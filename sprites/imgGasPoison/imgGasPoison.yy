@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "imgGasPoison",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"40fb6543-b5d6-43f5-a91f-e8c87157e6b7","path":"sprites/imgGasPoison/imgGasPoison.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"40fb6543-b5d6-43f5-a91f-e8c87157e6b7","path":"sprites/imgGasPoison/imgGasPoison.yy",},"LayerId":{"name":"d8d75c74-e980-4463-a9b7-0260d885127f","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"imgGasPoison","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","name":"40fb6543-b5d6-43f5-a91f-e8c87157e6b7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5c344e5d-3c01-45e3-a553-327dc12abf98","path":"sprites/imgGasPoison/imgGasPoison.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5c344e5d-3c01-45e3-a553-327dc12abf98","path":"sprites/imgGasPoison/imgGasPoison.yy",},"LayerId":{"name":"d8d75c74-e980-4463-a9b7-0260d885127f","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"imgGasPoison","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","name":"5c344e5d-3c01-45e3-a553-327dc12abf98","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d8f60828-5b81-4c0f-8805-271b2ff57300","path":"sprites/imgGasPoison/imgGasPoison.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d8f60828-5b81-4c0f-8805-271b2ff57300","path":"sprites/imgGasPoison/imgGasPoison.yy",},"LayerId":{"name":"d8d75c74-e980-4463-a9b7-0260d885127f","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"imgGasPoison","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","name":"d8f60828-5b81-4c0f-8805-271b2ff57300","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"27372030-081e-4d07-b7f8-d3601507da4a","path":"sprites/imgGasPoison/imgGasPoison.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"27372030-081e-4d07-b7f8-d3601507da4a","path":"sprites/imgGasPoison/imgGasPoison.yy",},"LayerId":{"name":"d8d75c74-e980-4463-a9b7-0260d885127f","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"imgGasPoison","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","name":"27372030-081e-4d07-b7f8-d3601507da4a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"40fb6543-b5d6-43f5-a91f-e8c87157e6b7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c344e5d-3c01-45e3-a553-327dc12abf98",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d8f60828-5b81-4c0f-8805-271b2ff57300",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"27372030-081e-4d07-b7f8-d3601507da4a",},
   ],
   "sequence": {
-    "spriteId": {"name":"imgGasPoison","path":"sprites/imgGasPoison/imgGasPoison.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "imgGasPoison",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.25,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"12e44969-0166-4551-9bb9-93c54e5ea12f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"40fb6543-b5d6-43f5-a91f-e8c87157e6b7","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"66dc7b36-42cd-4b79-be58-c3624c38c89e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5c344e5d-3c01-45e3-a553-327dc12abf98","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"340fb54a-c897-4ec9-9b5a-44265aae6e3e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d8f60828-5b81-4c0f-8805-271b2ff57300","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"793b858f-0f4f-4c5b-8f20-a99793f81a53","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"27372030-081e-4d07-b7f8-d3601507da4a","path":"sprites/imgGasPoison/imgGasPoison.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"imgGasPoison","path":"sprites/imgGasPoison/imgGasPoison.yy",},
-    "resourceVersion": "1.3",
-    "name": "imgGasPoison",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d8d75c74-e980-4463-a9b7-0260d885127f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d8d75c74-e980-4463-a9b7-0260d885127f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sprites",
     "path": "folders/Sprites.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "imgGasPoison",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -49,7 +49,7 @@ function worldGen(){
 			//worldGenReplaceFloor(z, imgFloor01, imgFloorSpikes, irandom_range(10, 20));
 			
 			
-			worldGenPatchGas(z, objGasPoison, 1);
+			//worldGenPatchGas(z, objGasPoison, 1);
 			
 			
 			if(ww.signText[z] != ""){
@@ -67,13 +67,14 @@ function worldGen(){
 			//if(z == 4){ worldGenReplaceFloor(z, imgFloor01, imgFloorSpike01, 10); }
 			//if(z == 5){ worldGenPatchGas(z, objGasDark, 2); }
 			if(z == 6){ worldGenReplaceFloor(z, imgFloor01, imgFloorMPTrap, 50); }
+			
 			//if(z == 2){ worldGenTreasureRoom(z, imgCoin10); }
 			if(z == 7){ 
 				worldGenFloorH(imgFloorWater, true, irandom_range(4, 7), 2, z); 
 				worldGenFloorV(imgFloorWater, true, irandom_range(4, 7), 2, z); 
 				worldGenReplaceFloor(z, imgFloor01, imgFloorSpikes, 30);
 			}
-			
+			if(z == 8){ worldGenPatchGas(z, objGasPoison, 10); }
 			
 			
 			worldGenReplaceBlock(z, imgBlock01, imgBlockHiddenChest, (z%2)+1 );
