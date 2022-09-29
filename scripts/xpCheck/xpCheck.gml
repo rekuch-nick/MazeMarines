@@ -34,6 +34,7 @@ function xpCheck(){
 				pc.party[i].hpGained += 2;
 				pc.party[i].mpMax += 1;
 				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Leach"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Vex"); }
 				
 			} else if(pc.party[i].class == 7){ // knight
 				pc.party[i].hpGained += 5;
@@ -55,12 +56,12 @@ function xpCheck(){
 			} else if(pc.party[i].class == 12){ // bard
 				pc.party[i].hpGained += 1;
 				pc.party[i].mpMax += 1;
-				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Phase Door"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Repel"); }
 				
 			} else if(pc.party[i].class == 13){ // gish
 				pc.party[i].hpGained += 3;
 				pc.party[i].mpMax += 1;
-				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Leach"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Xenograft"); }
 				
 			} else if(pc.party[i].class == 14){ // Sprayer
 				pc.party[i].hpGained += 3;

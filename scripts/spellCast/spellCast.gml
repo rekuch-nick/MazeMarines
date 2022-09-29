@@ -109,15 +109,7 @@ function spellCast(spell, casterIndex, tar){
 			pc.party[casterIndex].hp = clamp(pc.party[casterIndex].hp + ceil(d/4), 0, pc.party[casterIndex].hpMax);
 			ww.screenCombat.pcc[casterIndex].hp = pc.party[casterIndex].hp;
 			
-			var aa = ww.screenCombat.pcc[casterIndex].x; var bb = ww.screenCombat.pcc[casterIndex].y;
-			var angle = arctan2(t.y+32 - ww.screenCombat.pcc[casterIndex].y, t.x+32 - ww.screenCombat.pcc[casterIndex].x);
-			var xs = cos(angle) * 20;
-			var ys = sin(angle) * 20;
-			
-			while(aa > t.x){
-				instance_create_depth(aa, bb, -8900, effLeach);
-				aa += xs; bb += ys;
-			}
+			effLineOf(effLeach, 20, ww.screenCombat.pcc[casterIndex].x, ww.screenCombat.pcc[casterIndex].y, t.x+32, t.y+32);;
 			
 			var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
 			s.text = "LEACH";

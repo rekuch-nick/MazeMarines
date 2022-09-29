@@ -1,4 +1,5 @@
 if(other.aly != aly && (other.aly != 0 || aly == -1)){
+	if(onlyFor != noone && onlyFor != other.id){ return; }
 	
 	var d = shotPower;
 	

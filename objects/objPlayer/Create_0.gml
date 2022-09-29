@@ -1,5 +1,5 @@
 image_xscale = 4; image_yscale = 4;
-debug = true;
+debug = false;
 advancedClasses = false;
 
 xSpot = floor(x / 64);
@@ -39,6 +39,7 @@ inventory[0] = getItem("Mission Briefing");
 inventory[1] = getItem("Instructions");
 //inventory[2] = getItem("Mage Staff");
 //inventory[3] = getItem("Silver Triangle");
+//inventory[3] = getItem("Mirror Charm");
 
 
 

@@ -97,43 +97,43 @@ function characterBaseCombatStats(c, l){
 		o.magicPower = .5;
 	}
 	if(c == 9){ // laserTech
-		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
-		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
+		
+		o.shotPowerMin = 15 + l;
+		o.shotPowerMax = 15 + l;
+		o.shotCDMax = 20;
+		o.shotType = objLazShot;
+		
 		o.magicPower = .5;
 	}
 	if(c == 10){ // MGunner
-		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
-		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
+		o.shotPowerMin = 7;
+		o.shotPowerMax = 8;
+		o.shotCluster = 3; o.shotClusterMax = 3;
+		if(l >= 4){ o.shotCluster = 4; o.shotClusterMax = 4; }
+		if(l >= 5){ o.shotCluster = 5; o.shotClusterMax = 5; }
 		o.magicPower = .5;
 	}
 	if(c == 11){ // Iceman
-		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
-		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
+		o.ySpread = 40;
+		o.shotType = objShotSnow;
+		o.shotPowerMin = 11 + l;
+		o.shotPowerMax = 11 + l;
+		o.shotCluster = 4; o.shotClusterMax = 4;
+		
+		
 		o.magicPower = 1.2;
 	}
 	if(c == 12){ // Bard
-		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
-		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
+		o.shotType = objShotSong;
+		o.shotPowerMin = 20 + l;
+		o.shotPowerMax = 30 + l;
+		
 		o.magicPower = 1.2;
 	}
 	if(c == 13){ // Gish
-		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
-		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
+		o.shotPowerMin = 20 + l;
+		o.shotPowerMax = 25 + l;
+		o.shotCDMax = 30;
 		o.magicPower = 1;
 	}
 	if(c == 14){ // Sprayer

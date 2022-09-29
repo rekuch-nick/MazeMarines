@@ -28,8 +28,7 @@ function createParty(namArr, classArr){
 		if(classArr[i] == 1){
 			pc.party[i].spells = ["Bolts", "Bind Wounds"];
 			pc.party[i].hpBase = 50;
-			pc.party[i].mp = 4;
-			pc.party[i].mpMax = 4;
+			pc.party[i].mp = 4; pc.party[i].mpMax = 4;
 		}
 		if(classArr[i] == 2){
 			pc.party[i].hpBase = 80;
@@ -43,14 +42,12 @@ function createParty(namArr, classArr){
 		if(classArr[i] == 5){
 			pc.party[i].spells = ["Aim"];
 			pc.party[i].hpBase = 50;
-			pc.party[i].mp = 4;
-			pc.party[i].mpMax = 4;
+			pc.party[i].mp = 4; pc.party[i].mpMax = 4;
 		}
 		if(classArr[i] == 6){
 			pc.party[i].spells = ["AntiVenom"];
 			pc.party[i].hpBase = 50;
-			pc.party[i].mp = 4;
-			pc.party[i].mpMax = 4;
+			pc.party[i].mp = 4; pc.party[i].mpMax = 4;
 		}
 		if(classArr[i] == 7){
 			pc.party[i].hpBase = 120;
@@ -65,14 +62,19 @@ function createParty(namArr, classArr){
 			pc.party[i].hpBase = 100;
 		}
 		if(classArr[i] == 11){
+			pc.party[i].spells = ["Frost"];
 			pc.party[i].hpBase = 30;
+			pc.party[i].mp = 4; pc.party[i].mpMax = 4;
 		}
 		if(classArr[i] == 12){
 			pc.party[i].hpBase = 30;
 			pc.party[i].spells = ["Phase Door"];
+			pc.party[i].mp = 4; pc.party[i].mpMax = 4;
 		}
 		if(classArr[i] == 13){
 			pc.party[i].hpBase = 75;
+			pc.party[i].spells = ["Open"];
+			pc.party[i].mp = 4; pc.party[i].mpMax = 4;
 		}
 		if(classArr[i] == 14){
 			pc.party[i].hpBase = 100;
@@ -85,12 +87,16 @@ function createParty(namArr, classArr){
 		}
 		if(classArr[i] == 17){
 			pc.party[i].hpBase = 20;
+			pc.party[i].spells = ["Xerox"];
+			pc.party[i].mp = 4; pc.party[i].mpMax = 4;
 		}
 		if(classArr[i] == 18){
 			pc.party[i].hpBase = 20;
 		}
 		if(classArr[i] == 19){
 			pc.party[i].hpBase = 10;
+			pc.party[i].spells = ["Eye"];
+			pc.party[i].mp = 4; pc.party[i].mpMax = 4;
 		}
 		//pc.party[i].hp = 1; /////
 		
@@ -99,7 +105,7 @@ function createParty(namArr, classArr){
 	}
 	
 	//pc.party[3].hp = -2;
-	pc.party[0].spells = ["Eye", "Frost", "Open", "Vex", "Xerox", "Xenograft"];
+	//pc.party[0].spells = ["Eye", "Frost", "Open", "Vex", "Xerox", "Xenograft"];
 	
 
 	ww.namePlate[0] = instance_create_depth(1098, 10, -7500, objWidgetBars);

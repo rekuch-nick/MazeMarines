@@ -17,8 +17,8 @@ function combatTreasure(plus){
 		if(r == 1){ t = getItem("Portable Hole"); }
 		if(r == 2){ t = getItem("Bezoar"); }
 		if(r == 3){ t = getItem("Deflection Ring"); }
-		if(r == 4){ t = getItem("Lantern"); }
-		if(r == 5){ t = getItem("Junk"); }
+		if(r == 4){ t = getItem("Mirror Charm"); }
+		if(r == 5){ t = getItem("Lantern"); }
 		if(r == 6){ t = getItem("Junk"); }
 		if(r == 7){ t = getItem("Herb"); }
 		if(r == 8){ t = getItem("Sock"); }

@@ -108,6 +108,18 @@ function getItem(i){
 		breakMessage: "has broken",
 	}; }
 	
+	
+	if(i == "Mirror Charm"){ return {
+		nam: i,
+		canWear: true,
+		wearEffect: "Rare Xerox",
+		desc: "Rarely spawn a clone in battle",
+		spell: "",
+		worth: 65,
+		breakChance: 0,
+		breakMessage: "has broken",
+	}; }
+	
 	if(i == "Deflection Ring"){ return {
 		nam: i,
 		canWear: true,

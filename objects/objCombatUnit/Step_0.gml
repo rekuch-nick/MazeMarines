@@ -76,16 +76,24 @@ if(shotCD < 1){
 		if(st != noone){
 			if(target == noone){
 				target = characterAim();
+				if(st == objLazShot){
+					//target = characterAimAtMostHP(aly);
+					target = characterAimAtLeastHP(aly);
+				}
 			}
 			
 			
 			if(target != noone){
 				var aa = target.x + 32;
 				var bb = target.y + 32;
-			
+				
 				if(ySpread != 0){ bb += irandom_range(-ySpread, ySpread); }
+				
+				if(st == objLazShot){ 
+					effLineOf(effLaz, 20, x, y+32, target.x+32, target.y+32); 
+				}
 			
-				var s = instance_create_depth(x+32, y+32, -8990, shotType);
+				var s = instance_create_depth(x+32, y+32, -8990, st);
 				s.aly = aly;
 				s.tx = aa;
 				s.ty = bb;
@@ -106,7 +114,7 @@ if(shotCD < 1){
 				}
 				
 				if(s.aoe > 0){ s.aoe += aoePlus; }
-			
+				if(st == objLazShot){ s.onlyFor = target; }
 			}
 		}
 	

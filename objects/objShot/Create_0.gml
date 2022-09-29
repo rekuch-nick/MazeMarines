@@ -17,3 +17,4 @@ muteShots = false;
 
 aoe = 0;
 aoeEff = effBoomCircle;
+onlyFor = noone;

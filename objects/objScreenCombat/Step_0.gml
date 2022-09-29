@@ -115,6 +115,12 @@ if(image_alpha >= 1 && !started){
 		
 		
 		pcc[i] = o;
+		
+		if(pc.party[i] != noone && pc.party[i].item != noone && pc.party[i].item.wearEffect == "Rare Xerox"){
+			if(irandom_range(1, 10) >= 6){
+				spellCast(getSpell("Xerox"), i, noone);
+			}
+		}
 	}}
 	
 	

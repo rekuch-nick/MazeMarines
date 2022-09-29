@@ -23,6 +23,11 @@ if(xpToGain > 0 && instance_number(objScreenCombat) <= 1 ){
 	if(xpToGain > 100){ n = 100; }
 	if(xpToGain > 500){ n = 500; }
 	if(xpToGain > 2000){ n = 2000; }
+	if(xpToGain > 4000){ n = 4000; }
+	if(xpToGain > 16000){ n = 16000; }
+	if(xpToGain > 32000){ n = 32000; }
+	if(xpToGain > 64000){ n = 64000; }
+	if(xpToGain > 128000){ n = 128000; }
 	xpToGain = clamp(xpToGain - n, 0, xpToGain);
 	xpGain(n);
 }
@@ -143,7 +148,9 @@ if(callEnterTile){
 
 
 
-
+if(keyboard_check_pressed(vk_backspace)){
+	debug = !debug;
+}
 
 
 if(debug){
@@ -151,6 +158,8 @@ if(debug){
 	if(keyboard_check_pressed(vk_pageup)){ playerMoveFloor(-1); }
 	
 	if(keyboard_check_pressed(vk_home)){ 
-		pc.party[0].xp += xpMax(pc.party[0].xpLevel[pc.party[0].class]);
-		xpToGain += 5000; }
+		//pc.party[0].xp += xpMax(pc.party[0].xpLevel[pc.party[0].class]);
+		var n = xpMax(pc.party[0].xpLevel[pc.party[0].class]);
+		xpToGain += n*5; 
+	}
 }

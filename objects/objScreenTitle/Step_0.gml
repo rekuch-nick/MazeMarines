@@ -1,7 +1,7 @@
 
 
 
-if(pc.debug && keyboard_check_pressed(vk_backspace)){
+if(keyboard_check_pressed(vk_backspace)){
 	pc.advancedClasses = true;
 }
 
