@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "objScreen",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -24,8 +28,4 @@
     "name": "screens",
     "path": "folders/Objects/screens.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "objScreen",
-  "tags": [],
-  "resourceType": "GMObject",
 }
