@@ -10,3 +10,9 @@ waitingForDirection = false;
 castX = "";
 castCD = 0;
 template = noone;
+
+answer = "";
+
+
+
+

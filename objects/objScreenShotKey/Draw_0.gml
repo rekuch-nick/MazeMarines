@@ -1,5 +1,11 @@
 draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, .7);
 
+draw_text(40, 40, "Welcome to Locksmith!");
+
+
+
+
+/*
 if(pc.coins >= 15 && pc.keys < 99){
 	
 	if(!hasBought){
@@ -17,3 +23,5 @@ if(pc.coins >= 15 && pc.keys < 99){
 	draw_text(40, 40, "I can forge a key for you.");
 	draw_text(40, 62, "Come back when you have " + string(keyPrice) + " coins.");
 }
+
+*/

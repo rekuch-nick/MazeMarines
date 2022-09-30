@@ -6,6 +6,9 @@ if(phase == "no"){
 	draw_text(40,84, "Hahaha...");
 }
 
+
+
+/*
 if(phase == "need"){
 	draw_text(40, 40, "Hold on there, wait a second. Don't go burying that");
 	draw_text(40, 62, "poor lad just yet! He can walk again, for a fee.");
@@ -19,6 +22,12 @@ if(phase == "needMore"){
 	draw_text(40, 84, "What do you say, " + string(price) + " coins?");
 	draw_text(40, 128, "Y / N");
 }
+
+
+"Hold on there, wait a second. Don't go burying that poor lad just yet! He can walk again, for a fee. What do you say, " + string(price) + " coins?"
+
+
+*/
 
 
 //draw_text(40, 40, "I can forge a key for you.");

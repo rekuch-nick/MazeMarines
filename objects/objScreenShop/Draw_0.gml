@@ -1,6 +1,8 @@
-draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, .7);
+draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, 1);
+draw_text(40, 40, msg);
 
 
+/*
 if(triedToBuyWhileFull){
 	draw_text(40, 40, "I'd love to sell you that,");
 	draw_text(40, 62, "but you've got no room in your bags!");
@@ -31,4 +33,5 @@ for(var i=0; i<array_length(inventory); i++){
 	s += string(p) + "g";
 	draw_text(50, 115 + i*25, s);
 }
+*/
 

@@ -1,4 +1,4 @@
-
+if(instance_number(objMenu)){ return; }
 
 
 

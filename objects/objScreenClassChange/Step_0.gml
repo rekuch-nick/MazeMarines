@@ -1,4 +1,4 @@
-
+if(instance_number(objMenu)){ return; }
 
 
 if(arrowPressed() != noone || keyboard_check_pressed(vk_escape)){

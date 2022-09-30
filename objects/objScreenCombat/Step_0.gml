@@ -1,3 +1,4 @@
+if(instance_number(objMenu)){ return; }
 if(keyboard_check_pressed(vk_enter)){
 	room_speed = 150;
 	

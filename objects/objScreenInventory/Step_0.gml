@@ -1,3 +1,4 @@
+if(instance_number(objMenu)){ return; }
 o = pc.inventory[pc.inventoryCursor];
 
 if(keyboard_check_pressed(vk_escape) || letterPressed() == "I" || letterPressed() == "N"){

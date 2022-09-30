@@ -1,6 +1,7 @@
 image_xscale = 4; image_yscale = 4;
 debug = false;
 advancedClasses = false;
+answer = "";
 
 xSpot = floor(x / 64);
 ySpot = floor(y / 64);
@@ -53,7 +54,7 @@ unitSelected = -1;
 
 
 
-coins = 0;
+coins = 999100;
 bombs = 0;
 keys = 0;
 medkits = 0;

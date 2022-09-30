@@ -1,6 +1,5 @@
 if(castCD > 0){ return; }
-
-draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, .7);
+//draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, .7);
 if(firstFrame){ return; }
 
 
@@ -53,7 +52,7 @@ if(instance_number(objScreenCombat) < 1 && template != noone){
 
 
 
-
+/*
 if(spells[0] != noone){
 	
 	
@@ -82,4 +81,4 @@ if(spells[0] != noone){
 		draw_set_halign(fa_left);
 		
 	}	
-}
+}*/

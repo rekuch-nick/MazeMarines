@@ -1,8 +1,9 @@
+if(instance_number(objMenu)){ return; }
 if(!instance_number(objScreen) == 0 && !instance_number(objScreenCombat) == 1 && !instance_number(objScreenSpell)){ return; }
 if(spellInputCD > 0){ spellInputCD --; } else if(numberPressed() != noone){
 	var i = numberPressed() - 1;
 	
-	if(unitSelected == -1 || unitSelected != i){
+	//if(unitSelected == -1 || unitSelected != i){
 		if(pc.party[i] != noone){ if(pc.party[i].hp > 0){
 			unitSelected = i;
 			with(objScreenSpell){ instance_destroy(); }
@@ -10,10 +11,10 @@ if(spellInputCD > 0){ spellInputCD --; } else if(numberPressed() != noone){
 			s.index = i; 
 			s.explore = instance_number(objScreenCombat) == 0;
 		}}
-	} else if(unitSelected == i){
-		unitSelected = -1;
-		with(objScreenSpell){ instance_destroy(); }
-	}
+	//} else if(unitSelected == i){
+		//unitSelected = -1;
+		//with(objScreenSpell){ instance_destroy(); }
+	//}
 }
 
 
@@ -142,7 +143,10 @@ if(callEnterTile){
 
 
 
-
+if(answer != ""){
+	show_debug_message(answer);
+	answer = "";
+}
 
 
 
@@ -161,5 +165,11 @@ if(debug){
 		//pc.party[0].xp += xpMax(pc.party[0].xpLevel[pc.party[0].class]);
 		var n = xpMax(pc.party[0].xpLevel[pc.party[0].class]);
 		xpToGain += n*5; 
+	}
+	
+	if(keyboard_check_pressed(vk_insert)){ 
+		createMenu("This is an example menu", "", "", "",
+		["1", "2", "3", "4", "5"],
+		["1", "2", "3", "4", "5"] );
 	}
 }

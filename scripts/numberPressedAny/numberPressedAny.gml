@@ -8,6 +8,6 @@ function numberPressedAny(){
 	if(keyboard_check_pressed(ord("7"))){ return 7; }
 	if(keyboard_check_pressed(ord("8"))){ return 8; }
 	if(keyboard_check_pressed(ord("9"))){ return 9; }
-	if(keyboard_check_pressed(ord("0"))){ return 0; }
+	if(keyboard_check_pressed(ord("0"))){ return 10; }
 	return noone;
 }

@@ -1,3 +1,4 @@
+if(instance_number(objMenu)){ return; }
 if(instance_number(objScreenCombat) != 1){
 	instance_destroy();
 	return;

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "numberPressedAny",
+  "name": "stringCharsAt",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

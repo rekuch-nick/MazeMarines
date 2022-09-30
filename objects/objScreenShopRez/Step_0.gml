@@ -1,5 +1,23 @@
+if(instance_number(objMenu)){ return; }
 
 
+if(answer == "y"){
+	pc.coins -= price;
+	for(var i=0; i<6; i++){
+		if(pc.party[i] != noone && pc.party[i].hp < 1){
+			pc.party[i].hp = 1;
+			pc.party[i].bleed = 0;
+			pc.party[i].poison = 0;
+		}
+	}
+	
+	instance_destroy();
+} else if(anyPressed()){
+	instance_destroy();
+}
+
+
+/*
 
 if(arrowPressed() != noone || keyboard_check_pressed(vk_enter) || letterPressed() == "N" || keyboard_check_pressed(vk_escape)){
 	instance_destroy();
@@ -30,4 +48,4 @@ if(letterPressed() == "Y" && pc.coins >= price){
 		}
 	}
 	instance_destroy();
-}
+}*/
