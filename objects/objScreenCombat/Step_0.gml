@@ -117,7 +117,7 @@ if(image_alpha >= 1 && !started){
 		
 		pcc[i] = o;
 		
-		if(pc.party[i] != noone && pc.party[i].item != noone && pc.party[i].item.wearEffect == "Rare Xerox"){
+		if(pc.party[i] != noone && pc.party[i].hp > 0 && pc.party[i].item != noone && pc.party[i].item.wearEffect == "Rare Xerox"){
 			if(irandom_range(1, 5) == 1){
 				//spellCast(getSpell("Xerox"), i, noone);
 				var cc = instance_create_depth(o.x-64, o.y, o.depth, objCombatClone);

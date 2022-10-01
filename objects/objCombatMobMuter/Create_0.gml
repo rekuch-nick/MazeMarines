@@ -13,7 +13,7 @@ shotPowerMax = 4;
 hp = 100;
 hpMax = 100;
 
-xp = 100;
+xp = (128 * (1 + (z-1)*.10));
 gold = .5;
 
 muteChance = 20;

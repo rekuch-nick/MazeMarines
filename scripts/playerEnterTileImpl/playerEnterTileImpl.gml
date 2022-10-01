@@ -138,7 +138,7 @@ function playerEnterTileImpl(z, a, b){
 	
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorWater){
-		if(!pc.inBoat){
+		if(pc.inBoat == noone){
 			for(var aa=pc.xSpot-1; aa<=pc.xSpot+1; aa++){ for(var bb=pc.ySpot-1; bb<=pc.ySpot+1; bb++){
 				if(inBounds(aa, bb)){ if(ww.mmap[z][aa, bb] == noone && ww.bmap[z][aa, bb] == noone) {
 					if(a == aa && b == bb){ continue; }
@@ -157,7 +157,11 @@ function playerEnterTileImpl(z, a, b){
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorWaterBoat){
 		ww.fmap[zSpot][xSpot, ySpot] = imgFloorWater;
-		pc.inBoat = true;
+		pc.inBoat = imgBoatInWater;
+	}
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorWaterBoat2){
+		ww.fmap[zSpot][xSpot, ySpot] = imgFloorWater;
+		pc.inBoat = imgBoat2InWater;
 	}
 	
 	
@@ -187,6 +191,12 @@ function playerEnterTileImpl(z, a, b){
 	if(pup == imgMedkit){pc.medkits ++; rem = true; txt = "+1 MedKit"; }
 	if(pup == imgBoat){pc.boats ++; rem = true; txt = "+1 Raft"; }
 	if(pup == imgPick){pc.picks +=4; rem = true; txt = "+4 Harrows"; }
+	
+	if(pup == imgBomb2){pc.bombType = imgBomb2; rem = true; txt = "Power Bombs"; }
+	if(pup == imgMedkit2){pc.medkitType = imgMedkit2; rem = true; txt = "Medkits now Revive"; }
+	if(pup == imgBoat2){pc.boatType = imgBoat2; rem = true; txt = "Rafts survive Lava"; }
+	if(pup == imgPick2){pc.pickType = imgPick2; rem = true; txt = "Harrows last longer"; }
+	
 	if(pup == imgCoin){pc.coins += 5; rem = true; txt = "+5 Coins"; }
 	if(pup == imgCoin2){pc.coins +=10; rem = true; txt = "+10 Coins"; }
 	if(pup == imgCoin3){pc.coins +=15; rem = true; txt = "+15 Coins"; }

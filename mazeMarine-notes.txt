@@ -5,7 +5,7 @@ D
 E                                   eye 
 F  frost (aoe, auto kills small)      
 G
-H  
+H  ice lance
 I
 J  
 K	
@@ -31,13 +31,13 @@ Z
 neophyte
 1 bolts, bind wounds
 3 wall of fire
-
+5 cure
 
 
 scribe
 1 aim
 3 light
-5 cure
+5 shield
 
 gasdoc
 1 anti-venom
@@ -92,6 +92,15 @@ ascendant
 19 Ascendant  M ss eye
 
 
+
+
+
+Unable to find instance for object index -4
+ at gml_Script_xpCheck (line 98) - 					var s = instance_create_depth(co.x + 32, co.y, -8900, objEffect); s.text = "Level Up!";
+############################################################################################
+gml_Script_xpCheck (line 98)
+gml_Script_xpGain (line 16) - 	xpCheck();
+gml_Object_objPlayer_Step_0 (line 33) - 	xpGain(n);
 
 
 

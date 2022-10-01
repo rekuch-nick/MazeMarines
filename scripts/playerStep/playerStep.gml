@@ -21,6 +21,15 @@ function playerStep(xMove, yMove){
 			if(yMove < 0){ pc.y -= 32; }
 		}
 		
+		if(ww.bmap[z][a, b] == imgBlockChest2 && pc.keys > 0){ 
+			pc.keys --;
+			openChest2(z, a, b);
+			if(xMove > 0){ pc.x += 32; }
+			if(xMove < 0){ pc.x -= 32; }
+			if(yMove > 0){ pc.y += 32; }
+			if(yMove < 0){ pc.y -= 32; }
+		}
+		
 		if(ww.bmap[z][a, b] == imgSpecChest && pc.keys > 0){ 
 			pc.keys --;
 			openSpecChest(z, a, b);
@@ -38,13 +47,14 @@ function playerStep(xMove, yMove){
 	//ww.mmap[z][xSpot, ySpot] = ww.mmap[pc.zSpot][a, b];
 	//ww.mmap[pc.zSpot][a, b] = temp;
 	
-	if(inBoat){
+	if(inBoat != noone){
 		if(ww.fmap[z][a, b] != imgFloorWater){
 			if(ww.fmap[z][xSpot, ySpot] == imgFloorWater){ 
-				ww.fmap[z][xSpot, ySpot] = imgFloorWaterBoat;
+				var t = inBoat == imgBoatInWater ? imgFloorWaterBoat : imgFloorWaterBoat2;
+				ww.fmap[z][xSpot, ySpot] = t;
 			}
 			
-			inBoat = false;
+			inBoat = noone;
 		}
 	}
 	

@@ -16,7 +16,7 @@ for(var i=0; i<5; i++){
 	draw_text_color(700, 430 + i*30, "(" + getClassDesc(class[i]) + ")", c_grey, c_grey, c_grey, c_grey, 1);
 }
 
-draw_text_color(600, 400, "(Use Arrows to change class)", c_gray, c_gray, c_gray, c_gray, 1);
+draw_text_color(600, 400, "(Use Arrows to change starting class)", c_gray, c_gray, c_gray, c_gray, 1);
 
 if(cursor >= 0 && cursor <= 4){
 	draw_sprite_stretched(imgCursor, 0, 270, 428 + cursor*30, 24, 24);

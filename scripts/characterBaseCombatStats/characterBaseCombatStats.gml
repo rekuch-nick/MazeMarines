@@ -35,7 +35,7 @@ function characterBaseCombatStats(c, l){
 		o.shotPowerMin = 5 + l;
 		o.shotPowerMax = 14 + l;
 		o.limitGainMin = 5;
-		o.limitGainMax = 50;
+		o.limitGainMax = 25;
 		o.limit = "Craft a bomb and harrow";
 		o.magicPower = .4;
 	}

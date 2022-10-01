@@ -4,8 +4,8 @@ if(debug){
 	draw_set_alpha(1);
 }
 
-if(inBoat){
-	draw_sprite_ext(imgBoatInWater, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
+if(inBoat != noone){
+	draw_sprite_ext(inBoat, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 characterDrawSelf();
 

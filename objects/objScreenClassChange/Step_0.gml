@@ -10,6 +10,7 @@ if(answer != "no" && answer != ""){
 		if(pc.party[who].xpLevel[n] == 0){ pc.party[who].xpLevel[n] = 1; }
 		pc.party[who].class = n
 		pc.party[who].xp = 0;
+		pc.party[who].limit = 0;
 		if(n == 0){ pc.party[who].img = imgMarine; pc.party[who].hpBase = 100; }
 		if(n == 1){ pc.party[who].img = imgApprentice; pc.party[who].hpBase = 50; characterLearnSpell(who, "Bolts"); characterLearnSpell(n, "Bind Wounds"); }
 		if(n == 2){ pc.party[who].img = imgMechanic; pc.party[who].hpBase = 80;}

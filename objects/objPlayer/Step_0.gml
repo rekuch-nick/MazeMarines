@@ -42,40 +42,42 @@ if(waitCD > 0){ waitCD --; }
 if(combatCD > 0){ combatCD --; }
 
 
-if(directionAction != ""){
+if(usingItem != "" && answer != ""){
 	var tx = xSpot; var ty = ySpot;
-	if(pressed == 1){ ty --; } if(pressed == 2){ tx ++; } if(pressed == 3){ ty ++; } if(pressed == 4){ tx --; }
-	if(directionAction == "bomb"){
-		pc.bombs --;
+	if(answer == 1){ ty --; } if(answer == 2){ tx ++; } if(answer == 3){ ty ++; } if(answer == 4){ tx --; }
+	if(usingItem == "bomb"){
+		pc.bombs --; wallBreak(tx, ty);
 		instance_create_depth(tx*64, ty*64, -8999, effBoom);
-		wallBreak(tx, ty);
+		spellInputCD = 5;
 	}
-	if(directionAction == "dig"){
-		pc.picks --;
-		instance_create_depth(tx*64, ty*64, -8999, effDig);
+	if(usingItem == "dig"){
+		if(pc.pickType = imgPick2 && irandom_range(0, 1) == 1){ pc.picks --; }
 		floorBreak(tx, ty);
+		instance_create_depth(tx*64, ty*64, -8999, effDig);
+		spellInputCD = 5;
 	}
-	if(directionAction == "medkit"){
-		var i = pressed;
-		if(party[i] != noone){ if(party[i].hp > 0 && party[i].hp < party[i].hpMax){
-			party[i].hp = party[i].hpMax;
-			pc.medkits --;
-			for(var ii=0; ii<20; ii++){ instance_create_depth(xSpot*64+32, ySpot*64, -8999, effHeal); }
-		}}
-	}
-	if(directionAction == "boat"){
+	if(usingItem == "boat"){
 		if(inBounds(tx, ty) && ww.fmap[zSpot][tx, ty] == imgFloorWater){
 			pc.boats --;
-			ww.fmap[zSpot][tx, ty] = imgFloorWaterBoat;
+			var t = pc.boatType == imgBoat2 ? imgFloorWaterBoat2 : imgFloorWaterBoat;
+			ww.fmap[zSpot][tx, ty] = t;
 		}
-		
-		
-		
+		spellInputCD = 5;
 	}
-	
-	directionAction = "";
+	if(usingItem == "medkit"){
+		var i = answer;
+		if(party[i] != noone){ if(party[i].hp < party[i].hpMax){
+			if(party[i].hp > 0 || pc.medkitType == imgMedkit2){
+				party[i].hp = party[i].hpMax;
+				pc.medkits --;
+				for(var ii=0; ii<20; ii++){ instance_create_depth(xSpot*64+32, ySpot*64, -8999, effHeal); }
+			}
+		}}
+		spellInputCD = 5;
+	}
+	answer = "";
+	usingItem = "";
 }
-
 
 
 
@@ -108,24 +110,32 @@ if(!justMoved && spellInputCD < 1){
 		if(ww.fmap[zSpot][xSpot, ySpot] == imgStairUp){ playerMoveFloor(-1); return; }
 	}
 	else if(bombs > 0 && letterPressed() == "B"){
-		var s = instance_create_depth(0, 0, -8999, objScreenGetDirection);
-		s.txt = "Toss BOMB";
-		s.action = "bomb";
+		if(pc.bombType == imgBomb2){
+			pc.bombs --;
+			for(var aa=pc.xSpot-1; aa<=pc.xSpot+1; aa++){ for(var bb=pc.ySpot-1; bb<=pc.ySpot+1; bb++){ 
+				if(!inBounds(aa, bb)){ continue; }
+				wallBreak(aa, bb);
+				instance_create_depth(aa*64, bb*64, -8999, effBoom);
+				if(ww.mmap[pc.zSpot][aa, bb] != noone && ww.mmap[pc.zSpot][aa, bb].object_index == objMobGoon){
+					instance_destroy(ww.mmap[pc.zSpot][aa, bb]);
+					ww.mmap[pc.zSpot][aa, bb] = noone;
+				}
+			}}
+		} else {
+			usingItem = "bomb"; createMenu("Toss BOMB in which direction?", "dir", "wide", "dir", [""], [""], [""]);
+		}
 	}
 	else if(picks > 0 && letterPressed() == "H"){
-		var s = instance_create_depth(0, 0, -8999, objScreenGetDirection);
-		s.txt = "Use HARROW";
-		s.action = "dig";
+		usingItem = "dig";
+		createMenu("Dig with HARROW in which direction?", "dir", "wide", "dir", [""], [""], [""]);
 	}
 	else if(medkits > 0 && letterPressed() == "M"){
-		var s = instance_create_depth(0, 0, -8999, objScreenGetNumber);
-		s.txt = "Use MEDKIT";
-		s.action = "medkit";
+		usingItem = "medkit";
+		createMenu("Use Medkit on whom?", "num", "wide+", "num", ["1] "+pc.party[0].nickname,"2] "+pc.party[1].nickname,"3] "+pc.party[2].nickname,"4] "+pc.party[3].nickname,"5] "+pc.party[4].nickname], [0,1,2,3,4], [0,0,0,0,0]);
 	}
 	else if(boats > 0 && letterPressed() == "R"){
-		var s = instance_create_depth(0, 0, -8999, objScreenGetDirection);
-		s.txt = "Deploy RAFT";
-		s.action = "boat";
+		usingItem = "boat";
+		createMenu("Inflate RAFT in which direction?", "dir", "wide", "dir", [""], [""], [""]);
 	}
 	else if(letterPressed() == "I"){
 		instance_create_depth(0, 0, -8998, objScreenInventory);
@@ -169,5 +179,6 @@ if(debug){
 	if(keyboard_check_pressed(vk_insert)){ 
 		//createMenu("This is an example menu", "", "", "", ["1", "2", "3", "4", "5"], ["1", "2", "3", "4", "5"] );
 		if(pc.coins >= 10000){ pc.coins = 0; } else { pc.coins = 10000; }
+		//pc.boatType = imgBoat;
 	}
 }

@@ -10,7 +10,7 @@ shotPowerMin = 2 + z*2;
 hp = 80 + z;
 bleedChance = 10;
 
-xp = 148 + (z*2);
+xp = (148 * (1 + (z-1)*.10));
 gold = .8 + (z*.2);
 
 

@@ -14,7 +14,7 @@ itemFindCD = 0;
 
 pressed = noone;
 directionAction = "";
-inBoat = false;
+inBoat = noone;
 xpToGain = 0;
 
 spellInputCD = 0;
@@ -61,9 +61,10 @@ for(var i=0; i<10; i++){ party[i] = noone; }
 
 
 combatSpeed = 60; 
- 
-unitSelected = -1; 
 
+unitSelected = -1; 
+usingItem = "";
+answer = "";
 
 
 coins = 0;
@@ -72,6 +73,11 @@ keys = 0;
 medkits = 0;
 picks = 0;
 boats = 0;
+
+bombType = imgBomb;
+pickType = imgPick;
+boatType = imgBoat;
+medkitType = imgMedkit;
 
 
 steps = 3;

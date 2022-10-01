@@ -8,6 +8,11 @@ function worldGen(){
 	clueFloor = 9;
 	circleFloor = 10;
 	
+	boatFloor = 64;
+	medkitFloor = 53;
+	bombFloor = 13;
+	pickFloor = 78;
+	
 	
 	var stairQuad = choose(4, 1, 3, 2);
 	for(var z=0; z<=LAST; z++){
@@ -68,6 +73,9 @@ function worldGen(){
 			worldGenMaze(z);
 			worldGenReplaceBlock(z, imgBlock01, noone, 40 - z*2);
 			
+			if(z == bombFloor || z == medkitFloor || z == boatFloor || z == pickFloor){
+				worldGenReplaceBlock(z, imgBlock01, imgBlockChest2, 1);
+			}
 			worldGenReplaceBlock(z, imgBlock01, imgBlockChest, 2);
 			
 			//worldGenFloorH(imgFloorWater, true, irandom_range(4, 7), 2, z);

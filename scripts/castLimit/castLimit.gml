@@ -24,15 +24,23 @@ function castLimit(co, ind){
 		var s = instance_create_depth(co.x + 32, co.y, -8900, objEffect);
 		s.text = "Limit Heal";
 		
-		for(var i=0; i<5; i++){ if(pc.party[i] != noone & pc.party[i].hp > 0){
-			var h = ceil(pc.party[i].hpMax * .05);
-			pc.party[i].hp = clamp(pc.party[i].hp + h, pc.party[i].hp, pc.party[i].hpMax);
-			if(ww.screenCombat.pcc[i] != noone){ ww.screenCombat.pcc[i].hp = clamp(ww.screenCombat.pcc[i].hp + h, ww.screenCombat.pcc[i].hp, ww.screenCombat.pcc[i].hpMax); }
-			
-			if(ww.screenCombat.pcc[i] != noone) { for(var ii=0; ii<20; ii++){
+		with(objCombatUnit){ if(ally == 1){
+			if(hp < 1){ continue; }
+			hp = clamp(hp + h, hp, hpMax);
+			for(var ii=0; ii<20; ii++){
 				instance_create_depth(ww.screenCombat.pcc[i].x + 32, ww.screenCombat.pcc[i].y, -8900, effHeal);
-			}}
+			}
 		}}
+		
+		//for(var i=0; i<5; i++){ if(pc.party[i] != noone & pc.party[i].hp > 0){
+			//var h = ceil(pc.party[i].hpMax * .05);
+			//pc.party[i].hp = clamp(pc.party[i].hp + h, pc.party[i].hp, pc.party[i].hpMax);
+			//if(ww.screenCombat.pcc[i] != noone){ ww.screenCombat.pcc[i].hp = clamp(ww.screenCombat.pcc[i].hp + h, ww.screenCombat.pcc[i].hp, ww.screenCombat.pcc[i].hpMax); }
+			
+			//if(ww.screenCombat.pcc[i] != noone) { for(var ii=0; ii<20; ii++){
+			//	instance_create_depth(ww.screenCombat.pcc[i].x + 32, ww.screenCombat.pcc[i].y, -8900, effHeal);
+			//}}
+		//}}
 	
 	} else if(c == 4 || c == 8){ //Heavy, Cyborg
 		ww.screenCombat.pcc[ind].shotCDMax = floor(ww.screenCombat.pcc[ind].shotCDMax / 3);
