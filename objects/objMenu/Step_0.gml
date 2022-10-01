@@ -34,15 +34,42 @@ if(firstFrame){
 
 
 
-if(arrowPressed() == 1){
-	cursor --;
-	if(cursor < 0){ cursor = cursorMax; }
+if(optionsType == "bag"){ 
+	asker.o = pc.inventory[optionsAction[cursor]]; 
 }
 
-if(arrowPressed() == 3){
+if(letterPressed() != noone && hotkeyType == "spell"){
+	var ll = letterPressed();
+	for(var i=0; i<array_length(optionsAction); i++){
+		if(ll == string_char_at(optionsAction[i], 0)){
+			cursor = i;
+			if(canDo[i]){ ok = true; }
+			break;
+		}
+	}
+	
+} else if(arrowPressed() == 1){
+	cursor --;
+	if(cursor < 0){ cursor = cursorMax; }
+} else if (arrowPressed() == 3){
 	cursor ++;
 	if(cursor > cursorMax){ cursor = 0; }
 }
+
+
+if(hotkeyType == "dir" && arrowPressed() != noone){
+	asker.answer = arrowPressed();
+	instance_destroy();
+	return;
+}
+
+if(hotkeyType == "num" && numberPressed() != noone){
+	asker.answer = numberPressed()-1;
+	instance_destroy();
+	return;
+}
+
+
 
 if( escapePressed()
 				|| (letterPressed() == "N" && hotkeyType != "spell")
@@ -51,17 +78,7 @@ if( escapePressed()
 	no = true;
 }
 
-if(letterPressed() != noone && hotkeyType == "spell"){
-	// if can cast a spell of this letter set cursor to it and say ok = true
-	//        ^ spells[] contains a s.hotKey == letterPressed()    
-	
-	for(var i=0; i<array_length(optionsAction[i]); i++){
-		if(getSpell(optionsAction[i]).hotKey == letterPressed() && canCast[i]){
-			cursor = i;
-			ok = true;
-		}
-	}
-}
+
 
 if( keyboard_check_pressed(vk_enter) 
 				|| (letterPressed() == "Y" && hotkeyType != "spell")

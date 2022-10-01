@@ -32,6 +32,17 @@ function getItem(i){
 		breakMessage: "has broken",
 	}; }
 	
+	if(i == "Silver Circle"){ return {
+		nam: i,
+		canWear: false,
+		wearEffect: "",
+		desc: "One of the maze's seals",
+		spell: "",
+		worth: 120,
+		breakChance: 0,
+		breakMessage: "has broken",
+	}; }
+	
 	
 	
 	
@@ -64,7 +75,7 @@ function getItem(i){
 		desc: "Use to remove walls.",
 		spell: "Phase Door",
 		worth: 20,
-		breakChance: 50,
+		breakChance: 33,
 		breakMessage: "is consumed",
 	}; }
 	if(i == "Bug Spray"){ return {
@@ -76,6 +87,16 @@ function getItem(i){
 		worth: 24,
 		breakChance: 20,
 		breakMessage: "is empty",
+	}; }
+	if(i == "Healing Potion"){ return {
+		nam: i,
+		canWear: false,
+		wearEffect: "",
+		desc: "Drink to recover HP.",
+		spell: "Cure",
+		worth: 24,
+		breakChance: 33,
+		breakMessage: "runs out",
 	}; }
 	
 	
@@ -89,10 +110,10 @@ function getItem(i){
 	if(i == "Titan Belt"){ return {
 		nam: i,
 		canWear: true,
-		wearEffect: "One",
-		desc: "Equip: One",
+		wearEffect: "+2",
+		desc: "E: Shots deal +2 damage",
 		spell: "",
-		worth: 55,
+		worth: 255,
 		breakChance: 0,
 		breakMessage: "has broken",
 	}; }
@@ -100,10 +121,10 @@ function getItem(i){
 	if(i == "Titan Glove"){ return {
 		nam: i,
 		canWear: true,
-		wearEffect: "Two",
-		desc: "Equip: Two",
+		wearEffect: "+1",
+		desc: "E: Shots deal +1 damage",
 		spell: "",
-		worth: 65,
+		worth: 165,
 		breakChance: 0,
 		breakMessage: "has broken",
 	}; }
@@ -113,7 +134,7 @@ function getItem(i){
 		nam: i,
 		canWear: true,
 		wearEffect: "Rare Xerox",
-		desc: "Rarely spawn a clone in battle",
+		desc: "E: Rarely spawn a clone in battle",
 		spell: "",
 		worth: 65,
 		breakChance: 0,
@@ -124,7 +145,7 @@ function getItem(i){
 		nam: i,
 		canWear: true,
 		wearEffect: "Minor Deflection",
-		desc: "Rarely deflect basic shots",
+		desc: "E: Rarely deflect basic shots",
 		spell: "",
 		worth: 65,
 		breakChance: 0,
@@ -135,7 +156,7 @@ function getItem(i){
 		nam: i,
 		canWear: true,
 		wearEffect: "Gold Find",
-		desc: "Find more coins",
+		desc: "E: Find more coins",
 		spell: "",
 		worth: 125,
 		breakChance: 0,
@@ -146,7 +167,7 @@ function getItem(i){
 		nam: i,
 		canWear: true,
 		wearEffect: "MP Charge",
-		desc: "Regain MP over time",
+		desc: "E: Regain MP over time",
 		spell: "",
 		worth: 65,
 		breakChance: 0,

@@ -40,6 +40,8 @@ if(regen > 0 && hp < hpMax){ hp +=.5; regen --; }
 
 
 if(hp < 1){
+	hp = 0;
+	
 	if(aly == -1){ ww.screenCombat.xp += xp; ww.screenCombat.gp += gold; }
 	
 	var iid = id;
@@ -98,6 +100,8 @@ if(shotCD < 1){
 				s.tx = aa;
 				s.ty = bb;
 				s.shotPower = irandom_range(shotPowerMin, shotPowerMax);
+				if(aly == 1 && pc.party[playerIndex].item != noone && pc.party[playerIndex].item.wearEffect == "+1"){ s.shotPower +=1; }
+				if(aly == 1 && pc.party[playerIndex].item != noone && pc.party[playerIndex].item.wearEffect == "+2"){ s.shotPower +=2; }
 				if(aly == 1 && pc.party[playerIndex].aim > 0){ s.shotPower = floor(s.shotPower * 1.2); }
 				if(aly == 1 && pc.party[playerIndex].xenograft > 0){ s.shotPower = floor(s.shotPower * 1.1); }
 				s.bleedShots = bleedShots;

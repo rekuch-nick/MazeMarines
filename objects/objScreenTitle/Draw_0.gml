@@ -21,3 +21,6 @@ if(cursor >= 0 && cursor <= 4){
 	draw_sprite_stretched(imgCursor, 0, 270, 428 + cursor*30, 24, 24);
 	
 }
+
+//var s = "Dev Note: "
+//draw_text_transformed(600, 650, stringInsertBreaks(s), .8, .8, 0);

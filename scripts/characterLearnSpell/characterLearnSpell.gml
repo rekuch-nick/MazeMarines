@@ -3,7 +3,7 @@ function characterLearnSpell(charIndex, s){
 	
 	arr = []; var ind = 0;
 	
-	for(var a=0; a<=10; a++){
+	for(var a=0; a<=16; a++){
 		var sp = "";
 		if(a == 0){ sp = "Aim"; }
 		if(a == 1){ sp = "AntiVenom"; }

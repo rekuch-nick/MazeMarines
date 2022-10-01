@@ -105,7 +105,7 @@ function createParty(namArr, classArr){
 	}
 	
 	//pc.party[3].hp = -2;
-	//pc.party[0].spells = ["Eye", "Frost", "Open", "Vex", "Xerox", "Xenograft"];
+	//pc.party[0].spells = ["Cure", "Eye", "Frost", "Light", "Open", "Phase Door", "Vex", "Xerox", "Xenograft"];
 	
 
 	ww.namePlate[0] = instance_create_depth(1098, 10, -7500, objWidgetBars);

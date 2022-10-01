@@ -4,12 +4,14 @@ function mobSpawnForCombat(){
 	var number = irandom_range(1, 8);
 	for(var i=0; i<z/2; i++){ number += irandom_range(0, 2); }
 	var big = 0;
-	if(z > 10 && irandom_range(1, 6) == 1){ big++; }
+	if(z > 5 && irandom_range(1, 6) == 1){ big++; }
 	
 	mobList = [getCommonMob(), getUncommonMob(), getUncommonMob(), getUncommonMob()];
 	maxKinds = 1;
-	if(z > 10){ maxKinds += irandom_range(0, 1); }
-	if(z > 20){ maxKinds += irandom_range(0, 1); }
+	if(z > 5 && irandom_range(1, 4) == 1){ maxKinds=2; }
+	if(z > 10 && irandom_range(1, 2) == 1){ maxKinds=2; }
+	if(z > 10 && irandom_range(1, 4) == 1){ maxKinds=3; }
+	
 	
 	var typ = ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].sprite_index;
 	var spec = noone;

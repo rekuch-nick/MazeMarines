@@ -75,6 +75,7 @@ function spellCast(spell, casterIndex, tar){
 		for(var aa=0; aa<17; aa++){ for(var bb=0; bb<13; bb++){
 			if(ww.bmap[z][aa, bb] == imgBlockHiddenChest){ ww.bmap[z][aa, bb] = imgBlockChest; n ++; }
 			if(ww.bmap[z][aa, bb] == imgBlockHiddenMissed){ ww.bmap[z][aa, bb] = imgBlockChest; n ++; }
+			if(ww.fmap[z][aa, bb] == imgFloorSwitchTrapHiddenUp){ ww.fmap[z][aa, bb] = imgFloorSwitchTrapUp; n ++; }
 		}}
 		
 		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);

@@ -91,11 +91,13 @@ function xpCheck(){
 			
 			xpM = xpMax(pc.party[i].xpLevel[pc.party[i].class]);
 			
-			if(instance_number(objScreenCombat) > 0){
-				var co = ww.screenCombat.pcc[i];
-				var s = instance_create_depth(co.x + 32, co.y, -8900, objEffect); s.text = "Level Up!";
-			} else {
-				var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect); s.text = "Level Up!";
+			try {
+				if(instance_number(objScreenCombat) > 0){
+					var co = ww.screenCombat.pcc[i];
+					var s = instance_create_depth(co.x + 32, co.y, -8900, objEffect); s.text = "Level Up!";
+				} else {
+					var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect); s.text = "Level Up!";
+				}
 			}
 		}
 		

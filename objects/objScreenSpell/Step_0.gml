@@ -29,36 +29,79 @@ if(firstFrame){
 		//(promptText, oType, positionNote, oHotkey, oText, oAction, oPrice){
 		createMenu("Cast what?", "spell", "left", "spell", sName, sA, sC);
 	} else {
-		pc.unitSelected = -1;
-		createMenu("Checking Status", "", "small", "", ["Okay"], ["ok"], [0]);
+		if(instance_number(objScreenCombat) < 1 && template != noone){
+			pc.unitSelected = -1;
+			createMenu("Checking Status", "", "small", "", ["Okay"], ["no"], [0]);
+		} else {
+			instance_destroy(); return;
+		}
 	}
+	
+	
 	
 	return;
 } /// end of firstframe ///
 
 
+
+if(castX != ""){
+	if(castCD > 1){ 
+		castCD --; pc.spellInputCD = 5; 
+	} else {
+		spellCast(castX, index, noone);
+		pc.spellInputCD = 6;
+		instance_destroy(); return;
+	}
+}
+
 if(answer != ""){
+	if(answer == "no"){ instance_destroy(); return; }
+	
+	
+	
+	if(waitingForNumber){
+		spellCast(spl, index, answer);
+		pc.spellInputCD = 6;
+		instance_destroy(); return;
+	}
+	
+	if(waitingForDirection){
+		spellCast(spl, index, answer);
+		pc.spellInputCD = 6;
+		instance_destroy(); return;
+	}
+	
 	
 	var s = getSpellStructByLetter(string_char_at(answer, 0), spells);
 	if(s != noone){
 		if(s.canCast){
 			if(s.target == ""){
-				//castX = s; castCD = s.wait;
-				spellCast(s, index, noone);
+				castX = s; castCD = s.wait;
+				castX = s;
+				answer = "";
+				//spellCast(s, index, noone);
+				return;
+				
 			} else if(s.target == "number"){
-				//spl = s;
-				//waitingForNumber = true;
+				createMenu("Cast " + s.nam + " on whom?", "num", "wide+", "num", ["1] "+pc.party[0].nickname,"2] "+pc.party[1].nickname,"3] "+pc.party[2].nickname,"4] "+pc.party[3].nickname,"5] "+pc.party[4].nickname], [0,1,2,3,4], [0,0,0,0,0]);
+				
+				
+				spl = s;
+				waitingForNumber = true;
+				return;
 				
 			} else if(s.target == "direction"){
-				//spl = s;
-				//waitingForDirection = true;
+				createMenu("Cast " + s.nam + " in which direction?", "dir", "wide", "dir", [""], [""], [""]);
+				spl = s;
+				waitingForDirection = true;
+				return;
 			}
 		}
 	}
 	
 	
 }
-instance_destroy();
+
 
 
 

@@ -5,6 +5,9 @@ function worldGen(){
 	bossOneDown = false;
 	bossFloor01 = 4;
 	triangleFloor = 4;
+	clueFloor = 9;
+	circleFloor = 10;
+	
 	
 	var stairQuad = choose(4, 1, 3, 2);
 	for(var z=0; z<=LAST; z++){
@@ -29,14 +32,37 @@ function worldGen(){
 			ww.fmap[z][9, 6] = imgFloorGate01;
 			
 			worldGenPatchGas(z, objGasDark, 15);
+		} else if(z == clueFloor){
+			for(var a=0; a<17; a++){
+				ww.bmap[z][a, 0] = imgBlockAntiMagic;
+				ww.bmap[z][a, 12] = imgBlockAntiMagic;
+			}
+			for(var b=0; b<12; b++){
+				ww.bmap[z][0, b] = imgBlockAntiMagic;
+				ww.bmap[z][16, b] = imgBlockAntiMagic;
+			}
 			
+			
+			ww.signText[z] = "Limit one per customer!";
+			ww.fmap[z][8, 11] = imgFloorSign;
+		
+		} else if(z == 10){
+			ww.antiMagic[z] = ["Warp"];
+			for(var b=0; b<13; b++){ ww.bmap[z][8, b] = imgBlockAntiMagic; }
+			
+			ww.bmap[z][8, 6] = imgBlockGate;
+			ww.fmap[z][7, 6] = imgFloorGate02;
+			ww.fmap[z][9, 6] = imgFloorGate02;
+			
+			worldGenPatchGas(z, objGasPoison, 15);
+		
 		} else if(z >= 1){
 			normMaze = true;
 			
-			if(z == 1){ ww.signText[z] = "Feeling good about my first mission! I'll leave\nanother note on this floor on my way back out."; }
-			if(z == 2){ ww.signText[z] = "Most monsters are so mindless they will target\nyour party members randomly. The ones with chain-guns\nare even so dumb they fire at the guy with the most HP.\n\nWatch out for the one that looks either kinda like\nits melting or maybe wearing a dress. I guess it smells\nblood or something, somehow it knows who has the\nleast HP and shoots at them."; }
-			if(z == 3){ ww.signText[z] = "Don't worry about the pink monsters, it's the red\nones that... well anyways, after you beat one for the\n first time, look around to see if anything has\nchanged."; }
-			if(z == 4){ ww.signText[z] = "Watch out for blocks with a blue crystal in them, they\nprevent some spells from being cast. Exploration\nspells like WARP and PHASE DOOR are the most often\nwarded against, but it could be anything.\nYou'll know a spell is blocked if it Fizzles when\nit shouldn't."; }
+			if(z == 1){ ww.signText[z] = stringInsertBreaks("Feeling good about my first mission! I'll leave another note on this floor on my way back out.", 0); }
+			if(z == 2){ ww.signText[z] = stringInsertBreaks("Most monsters are so mindless they will target your party members randomly. The ones with chain-guns are even so dumb they always fire at the guy with the most HP.\n\nWatch out for the one that looks either like its melting or maybe wearing a dress. Somehow it knows who has the least HP and always shoots at them.", 0); }
+			if(z == 3){ ww.signText[z] = stringInsertBreaks("Don't worry about the pink monsters, it's the red ones that... well anyways, after you beat one for the  first time, look around to see if anything has changed.", 0); }
+			if(z == 4){ ww.signText[z] = stringInsertBreaks("Watch out for blocks with a blue crystal in them, they prevent some spells from being cast. Exploration spells like WARP and PHASE DOOR are the most often warded against, but it could be anything. You'll know a spell is blocked if it Fizzles when it shouldn't.", 0); }
 			
 			
 			worldGenMaze(z);
@@ -64,9 +90,12 @@ function worldGen(){
 			if(z == bossFloor01){ worldGenReplaceFloor(z, imgFloor01, imgFloorSpikeBoss01, 1); }
 			
 			
+			
+			
 			//if(z == 4){ worldGenReplaceFloor(z, imgFloor01, imgFloorSpike01, 10); }
 			//if(z == 5){ worldGenPatchGas(z, objGasDark, 2); }
 			if(z == 6){ worldGenReplaceFloor(z, imgFloor01, imgFloorMPTrap, 50); }
+			
 			
 			//if(z == 2){ worldGenTreasureRoom(z, imgCoin10); }
 			if(z == 7){ 
@@ -74,7 +103,8 @@ function worldGen(){
 				worldGenFloorV(imgFloorWater, true, irandom_range(4, 7), 2, z); 
 				worldGenReplaceFloor(z, imgFloor01, imgFloorSpikes, 30);
 			}
-			if(z == 8){ worldGenPatchGas(z, objGasPoison, 10); }
+			//if(z == 8){ worldGenPatchGas(z, objGasPoison, 10); }
+			if(z == 8){ worldGenReplaceFloor(z, imgFloor01, imgFloorSwitchTrapHiddenUp, 20); }
 			
 			
 			worldGenReplaceBlock(z, imgBlock01, imgBlockHiddenChest, (z%2)+1 );
@@ -129,7 +159,8 @@ function worldGen(){
 		
 		
 	} // end of loop through Zs
-
+	
+	riddle = irandom_range(1, 9);
 
 	randomize();
 }

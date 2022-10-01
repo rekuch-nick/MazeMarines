@@ -20,3 +20,7 @@ if(text != ""){
 	timeCD = 60 * (room_speed / 30);
 	
 }
+
+yMatchPC = false;
+isBlade = false;
+hasHit = false;

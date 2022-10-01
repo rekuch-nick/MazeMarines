@@ -38,7 +38,16 @@ inventoryCursor = 0;
 for(var i=0; i<30; i++){ inventory[i] = noone; }
 inventory[0] = getItem("Mission Briefing");
 inventory[1] = getItem("Instructions");
+//inventory[2] = getItem("Healing Potion");
+//inventory[2] = getItem("Portable Hole");
+//inventory[3] = getItem("Lucky Coin");
 //inventory[2] = getItem("Mage Staff");
+//inventory[3] = getItem("Titan Glove");
+//inventory[4] = getItem("Titan Belt");
+//inventory[4] = getItem("Lucky Coin");
+
+
+//inventory[3] = getItem("Silver Triangle");
 //inventory[3] = getItem("Silver Triangle");
 //inventory[3] = getItem("Mirror Charm");
 
@@ -54,7 +63,7 @@ unitSelected = -1;
 
 
 
-coins = 999100;
+coins = 0;
 bombs = 0;
 keys = 0;
 medkits = 0;

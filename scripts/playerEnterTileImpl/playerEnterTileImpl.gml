@@ -40,6 +40,14 @@ function playerEnterTileImpl(z, a, b){
 		roomCheckSwtches();
 	}
 	
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSwitchTrapUp || ww.fmap[zSpot][xSpot, ySpot] == imgFloorSwitchTrapHiddenUp){
+		ww.fmap[zSpot][xSpot, ySpot] = imgFloorSwitchDown;
+		var s = instance_create_depth(pc.x+32, pc.y, -8998, objEffect);
+		s.text = "click";
+		
+		var s = instance_create_depth(64*17, pc.y, -8998, effBladeWheel);
+	}
+	
 	
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorChurch){
@@ -61,6 +69,17 @@ function playerEnterTileImpl(z, a, b){
 				}
 			}}
 		}
+		
+		ww.pmap[ww.clueFloor][5, 4] = imgrBed;
+		ww.pmap[ww.clueFloor][8, 4] = imgrCandle;
+		ww.pmap[ww.clueFloor][11, 4] = imgrDeck;
+		ww.pmap[ww.clueFloor][6, 6] = imgrDictionary;
+		ww.pmap[ww.clueFloor][9, 6] = imgrEgg;
+		ww.pmap[ww.clueFloor][12, 6] = imgrMap;
+		ww.pmap[ww.clueFloor][5, 8] = imgrPiano;
+		ww.pmap[ww.clueFloor][8, 8] = imgrSoap;
+		ww.pmap[ww.clueFloor][11, 8] = imgrSponge;
+		
 		instance_create_depth(0, 0, -7999, objScreenChurch);
 	}
 	
@@ -104,6 +123,19 @@ function playerEnterTileImpl(z, a, b){
 			s.text = "Only the Silver Triangle bearer may pass";
 		}
 	}
+	
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorGate02){
+		if(playerHasItem("Silver Circle")){
+			worldGenReplaceBlockAll(pc.zSpot, imgBlockGate, noone);
+			worldGenReplaceFloorAll(pc.zSpot, imgFloorGate01, imgFloor01);
+			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+			s.text = "Bearer of the Circle, you may pass";
+		} else {
+			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+			s.text = "Only the Silver Circle bearer may pass";
+		}
+	}
+	
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorWater){
 		if(!pc.inBoat){
@@ -170,6 +202,17 @@ function playerEnterTileImpl(z, a, b){
 		rem = true; txt = "Limt Charge Up"; 
 	}
 	if(pup == imgSilverTriangle){ if(playerGainItem("Silver Triangle")){ rem = true; txt = "Found Silver Triangle"; } }
+	
+	if(pup == imgrBed){ if(playerGainItem("Bed")){ rem = true; txt = "Chose the Bed"; removeClueItems(); } }
+	if(pup == imgrCandle){ if(playerGainItem("Candle")){ rem = true; txt = "Chose the Candle"; removeClueItems(); } }
+	if(pup == imgrDeck){ if(playerGainItem("Deck of Cards")){ rem = true; txt = "Chose the Deck of Cards"; removeClueItems(); } }
+	if(pup == imgrDictionary){ if(playerGainItem("Dictionary")){ rem = true; txt = "Chose the Dictionary"; removeClueItems(); } }
+	if(pup == imgrEgg){ if(playerGainItem("Egg")){ rem = true; txt = "Chose the Egg"; removeClueItems(); } }
+	if(pup == imgrMap){ if(playerGainItem("Map")){ rem = true; txt = "Chose the Map"; removeClueItems(); } }
+	if(pup == imgrPiano){ if(playerGainItem("Piano")){ rem = true; txt = "Chose the Piano"; removeClueItems(); } }
+	if(pup == imgrSoap){ if(playerGainItem("Bar of Soap")){ rem = true; txt = "Chose the Bar of Soap"; removeClueItems(); } }
+	if(pup == imgrSponge){ if(playerGainItem("Sponge")){ rem = true; txt = "Chose the Sponge"; removeClueItems(); } }
+	
 	if(rem){ ww.pmap[zSpot][xSpot, ySpot] = noone; }
 	if(txt != noone){
 		var s = instance_create_depth(pc.x+32, pc.y, -8998, objEffect);

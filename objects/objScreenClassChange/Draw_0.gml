@@ -1,4 +1,7 @@
-draw_sprite_ext(imgScreenCombat, image_index, x, y, 4, 4, 0, c_white, .8);
+draw_sprite_ext(imgScreenCombat, image_index, x, y, 4, 4, 0, c_white, 1);
+
+draw_text(40, 40, msg);
+return;
 
 if(phase == "intro"){
 	draw_text(40, 40, "At level 5 or higher, soldiers can upgrade into a");

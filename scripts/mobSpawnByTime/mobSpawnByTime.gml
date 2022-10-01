@@ -1,6 +1,7 @@
 function mobSpawnByTime(){
 	
 	if(pc.zSpot == 0){ return; }
+	if(pc.zSpot == ww.clueFloor){ return; }
 	
 	var t = objMobGoon;
 	if(pc.zSpot > 1 && irandom_range(1, 8) == 1){ t = objMobGoon2; }
@@ -18,7 +19,7 @@ function mobSpawnByTime(){
 		if(ww.bmap[z][a, b] == noone && dis >= 2){
 			if(ww.mmap[z][a, b] == noone){ if(a != pc.xSpot || b != pc.ySpot){
 				var f = ww.fmap[z][a, b];
-				if(f != imgStairDown && f != imgStairUp && f != imgStairDownLocked && f != imgFloorSwitchUp && f != imgFloorSafe && f != imgFloorGate01){
+				if(f != imgStairDown && f != imgStairUp && f != imgStairDownLocked && f != imgFloorSwitchUp && f != imgFloorSafe && f != imgFloorGate01 && f != imgFloorGate02){
 					if(f != imgFloorWater){
 						ww.mmap[z][a, b] = instance_create_depth(a * 64, b * 64, -5000, t);
 						ww.mmap[z][a, b].xSpot = a;

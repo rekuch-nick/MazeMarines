@@ -14,7 +14,7 @@ for(var i=0; i<=cursorMax; i++){
 	var c = c_white;
 	if(!canDo[i]){ c = c_grey; }
 	draw_text_color(x + 72, y + 64 + i*22 + promptLines*22, s, c, c, c, c, 1);
-	if(c == c_white){ if(hotkeyType == "y/n" || hotkeyType == "spell" || hotkeyType == "number"){
+	if(c == c_white){ if(hotkeyType == "y/n" || hotkeyType == "spell" || hotkeyType == "number" || hotkeyType == "num"){
 		draw_text_color(x + 72, y + 64 + i*22 + promptLines*22, string_char_at(s, 0), c_yellow, c_yellow, c_yellow, c_yellow, 1);
 	}}
 }

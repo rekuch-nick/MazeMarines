@@ -1,4 +1,11 @@
-draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, 1);
+draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, image_alpha);
+	draw_text_color(64, 64, "Inventory Empty", c_grey, c_grey, c_grey, c_grey, 1);
+
+if(o != noone){
+	draw_text_color(500, 90, o.desc, c_grey, c_grey, c_grey, c_grey, 1);
+}
+
+/*
 
 for(var i=0; i<30; i++){
 	var c = pc.inventoryCursor == i ? c_yellow : c_white;
@@ -55,3 +62,5 @@ if(selling){
 	
 	
 }
+
+*/

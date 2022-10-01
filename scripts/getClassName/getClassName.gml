@@ -19,8 +19,7 @@ function getClassName(n){
 	if(n == 16){ return "Commando"; }
 	if(n == 17){ return "Mage"; }
 	if(n == 18){ return "Demo"; }
-	if(n == 19){ return "Magus"; }
-	//if(n == 1){ return "Apprentice"; }
+	if(n == 19){ return "Ascendant"; }
 	
 	
 	return "???";

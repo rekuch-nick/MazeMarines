@@ -128,7 +128,7 @@ if(!justMoved && spellInputCD < 1){
 		s.action = "boat";
 	}
 	else if(letterPressed() == "I"){
-		instance_create_depth(0, 0, -8999, objScreenInventory);
+		instance_create_depth(0, 0, -8998, objScreenInventory);
 	}
 }
 
@@ -144,7 +144,6 @@ if(callEnterTile){
 
 
 if(answer != ""){
-	show_debug_message(answer);
 	answer = "";
 }
 
@@ -168,8 +167,7 @@ if(debug){
 	}
 	
 	if(keyboard_check_pressed(vk_insert)){ 
-		createMenu("This is an example menu", "", "", "",
-		["1", "2", "3", "4", "5"],
-		["1", "2", "3", "4", "5"] );
+		//createMenu("This is an example menu", "", "", "", ["1", "2", "3", "4", "5"], ["1", "2", "3", "4", "5"] );
+		if(pc.coins >= 10000){ pc.coins = 0; } else { pc.coins = 10000; }
 	}
 }

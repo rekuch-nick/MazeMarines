@@ -1,5 +1,7 @@
-draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, .9);
-
+draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, 1);
+if(msg != ""){
+	draw_text(40, 40, msg);
+}
 
 //draw_text(40, 40, "I can forge a key for you.");
 //draw_text(40, 62, "What do you say, " + string(keyPrice) + " coins?");
@@ -86,7 +88,7 @@ if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv5){
 	draw_text(40, 140, "Lantern casts LIGHT with a 50% break chance.");
 	draw_text(40, 165, "Bug Spray casts REPEL with a 20% break chance.");
 	draw_text(40, 190, "Bezoar casts ANTIVENOM+ with a 50% break chance.");
-	draw_text(40, 215, "Portable Hole is PHASE DOOR with a 50% break chance.");
+	draw_text(40, 215, "Portable Hole is PHASE DOOR with a 33% break chance.");
 	draw_text(40, 240, "");
 	draw_text(40, 265, "You say you want to know what those spells do?");
 	draw_text(40, 290, "");
