@@ -1,12 +1,11 @@
 {
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "upgradeSpell",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
     "name": "Scripts",
     "path": "folders/Scripts.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "upgradeSpell",
-  "tags": [],
-  "resourceType": "GMScript",
 }

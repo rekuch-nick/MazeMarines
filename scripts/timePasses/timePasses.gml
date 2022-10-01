@@ -23,6 +23,9 @@ function timePasses(n){
 			if(c.hp > 0 && pc.party[i].item != noone){ if(pc.party[i].item.wearEffect == "MP Charge"){
 				pc.party[i].mp = clamp(party[i].mp + 1, 0, party[i].mpMax);
 			}}
+			if(c.hp > 0 && ( pc.party[i].class == 17 || pc.party[i].xpLevel[17] >= 15) ){
+				pc.party[i].mp = clamp(party[i].mp + 1, 0, party[i].mpMax);
+			}
 			
 			if(c.poison > 0){ c.hp -= ceil(c.hpMax / 20); }
 			if(c.bleed > 0){ c.hp --;  }

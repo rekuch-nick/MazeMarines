@@ -187,7 +187,7 @@ function playerEnterTileImpl(z, a, b){
 	if(pup == imgMedkit){pc.medkits ++; rem = true; txt = "+1 MedKit"; }
 	if(pup == imgBoat){pc.boats ++; rem = true; txt = "+1 Raft"; }
 	if(pup == imgPick){pc.picks +=4; rem = true; txt = "+4 Harrows"; }
-	if(pup == imgCoin){pc.coins += 5; rem = true; txt = "+5 Coina"; }
+	if(pup == imgCoin){pc.coins += 5; rem = true; txt = "+5 Coins"; }
 	if(pup == imgCoin2){pc.coins +=10; rem = true; txt = "+10 Coins"; }
 	if(pup == imgCoin3){pc.coins +=15; rem = true; txt = "+15 Coins"; }
 	if(pup == imgCoin4){pc.coins +=20; rem = true; txt = "+20 Coins"; }

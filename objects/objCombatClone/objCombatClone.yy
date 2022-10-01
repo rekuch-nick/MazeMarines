@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "objCombatClone",
   "spriteId": {
     "name": "imgMarine",
     "path": "sprites/imgMarine/imgMarine.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -24,7 +28,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -32,8 +37,4 @@
     "name": "combatUnits",
     "path": "folders/Objects/combatUnits.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "objCombatClone",
-  "tags": [],
-  "resourceType": "GMObject",
 }

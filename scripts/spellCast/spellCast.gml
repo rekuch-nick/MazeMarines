@@ -2,6 +2,7 @@ function spellCast(spell, casterIndex, tar){
 	var tx = pc.xSpot; var ty = pc.ySpot; var z = pc.zSpot;
 	if(tar == 1){ ty --; } if(tar == 2){ tx ++; } if(tar == 3){ ty ++; } if(tar == 4){ tx --; }
 	var casterLevel = casterIndex == -1 ? 0 : pc.party[casterIndex].xpLevel[pc.party[casterIndex].class];
+	var mag = .5;
 	if(instance_number(objScreenCombat) > 0){ mag = ww.screenCombat.pcc[casterIndex].magicPower; }
 	
 	
@@ -87,7 +88,7 @@ function spellCast(spell, casterIndex, tar){
 			//var mult = clamp(casterLevel, 1, 10);
 			//var bns = clamp(casterLevel - 10, 0, casterLevel);
 			//var d = (20 * mult) + bns * 4;
-			var d = ceil(100 * other.mag);
+			var d = ceil(100 * mag);
 			hp -= d;
 			instance_create_depth(x, y, -8999, effBoomIce);
 		}}
@@ -96,6 +97,19 @@ function spellCast(spell, casterIndex, tar){
 		instance_create_depth(64*14, 0, -8999, effFrost);
 		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
 		s.text = "FROST";
+	}
+	
+	if(spell.nam == "Ice Lance"){
+		ww.screenCombat.pcc[casterIndex].shotCDMax = 40;
+		ww.screenCombat.pcc[casterIndex].shotCD = 10;
+		ww.screenCombat.pcc[casterIndex].shotType = objIceLance;
+		if(ww.screenCombat.pcc[casterIndex].shotPowerMin < 30){ ww.screenCombat.pcc[casterIndex].shotPowerMin = 30; }
+		if(ww.screenCombat.pcc[casterIndex].shotPowerMax < 30){ ww.screenCombat.pcc[casterIndex].shotPowerMax = 30; }
+		ww.screenCombat.pcc[casterIndex].shotClusterMax = 4;
+		
+		
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		s.text = "ICE LANCE";
 	}
 	
 	if(spell.nam == "Leach"){
@@ -170,7 +184,7 @@ function spellCast(spell, casterIndex, tar){
 	
 	if(spell.nam == "Vex"){
 		with(objCombatUnit){ if(aly == -1){
-			var d = ceil(10 * other.mag);
+			var d = ceil(10 * mag);
 			vex += d;
 			instance_create_depth(x, y, -8999, effBoomPoison);
 		}}
@@ -178,12 +192,12 @@ function spellCast(spell, casterIndex, tar){
 		s.text = "VEX";
 	}
 	
-	if(spell.nam == "Wall of Fire"){
+	if(spell.nam == "Wall of Fire" || spell.nam == "Itm Fire"){
 		with(objCombatUnit){ if(aly == -1){
 			//var mult = clamp(casterLevel, 1, 10);
 			//var bns = clamp(casterLevel - 10, 0, casterLevel);
 			//var d = (20 * mult) + bns * 4;
-			var d = ceil(50 * other.mag);
+			var d = ceil(50 * mag);
 			hp -= d;
 			instance_create_depth(x, y, -8999, effBoom);
 		}}
@@ -192,11 +206,12 @@ function spellCast(spell, casterIndex, tar){
 		instance_create_depth(64*14, 0, -8999, effWallOfFire);
 		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
 		s.text = "WALL OF FIRE";
+		if(spell.nam == "Itm Fire"){ s.text = "USE Rod of Fireballs"; }
 	}
 	
 	if(spell.nam == "Xerox"){
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x - 70, ww.screenCombat.pcc[casterIndex].y, ww.screenCombat.pcc[casterIndex].depth, objCombatClone);
-		s.face = -1;;
+		var s = instance_create_depth(64 * 13, ww.screenCombat.pcc[casterIndex].y, ww.screenCombat.pcc[casterIndex].depth, objCombatClone);
+		s.face = -1;
 		
 		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
 		s.text = "XEROX";

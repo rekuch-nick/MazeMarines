@@ -52,6 +52,16 @@ function getSpell(n){
 		hotKey: "B",
 		desc: "Remove Bleed from one unit",
 	}; }
+	if(n == "Bind Wounds+"){ return {
+		nam: n,
+		cost: 1,
+		wait: 0,
+		explore: true,
+		target: "",
+		canCast: true,
+		hotKey: "B",
+		desc: "Remove Bleed from all units",
+	}; }
 	
 	if(n == "Cure"){ return {
 		nam: n,
@@ -63,6 +73,7 @@ function getSpell(n){
 		hotKey: "C",
 		desc: "Restore HP to one unit",
 	}; }
+	
 	
 	if(n == "Eye"){ return {
 		nam: n,
@@ -77,13 +88,24 @@ function getSpell(n){
 	
 	if(n == "Frost"){ return {
 		nam: n,
-		cost: 4,
+		cost: 8,
 		wait: 30,
 		explore: false,
 		target: "",
 		canCast: true,
 		hotKey: "F",
 		desc: "AoE Cold Attack",
+	}; }
+	
+	if(n == "Ice Lance"){ return {
+		nam: n,
+		cost: 16,
+		wait: 0,
+		explore: false,
+		target: "",
+		canCast: true,
+		hotKey: "I",
+		desc: "Caster attacks rapdily with ice",
 	}; }
 	
 	if(n == "Leach"){ return {
@@ -99,7 +121,7 @@ function getSpell(n){
 	
 	if(n == "Light"){ return {
 		nam: n,
-		cost: 4,
+		cost: 3,
 		wait: 0,
 		explore: true,
 		target: "",
@@ -110,7 +132,7 @@ function getSpell(n){
 	
 	if(n == "Open"){ return {
 		nam: n,
-		cost: 2,
+		cost: 7,
 		wait: 0,
 		explore: true,
 		target: "",
@@ -132,7 +154,7 @@ function getSpell(n){
 	
 	if(n == "Repel"){ return {
 		nam: n,
-		cost: 2,
+		cost: 3,
 		wait: 0,
 		explore: true,
 		target: "",
@@ -143,7 +165,7 @@ function getSpell(n){
 	
 	if(n == "Shield"){ return {
 		nam: n,
-		cost: 3,
+		cost: 5,
 		wait: 0,
 		explore: false,
 		target: "",
@@ -154,7 +176,7 @@ function getSpell(n){
 	
 	if(n == "Vex"){ return {
 		nam: n,
-		cost: 1,
+		cost: 3,
 		wait: 0,
 		explore: false,
 		target: "",
@@ -174,9 +196,20 @@ function getSpell(n){
 		desc: "AoE Fire Attack",
 	}; }
 	
+	if(n == "Itm Fire"){ return {
+		nam: n,
+		cost: 0,
+		wait: 30,
+		explore: false,
+		target: "",
+		canCast: true,
+		hotKey: "W",
+		desc: "AoE Fire Attack",
+	}; }
+	
 	if(n == "Xenograft"){ return {
 		nam: n,
-		cost: 1,
+		cost: 6,
 		wait: 0,
 		explore: true,
 		target: "number",
@@ -187,7 +220,7 @@ function getSpell(n){
 	
 	if(n == "Xerox"){ return {
 		nam: n,
-		cost: 1,
+		cost: 3,
 		wait: 0,
 		explore: false,
 		target: "",

@@ -48,8 +48,11 @@ inventory[1] = getItem("Instructions");
 
 
 //inventory[3] = getItem("Silver Triangle");
-//inventory[3] = getItem("Silver Triangle");
+//inventory[3] = getItem("Silver Circle");
+
 //inventory[3] = getItem("Mirror Charm");
+//inventory[3] = getItem("Rod of Fireballs");
+
 
 
 

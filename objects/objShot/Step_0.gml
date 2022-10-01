@@ -16,6 +16,7 @@ if(firstFrame){
 x += xs;
 y += ys;
 ys += grav;
+if(xSpeedup){ xs *= 1.08; ys *= 1.08; }
 
 if(sprite_index == imgShotSong){ //&& irandom_range(1, 10) == 1){ 
 	//grav *= -1;

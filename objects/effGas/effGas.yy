@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objScreenSign",
+  "name": "effGas",
   "spriteId": {
-    "name": "imgScreenSign",
-    "path": "sprites/imgScreenSign/imgScreenSign.yy",
+    "name": "imgGasPoison",
+    "path": "sprites/imgGasPoison/imgGasPoison.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "objScreen",
-    "path": "objects/objScreen/objScreen.yy",
+    "name": "objEffect",
+    "path": "objects/objEffect/objEffect.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -29,13 +29,11 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "screens",
-    "path": "folders/Objects/screens.yy",
+    "name": "effects",
+    "path": "folders/Objects/effects.yy",
   },
 }

@@ -47,5 +47,5 @@ aoePlus = 0;
 regen = 0;
 regenReduction = 0;
 
-
+procCD = 30;
 

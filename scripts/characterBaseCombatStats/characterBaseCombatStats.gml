@@ -23,12 +23,13 @@ function characterBaseCombatStats(c, l){
 		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
 		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
 		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
-		o.magicPower = .5;
+		o.magicPower = .4;
 	}
 	if(c == 1){ // apprentice
 		o.shotPowerMin = 5 + l;
 		o.shotPowerMax = 14 + l;
 		o.limit = "Regain 4 MP";
+		o.magicPower = 1;
 	}
 	if(c == 2){ // mechanic
 		o.shotPowerMin = 5 + l;
@@ -36,7 +37,7 @@ function characterBaseCombatStats(c, l){
 		o.limitGainMin = 5;
 		o.limitGainMax = 50;
 		o.limit = "Craft a bomb and harrow";
-		o.magicPower = .5;
+		o.magicPower = .4;
 	}
 	if(c == 3){ // medic
 		o.shotPowerMin = 5 + l;
@@ -45,7 +46,7 @@ function characterBaseCombatStats(c, l){
 		o.limitGainMin = 50;
 		o.limitGainMax = 150;
 		o.limit = "Heal party for 5%";
-		o.magicPower = .75;
+		o.magicPower = .6;
 	}
 	
 	if(c == 4){ // heavy
@@ -56,7 +57,7 @@ function characterBaseCombatStats(c, l){
 		o.aoePlus = 22 * clamp(l, 1, 30);
 		o.shotNote = "AoE Attack";
 		o.limitGainMax = 40;
-		o.magicPower = .5;
+		o.magicPower = .4;
 		o.limit = "Berserk";
 	}
 	
@@ -64,6 +65,7 @@ function characterBaseCombatStats(c, l){
 		o.shotPowerMin = 5 + l;
 		o.shotPowerMax = 14 + l;
 		o.limit = "Regain 4 MP";
+		o.magicPower = 1;
 	}
 	
 	if(c == 6){ // gasdoc
@@ -73,10 +75,11 @@ function characterBaseCombatStats(c, l){
 		o.limitGainMin = 30;
 		o.limitGainMax = 120;
 		o.limit = "AoE magic attack";
+		o.magicPower = 1;
 	}
 	
 	if(c == 7){ // knight
-		o.shotPowerMin = 5 + l;
+		o.shotPowerMin = 5 + l + 2;
 		o.shotPowerMax = 14 + l;
 		o.shotCluster = 1; o.shotClusterMax = 1;
 		if(l >= 3){ o.shotCluster = 2; o.shotClusterMax = 2; }
@@ -85,6 +88,9 @@ function characterBaseCombatStats(c, l){
 		o.limitGainMax = 100;
 		o.limit = "Delete enemy shots";
 		o.magicPower = .75;
+		if(l >= 5){
+			o.passive = "No Poison, Bleed, Stun, Mute";
+		}
 	}
 	if(c == 8){ // cyborg
 		o.shotPowerMin = 5 + l;
@@ -94,7 +100,7 @@ function characterBaseCombatStats(c, l){
 		if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
 		o.limit = "Berserk";
 		o.passive = "4x Regeneration";
-		o.magicPower = .5;
+		o.magicPower = .2;
 	}
 	if(c == 9){ // laserTech
 		
@@ -103,7 +109,7 @@ function characterBaseCombatStats(c, l){
 		o.shotCDMax = 20;
 		o.shotType = objLazShot;
 		
-		o.magicPower = .5;
+		o.magicPower = .4;
 	}
 	if(c == 10){ // MGunner
 		o.shotPowerMin = 7;
@@ -111,7 +117,7 @@ function characterBaseCombatStats(c, l){
 		o.shotCluster = 3; o.shotClusterMax = 3;
 		if(l >= 4){ o.shotCluster = 4; o.shotClusterMax = 4; }
 		if(l >= 5){ o.shotCluster = 5; o.shotClusterMax = 5; }
-		o.magicPower = .5;
+		o.magicPower = .4;
 	}
 	if(c == 11){ // Iceman
 		o.ySpread = 40;
@@ -142,7 +148,7 @@ function characterBaseCombatStats(c, l){
 		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
 		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
 		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
-		o.magicPower = .5;
+		o.magicPower = .4;
 	}
 	if(c == 15){ // Sniper
 		o.shotPowerMin = 5 + l;
@@ -150,7 +156,7 @@ function characterBaseCombatStats(c, l){
 		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
 		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
 		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
-		o.magicPower = .5;
+		o.magicPower = .4;
 	}
 	if(c == 16){ // Commando
 		o.shotPowerMin = 5 + l;

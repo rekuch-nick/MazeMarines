@@ -52,6 +52,7 @@ function xpCheck(){
 				pc.party[i].hpGained += 1;
 				pc.party[i].mpMax += 1;
 				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Leach"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Ice Lance"); }
 			
 			} else if(pc.party[i].class == 12){ // bard
 				pc.party[i].hpGained += 1;
@@ -91,14 +92,18 @@ function xpCheck(){
 			
 			xpM = xpMax(pc.party[i].xpLevel[pc.party[i].class]);
 			
-			try {
-				if(instance_number(objScreenCombat) > 0){
+
+			if(instance_number(objScreenCombat) > 0){ 
+				if(pc.party[i] != noone){ if(pc.party[i].hp > 0){
 					var co = ww.screenCombat.pcc[i];
-					var s = instance_create_depth(co.x + 32, co.y, -8900, objEffect); s.text = "Level Up!";
-				} else {
-					var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect); s.text = "Level Up!";
-				}
+					if(co != noone){
+						var s = instance_create_depth(co.x + 32, co.y, -8900, objEffect); s.text = "Level Up!";
+					}
+				}}
+			} else {
+				var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect); s.text = "Level Up!";
 			}
+
 		}
 		
 	}}}

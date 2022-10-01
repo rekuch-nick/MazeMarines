@@ -41,10 +41,12 @@ function castLimit(co, ind){
 		s.text = "Limit Berserk";
 	
 	} else if (c == 6) { // gasdoc
+		var b = co.y + 32;
+		for(var a=co.x; a>0; a-= 32){
+			var s = instance_create_depth(a, b-32, -8999, effGas);
+			b += choose(0, -16, 16);
+		}
 		with(objCombatUnit){ if(aly == -1){
-			//var mult = clamp(l, 1, 10);
-			//var bns = clamp(l - 10, 0, l);
-			//var d = (20 * mult) + bns * 4;
 			var d = ceil(mag * 25);
 			hp -= d;
 			instance_create_depth(x, y, -8999, effBoomPoison);

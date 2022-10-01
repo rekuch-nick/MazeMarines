@@ -2,7 +2,7 @@ image_xscale = 4; image_yscale = 4;
 
 msg = "Welcome to the store.";
 
-inventory = ["Lantern", "Bezoar", "Portable Hole", "Bug Spray"];
+inventory = ["Lantern", "Portable Hole", "Bug Spray", "Healing Potion"];
 priceMod = 5;
 
 triedToBuyWhileFull = false;

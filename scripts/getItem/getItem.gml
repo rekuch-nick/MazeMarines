@@ -61,7 +61,7 @@ function getItem(i){
 		nam: i,
 		canWear: false,
 		wearEffect: "",
-		desc: "Use to cure poison.",
+		desc: "Use to cure poison from the whole party.",
 		spell: "AntiVenom+",
 		worth: 20,
 		breakChance: 50,
@@ -94,7 +94,7 @@ function getItem(i){
 		wearEffect: "",
 		desc: "Drink to recover HP.",
 		spell: "Cure",
-		worth: 24,
+		worth: 424,
 		breakChance: 33,
 		breakMessage: "runs out",
 	}; }
@@ -111,7 +111,7 @@ function getItem(i){
 		nam: i,
 		canWear: true,
 		wearEffect: "+2",
-		desc: "E: Shots deal +2 damage",
+		desc: "E: All shots deal +2 damage",
 		spell: "",
 		worth: 255,
 		breakChance: 0,
@@ -122,7 +122,7 @@ function getItem(i){
 		nam: i,
 		canWear: true,
 		wearEffect: "+1",
-		desc: "E: Shots deal +1 damage",
+		desc: "E: All shots deal +1 damage",
 		spell: "",
 		worth: 165,
 		breakChance: 0,
@@ -134,7 +134,7 @@ function getItem(i){
 		nam: i,
 		canWear: true,
 		wearEffect: "Rare Xerox",
-		desc: "E: Rarely spawn a clone in battle",
+		desc: "E: Spawn a clone in battle 20% chance",
 		spell: "",
 		worth: 65,
 		breakChance: 0,
@@ -145,7 +145,7 @@ function getItem(i){
 		nam: i,
 		canWear: true,
 		wearEffect: "Minor Deflection",
-		desc: "E: Rarely deflect basic shots",
+		desc: "E: Deflect basic shots 10% chance",
 		spell: "",
 		worth: 65,
 		breakChance: 0,
@@ -169,10 +169,23 @@ function getItem(i){
 		wearEffect: "MP Charge",
 		desc: "E: Regain MP over time",
 		spell: "",
-		worth: 65,
+		worth: 965,
 		breakChance: 0,
 		breakMessage: "has broken",
 	}; }
+	
+	if(i == "Rod of Fireballs"){ return {
+		nam: i,
+		canWear: true,
+		wearEffect: "Wall of Fire",
+		desc: "E: Cast fire spells in combat",
+		spell: "",
+		worth: 465,
+		breakChance: 0,
+		breakMessage: "has broken",
+	}; }
+	
+	
 	
 	
 	

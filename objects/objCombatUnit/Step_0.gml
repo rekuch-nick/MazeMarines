@@ -1,33 +1,27 @@
-//if(instance_number(objScreen) != 1){ return; }
+if(instance_number(objMenu) > 0){ return; }
+
 if(firstFrame){
-	var tries = 0;
-	while(tries < 10000 && collision_circle(x + 32, y + 32, 16, objCombatUnit, false, true)){
-		if(x < 16){ x = 15; }
-		if(y < 16){ y = 15; }
-		if(x > room_width / 3){ x = room_width / 3; }
-		if(y > room_height - 76){ y = room_height - 76; }
-		tries ++;
-		x += choose(-5, 5);
-		y += choose(-5, 5);
+	var shiftAway = true;
+	if(object_index == objCombatClone){ shiftAway = false; }
+	
+	if(shiftAway){
+		var tries = 0;
+		while(tries < 10000 && collision_circle(x + 32, y + 32, 16, objCombatUnit, false, true)){
+			if(x < 16){ x = 15; }
+			if(y < 16){ y = 15; }
+			if(x > room_width / 3){ x = room_width / 3; }
+			if(y > room_height - 76){ y = room_height - 76; }
+			tries ++;
+			x += choose(-5, 5);
+			y += choose(-5, 5);
+		}
 	}
 	
 	
 	firstFrame = false;
-}
+} /// end of firstframe
 
 depth = -8000 - y;
-
-
-if(playerIndex != -1){
-	pc.party[playerIndex].hp = hp;
-	if(bleed > 0){ pc.party[playerIndex].bleed += bleed; bleed = 0; }
-	if(stun > 0){ pc.party[playerIndex].stun += stun; stun = 0; }
-	if(poison > 0){ pc.party[playerIndex].poison += poison; poison = 0; }
-	if(mute > 0){ pc.party[playerIndex].mute += mute; mute = 0; }
-	
-	
-	
-}
 
 
 if(regen > 1200 && hp < hpMax){ hp +=.5; regen --; }
@@ -36,13 +30,27 @@ if(regen > 300 && hp < hpMax){ hp +=.5; regen --; }
 if(regen > 150 && hp < hpMax){ hp +=.5; regen --; }
 if(regen > 0 && hp < hpMax){ hp +=.5; regen --; }
 
+if(aly == 1){
+	pc.party[playerIndex].hp = hp;
+	show_debug_message(hp)
+	if(bleed > 0){ pc.party[playerIndex].bleed += bleed; bleed = 0; }
+	if(stun > 0){ pc.party[playerIndex].stun += stun; stun = 0; }
+	if(poison > 0){ pc.party[playerIndex].poison += poison; poison = 0; }
+	if(mute > 0){ pc.party[playerIndex].mute += mute; mute = 0; }
+	
+}
+
+
+
 
 
 
 if(hp < 1){
 	hp = 0;
 	
+	
 	if(aly == -1){ ww.screenCombat.xp += xp; ww.screenCombat.gp += gold; }
+	if(aly == 1){ pc.party[playerIndex].hp = 0; }
 	
 	var iid = id;
 	with(objCombatUnit){
@@ -57,6 +65,21 @@ if(hp < 1){
 
 if(stunTime > 0){ stunTime --; return; }
 
+if(aly == 1){
+	if(procCD > 0){
+		procCD --;
+	} else {
+		var mobsLeft = false; with(objCombatUnit){ if(aly == -1){ mobsLeft = true; } }
+		var itm = pc.party[playerIndex].item;
+		if(itm != noone && mobsLeft){
+			if(itm.wearEffect == "Wall of Fire" && irandom_range(1, 30 * 10) == 1){ 
+				spellCast(getSpell("Itm Fire"), playerIndex, ""); 
+				procCD = 300;
+			}
+		
+		}
+	}
+}
 
 shotCD --;
 if(shotCD < 1){

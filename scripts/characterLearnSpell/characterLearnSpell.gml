@@ -3,7 +3,7 @@ function characterLearnSpell(charIndex, s){
 	
 	arr = []; var ind = 0;
 	
-	for(var a=0; a<=16; a++){
+	for(var a=0; a<=17; a++){
 		var sp = "";
 		if(a == 0){ sp = "Aim"; }
 		if(a == 1){ sp = "AntiVenom"; }
@@ -12,16 +12,17 @@ function characterLearnSpell(charIndex, s){
 		if(a == 4){ sp = "Cure"; }
 		if(a == 5){ sp = "Eye"; }
 		if(a == 6){ sp = "Frost"; }
-		if(a == 7){ sp = "Leach"; }
-		if(a == 8){ sp = "Light"; }
-		if(a == 9){ sp = "Open"; }
-		if(a == 10){ sp = "Phase Door"; }
-		if(a == 11){ sp = "Repel"; }
-		if(a == 12){ sp = "Shield"; }
-		if(a == 13){ sp = "Vex"; }
-		if(a == 14){ sp = "Wall of Fire"; }
-		if(a == 15){ sp = "Xerox"; }
-		if(a == 16){ sp = "Xenograft"; }
+		if(a == 7){ sp = "Ice Lance"; }
+		if(a == 8){ sp = "Leach"; }
+		if(a == 9){ sp = "Light"; }
+		if(a == 10){ sp = "Open"; }
+		if(a == 11){ sp = "Phase Door"; }
+		if(a == 12){ sp = "Repel"; }
+		if(a == 13){ sp = "Shield"; }
+		if(a == 14){ sp = "Vex"; }
+		if(a == 15){ sp = "Wall of Fire"; }
+		if(a == 16){ sp = "Xerox"; }
+		if(a == 17){ sp = "Xenograft"; }
 		
 		
 		if(s == sp || characterKnowsSpell(pc.party[charIndex], sp)){ 
