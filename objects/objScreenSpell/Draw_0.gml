@@ -21,7 +21,7 @@ if(instance_number(objScreenCombat) < 1 && template != noone && spl == noone){
 	draw_text(560, 256, string(template.shotNote));
 	
 	draw_text(560, 288, "LP: " + string(1000 - char.limitMax));
-	draw_text(560, 320, "Limt Break: " + template.limit);
+	draw_text(560, 320, "Limit: " + template.limit);
 	var n = ceil( pc.party[index].limitMax / (template.limitGainMin + template.limitGainMax / 2) );
 	draw_text(560, 352, "Limit Wait: " + string(n));
 	
@@ -30,26 +30,6 @@ if(instance_number(objScreenCombat) < 1 && template != noone && spl == noone){
 	
 	if(template.passive != ""){ draw_text(560, 416, "Passive: " + string(template.passive)); }
 	
-	/*
-	draw_text(350, 580, "MHP: " + string(char.hpGained) + " + " + string(char.hpBase));
-	draw_text(600, 580, "   MMP: " + string(char.mpMax));
-	draw_text(850, 580, "   LP: " + string(1000 - char.limitMax));
-	
-	draw_text(350, 605, "Shots/Turn: " + string(template.shotCluster + 1));
-	draw_text(700, 605, "Wait Time: " + string( floor(template.shotCDMax / 3) / 10  ) );
-	
-	draw_text(350, 630, "Dmg: " + string(template.shotPowerMin) + "-" + string(template.shotPowerMax));
-	draw_text(700, 630, string(template.shotNote));
-	
-	draw_text(350, 680, "Limt Break: " + template.limit);
-	var n = ceil( pc.party[index].limitMax / (template.limitGainMin + template.limitGainMax / 2) );
-	draw_text(350, 655, "Limit Wait: " + string(n));
-	
-	n = string( template.magicPower * 100 ) + "%";
-	draw_text(720, 655, "Spell Power: " + string(n));
-	
-	if(template.passive != ""){ draw_text(350, 705, "Passive: " + string(template.passive)); }
-	*/
 	
 	var ii = 19; 
 	for(var i=0; i<ii; i++){

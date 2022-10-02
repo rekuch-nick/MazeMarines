@@ -13,12 +13,12 @@ function playerEnterTileImpl(z, a, b){
 			pc.party[i].poison = 1;
 			pc.party[i].hp -= irandom_range(1, 6);
 		}}
-		for(var i=0; i<20; i++){ instance_create_depth(pc.x+32, pc.y+32, -8998, effPoison); }
+		for(var i=0; i<20; i++){ instance_create_depth(pc.x+32, pc.y+32, ww.Leff, effPoison); }
 	}
 	
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSpikes){
-		for(var i=0; i<20; i++){ instance_create_depth(x+32, y+32, -8998, effBlood); }
+		for(var i=0; i<20; i++){ instance_create_depth(x+32, y+32, ww.Leff, effBlood); }
 		for(var i=0; i<7; i++){ if(pc.party[i] != noone){ if(pc.party[i].hp > 0){
 				party[i].hp -= irandom_range(1, 6) + irandom_range(1, 6);
 		}}}
@@ -26,7 +26,7 @@ function playerEnterTileImpl(z, a, b){
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorMPTrap){
 		var mpTaken = 0;
-		for(var i=0; i<12; i++){ instance_create_depth(x+32, y+32, -8998, effDrain); }
+		for(var i=0; i<12; i++){ instance_create_depth(x+32, y+32, ww.Leff, effDrain); }
 		for(var i=0; i<7; i++){ if(pc.party[i] != noone){ if(pc.party[i].hp > 0){
 				if(party[i].mp > 0){ mpTaken ++; }
 				party[i].mp = clamp(party[i].mp - 1, 0, party[i].mp);
@@ -40,17 +40,17 @@ function playerEnterTileImpl(z, a, b){
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSwitchUp){
 		ww.fmap[zSpot][xSpot, ySpot] = imgFloorSwitchDown;
-		var s = instance_create_depth(pc.x+32, pc.y, -8998, objEffect);
+		var s = instance_create_depth(pc.x+32, pc.y, ww.Leff, objEffect);
 		s.text = "click";
 		roomCheckSwtches();
 	}
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSwitchTrapUp || ww.fmap[zSpot][xSpot, ySpot] == imgFloorSwitchTrapHiddenUp){
 		ww.fmap[zSpot][xSpot, ySpot] = imgFloorSwitchDown;
-		var s = instance_create_depth(pc.x+32, pc.y, -8998, objEffect);
+		var s = instance_create_depth(pc.x+32, pc.y, ww.Leff, objEffect);
 		s.text = "click";
 		
-		var s = instance_create_depth(64*17, pc.y, -8998, effBladeWheel);
+		var s = instance_create_depth(64*17, pc.y, ww.Leff, effBladeWheel);
 	}
 	
 	
@@ -85,40 +85,40 @@ function playerEnterTileImpl(z, a, b){
 		ww.pmap[ww.clueFloor][8, 8] = imgrSoap;
 		ww.pmap[ww.clueFloor][11, 8] = imgrSponge;
 		
-		instance_create_depth(0, 0, -7999, objScreenChurch);
+		instance_create_depth(0, 0, ww.Lscn, objScreenChurch);
 	}
 	
 	
 	
 	if(ww.mmap[zSpot][xSpot, ySpot] != noone){
-		ww.screenCombat = instance_create_depth(0, 0, -7999, objScreenCombat);
+		ww.screenCombat = instance_create_depth(0, 0, ww.Lcsn, objScreenCombat);
 	}
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorTower){
-		instance_create_depth(0, 0, -7999, objScreenClassChange);
+		instance_create_depth(0, 0, ww.Lscn, objScreenClassChange);
 	}
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorKey){
-		instance_create_depth(0, 0, -7999, objScreenShotKey);
+		instance_create_depth(0, 0, ww.Lscn, objScreenShotKey);
 	}
 	
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv1){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv2){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv3){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv4){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv5){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv6){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv7){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv8){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv9){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv10){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorRid){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorShop){ instance_create_depth(0, 0, -7999, objScreenShop); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv1){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv2){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv3){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv4){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv5){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv6){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv7){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv8){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv9){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv10){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorRid){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorShop){ instance_create_depth(0, 0, ww.Lscn, objScreenShop); }
 	
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSign){ instance_create_depth(0, 0, -7999, objScreenSign); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSign){ instance_create_depth(0, 0, ww.Lscn, objScreenSign); }
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorGrave){
-		instance_create_depth(0, 0, -7999, objScreenShopRez);
+		instance_create_depth(0, 0, ww.Lscn, objScreenShopRez);
 	}
 	
 	
@@ -126,10 +126,10 @@ function playerEnterTileImpl(z, a, b){
 		if(playerHasItem("Silver Triangle")){
 			worldGenReplaceBlockAll(pc.zSpot, imgBlockGate, noone);
 			worldGenReplaceFloorAll(pc.zSpot, imgFloorGate01, imgFloor01);
-			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 			s.text = "Bearer of the Triangle, you may pass";
 		} else {
-			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 			s.text = "Only the Silver Triangle bearer may pass";
 		}
 	}
@@ -138,10 +138,10 @@ function playerEnterTileImpl(z, a, b){
 		if(playerHasItem("Silver Circle")){
 			worldGenReplaceBlockAll(pc.zSpot, imgBlockGate, noone);
 			worldGenReplaceFloorAll(pc.zSpot, imgFloorGate01, imgFloor01);
-			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 			s.text = "Bearer of the Circle, you may pass";
 		} else {
-			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 			s.text = "Only the Silver Circle bearer may pass";
 		}
 	}
@@ -155,7 +155,7 @@ function playerEnterTileImpl(z, a, b){
 					if(ww.fmap[z][aa, bb] != imgFloorWater){ continue; }
 					if(choose(true, true, false, false, false)){ continue; }
 					var t = objMobGoonWater;
-					ww.mmap[z][aa, bb] = instance_create_depth(aa * 64, bb * 64, -5000, t);
+					ww.mmap[z][aa, bb] = instance_create_depth(aa * 64, bb * 64, ww.Lmmb, t);
 					ww.mmap[z][aa, bb].xSpot = aa;
 					ww.mmap[z][aa, bb].ySpot = bb;
 					ww.mmap[z][aa, bb].zSpot = z;
@@ -221,21 +221,25 @@ function playerEnterTileImpl(z, a, b){
 		}}}
 		rem = true; txt = "Limt Charge Up"; 
 	}
-	if(pup == imgSilverTriangle){ if(playerGainItem("Silver Triangle")){ rem = true; txt = "Found Silver Triangle"; } }
 	
-	if(pup == imgrBed){ if(playerGainItem("Bed")){ rem = true; txt = "Chose the Bed"; removeClueItems(); } }
-	if(pup == imgrCandle){ if(playerGainItem("Candle")){ rem = true; txt = "Chose the Candle"; removeClueItems(); } }
-	if(pup == imgrDeck){ if(playerGainItem("Deck of Cards")){ rem = true; txt = "Chose the Deck of Cards"; removeClueItems(); } }
-	if(pup == imgrDictionary){ if(playerGainItem("Dictionary")){ rem = true; txt = "Chose the Dictionary"; removeClueItems(); } }
-	if(pup == imgrEgg){ if(playerGainItem("Egg")){ rem = true; txt = "Chose the Egg"; removeClueItems(); } }
-	if(pup == imgrMap){ if(playerGainItem("Map")){ rem = true; txt = "Chose the Map"; removeClueItems(); } }
-	if(pup == imgrPiano){ if(playerGainItem("Piano")){ rem = true; txt = "Chose the Piano"; removeClueItems(); } }
-	if(pup == imgrSoap){ if(playerGainItem("Bar of Soap")){ rem = true; txt = "Chose the Bar of Soap"; removeClueItems(); } }
-	if(pup == imgrSponge){ if(playerGainItem("Sponge")){ rem = true; txt = "Chose the Sponge"; removeClueItems(); } }
+	if(playerHasInventorySpace()){
+		if(pup == imgSilverTriangle){ if(playerGainItem("Silver Triangle")){ rem = true; txt = "Found Silver Triangle"; } }
+	
+		if(pup == imgrBed){ if(playerGainItem("Bed")){ rem = true; txt = "Chose the Bed"; removeClueItems(); } }
+		if(pup == imgrCandle){ if(playerGainItem("Candle")){ rem = true; txt = "Chose the Candle"; removeClueItems(); } }
+		if(pup == imgrDeck){ if(playerGainItem("Deck of Cards")){ rem = true; txt = "Chose the Deck of Cards"; removeClueItems(); } }
+		if(pup == imgrDictionary){ if(playerGainItem("Dictionary")){ rem = true; txt = "Chose the Dictionary"; removeClueItems(); } }
+		if(pup == imgrEgg){ if(playerGainItem("Egg")){ rem = true; txt = "Chose the Egg"; removeClueItems(); } }
+		if(pup == imgrMap){ if(playerGainItem("Map")){ rem = true; txt = "Chose the Map"; removeClueItems(); } }
+		if(pup == imgrPiano){ if(playerGainItem("Piano")){ rem = true; txt = "Chose the Piano"; removeClueItems(); } }
+		if(pup == imgrSoap){ if(playerGainItem("Bar of Soap")){ rem = true; txt = "Chose the Bar of Soap"; removeClueItems(); } }
+		if(pup == imgrSponge){ if(playerGainItem("Sponge")){ rem = true; txt = "Chose the Sponge"; removeClueItems(); } }
+	}
+		
 	
 	if(rem){ ww.pmap[zSpot][xSpot, ySpot] = noone; }
 	if(txt != noone){
-		var s = instance_create_depth(pc.x+32, pc.y, -8998, objEffect);
+		var s = instance_create_depth(pc.x+32, pc.y, ww.Leff, objEffect);
 		s.text = txt;
 	}
 	

@@ -11,7 +11,8 @@ for(var i=0; i<5; i++){
 	if(char.hp > 0 && char.xpLevel[char.class] >= 5){
 		nams[j] = string(i+1) + "] " + char.nickname;// + "  L" //+ char.xpLevel[char.class] + " " + string(getClassName(char.class));
 		
-		var spaces = clamp(10 - string_length(pc.party[j].nickname), 2, 10);
+		//var spaces = clamp(10 - string_length(pc.party[j].nickname), 2, 10);
+		var spaces = clamp(10 - string_length(char.nickname), 2, 10);
 		for(var k=0; k<spaces; k++){ nams[j] = nams[j] + " "; }
 		nams[j] += "L " + string(char.xpLevel[char.class]) + " " + string(getClassName(char.class));
 		

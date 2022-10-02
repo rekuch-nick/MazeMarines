@@ -108,15 +108,15 @@ function createParty(namArr, classArr){
 	//pc.party[0].spells = ["Cure", "Eye", "Frost", "Light", "Open", "Phase Door", "Vex", "Xerox", "Xenograft"];
 	
 
-	ww.namePlate[0] = instance_create_depth(1098, 10, -7500, objWidgetBars);
+	ww.namePlate[0] = instance_create_depth(1098, 10, ww.Lscn, objWidgetBars);
 	ww.namePlate[0].index = 0;
-	ww.namePlate[1] = instance_create_depth(1098, 140, -7500, objWidgetBars);
+	ww.namePlate[1] = instance_create_depth(1098, 140, ww.Lscn, objWidgetBars);
 	ww.namePlate[1].index = 1;
-	ww.namePlate[2] = instance_create_depth(1098, 270, -7500, objWidgetBars);
+	ww.namePlate[2] = instance_create_depth(1098, 270, ww.Lscn, objWidgetBars);
 	ww.namePlate[2].index = 2;
-	ww.namePlate[3] = instance_create_depth(1098, 400, -7500, objWidgetBars);
+	ww.namePlate[3] = instance_create_depth(1098, 400, ww.Lscn, objWidgetBars);
 	ww.namePlate[3].index = 3;
-	ww.namePlate[4] = instance_create_depth(1098, 530, -7500, objWidgetBars);
+	ww.namePlate[4] = instance_create_depth(1098, 530, ww.Lscn, objWidgetBars);
 	ww.namePlate[4].index = 4;
 
 }

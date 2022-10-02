@@ -21,21 +21,21 @@ function spellCast(spell, casterIndex, tar){
 			if(pc.party[i].aim < 1){ pc.party[i].aim = 1; }
 		}}
 		
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "AIM";
 	}
 	
 	if(spell.nam == "AntiVenom"){
 		pc.party[tar].poison = 0;
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "ANTIVENOM";
 	}
 	if(spell.nam == "AntiVenom+"){
 		for(var i=0; i<5; i++){ if(pc.party[i] != noone && pc.party[i].hp > 0){
 			pc.party[i].poison = 0;
 		}}
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "ANTIVENOM+";
 	}
 	
@@ -45,7 +45,7 @@ function spellCast(spell, casterIndex, tar){
 		ww.screenCombat.pcc[casterIndex].shotCD = 10;
 		ww.screenCombat.pcc[casterIndex].shotType = objBoltShot;
 		
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "BOLTS";
 	}
 	if(spell.nam == "Bolts+"){
@@ -53,21 +53,21 @@ function spellCast(spell, casterIndex, tar){
 		ww.screenCombat.pcc[casterIndex].shotCD = 10;
 		ww.screenCombat.pcc[casterIndex].shotType = objBoltShot2;
 		
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "BOLTS+";
 	}
 	
 	if(spell.nam == "Bind Wounds"){
 		pc.party[tar].bleed = 0;
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "BIND";
 	}
 	if(spell.nam == "Bind Wounds+"){
 		for(var i=0; i<5; i++){ if(pc.party[i] != noone && pc.party[i].hp > 0){
 			pc.party[i].bleed = 0;
 		}}
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "BIND+";
 	}
 	
@@ -75,7 +75,7 @@ function spellCast(spell, casterIndex, tar){
 		var n = floor(pc.party[tar].hpBase * 1);
 		pc.party[tar].hp = clamp(pc.party[tar].hp + n, 0, pc.party[tar].hpMax);
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "CURE";
 	}
 	
@@ -87,7 +87,7 @@ function spellCast(spell, casterIndex, tar){
 			if(ww.fmap[z][aa, bb] == imgFloorSwitchTrapHiddenUp){ ww.fmap[z][aa, bb] = imgFloorSwitchTrapUp; n ++; }
 		}}
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "EYEed " + string(n);
 	}
 	
@@ -96,12 +96,12 @@ function spellCast(spell, casterIndex, tar){
 			var d = ceil(100 * mag);
 			if(spell.nam == "Frost+"){ var d = ceil(120 * mag); }
 			hp -= d;
-			instance_create_depth(x, y, -8999, effBoomIce);
+			instance_create_depth(x, y, ww.Leff, effBoomIce);
 		}}
-		instance_create_depth(64*10, 0, -8999, effFrost);
-		instance_create_depth(64*12, 0, -8999, effFrost);
-		instance_create_depth(64*14, 0, -8999, effFrost);
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		instance_create_depth(64*10, 0, ww.Leff, effFrost);
+		instance_create_depth(64*12, 0, ww.Leff, effFrost);
+		instance_create_depth(64*14, 0, ww.Leff, effFrost);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "FROST";
 	}
 	
@@ -110,15 +110,15 @@ function spellCast(spell, casterIndex, tar){
 			if(pc.party[i].flameward < 1){ pc.party[i].flameward = 1; }
 		}}
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "FLAME WARD";
 	}
 	
 	
 	if(spell.nam == "Gravity"){
-		instance_create_depth(room_width/3, room_height/2, -8900, objGravityBall);
+		instance_create_depth(room_width/3, room_height/2, ww.Leff, objGravityBall);
 		
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "VEX";
 	}
 	
@@ -135,7 +135,7 @@ function spellCast(spell, casterIndex, tar){
 		ww.screenCombat.pcc[casterIndex].shotClusterMax = 4;
 		
 		
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "ICE LANCE";
 	}
 	
@@ -153,7 +153,7 @@ function spellCast(spell, casterIndex, tar){
 			
 			effLineOf(effLeach, 20, ww.screenCombat.pcc[casterIndex].x, ww.screenCombat.pcc[casterIndex].y, t.x+32, t.y+32);;
 			
-			var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+			var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 			s.text = "LEACH";
 		}
 	}
@@ -161,7 +161,7 @@ function spellCast(spell, casterIndex, tar){
 	if(spell.nam == "Light"){
 		with(objGasDark){ instance_destroy(); }
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "LIGHT";
 	}
 	
@@ -172,7 +172,7 @@ function spellCast(spell, casterIndex, tar){
 			if(ww.bmap[z][aa, bb] == imgSpecChest){ openSpecChest(z, aa, bb); n ++; }
 		}}
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "OPENed " + string(n);
 	}
 	
@@ -196,15 +196,15 @@ function spellCast(spell, casterIndex, tar){
 			}
 		} until (turned * 6 >= notTurned);
 		
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "POLYMORPH";
 	}
 	
 	if(spell.nam == "Phase Door"){
 		if(inBounds(tx, ty) && wallBreak(tx, ty)){
-			var s = instance_create_depth(tx*64, ty*64, -8900, effBoom);
+			var s = instance_create_depth(tx*64, ty*64, ww.Leff, effBoom);
 			
-			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 			s.text = "PHASE";
 		} else {
 			spellFizzle();
@@ -220,7 +220,7 @@ function spellCast(spell, casterIndex, tar){
 			}}
 		}}}
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "REPEL";
 	}
 	
@@ -229,7 +229,7 @@ function spellCast(spell, casterIndex, tar){
 			pc.party[i].shield += mag * 40;
 		}}
 		
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "SHIELD";
 	}
 	
@@ -240,7 +240,7 @@ function spellCast(spell, casterIndex, tar){
 		if(tar == 4){ tx = pc.xSpot-3; ty = pc.ySpot -1; }
 		
 		for(var aa=tx; aa<=tx+2; aa++){ for(var bb=ty; bb<=ty+2; bb++){ if(inBounds(aa, bb)){
-			var s = instance_create_depth(aa*64, bb*64, -8900, effTornado);
+			var s = instance_create_depth(aa*64, bb*64, ww.Leff, effTornado);
 			with(objGasDark){
 				if(x == aa*64 && y == bb * 64){
 					instance_destroy();
@@ -248,7 +248,7 @@ function spellCast(spell, casterIndex, tar){
 			}
 		}}}
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "TORNADO";
 	}
 	
@@ -257,9 +257,9 @@ function spellCast(spell, casterIndex, tar){
 		with(objCombatUnit){ if(aly == -1){
 			var d = ceil(10 * mag);
 			vex += d;
-			instance_create_depth(x, y, -8999, effBoomPoison);
+			instance_create_depth(x, y, ww.Leff, effBoomPoison);
 		}}
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "VEX";
 	}
 	
@@ -267,12 +267,12 @@ function spellCast(spell, casterIndex, tar){
 		with(objCombatUnit){ if(aly == -1){
 			var d = ceil(50 * mag);
 			hp -= d;
-			instance_create_depth(x, y, -8999, effFire);
+			instance_create_depth(x, y, ww.Leff, effFire);
 		}}
-		instance_create_depth(64*10, 0, -8999, effWallOfFire);
-		instance_create_depth(64*12, 0, -8999, effWallOfFire);
-		instance_create_depth(64*14, 0, -8999, effWallOfFire);
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		instance_create_depth(64*10, 0, ww.Leff, effWallOfFire);
+		instance_create_depth(64*12, 0, ww.Leff, effWallOfFire);
+		instance_create_depth(64*14, 0, ww.Leff, effWallOfFire);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "WALL OF FIRE";
 		if(spell.nam == "Itm Fire"){ s.text = "USE Rod of Fireballs"; }
 	}
@@ -297,12 +297,12 @@ function spellCast(spell, casterIndex, tar){
 		} until (ok);
 		
 		if(pc.xSpot == tx && pc.ySpot == ty){
-			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect); s.text = "No room to WARP that direction";
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect); s.text = "No room to WARP that direction";
 		} else {
-			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect); s.text = "WARP";
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect); s.text = "WARP";
 			pc.xSpot = tx; pc.ySpot = ty;
 			pc.x = tx * 64 + 1; pc.y = ty * 64;
-			var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect); s.text = "WARP";
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect); s.text = "WARP";
 		}
 		
 		
@@ -313,17 +313,17 @@ function spellCast(spell, casterIndex, tar){
 	
 	
 	if(spell.nam == "Xerox"){
-		var s = instance_create_depth(64 * 13, ww.screenCombat.pcc[casterIndex].y, ww.screenCombat.pcc[casterIndex].depth, objCombatClone);
+		var s = instance_create_depth(64 * 13, ww.screenCombat.pcc[casterIndex].y, ww.Lcmb, objCombatClone);
 		s.face = -1;
 		
-		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, -8900, objEffect);
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
 		s.text = "XEROX";
 	}
 	
 	if(spell.nam == "Xenograft"){
 		pc.party[tar].xenograft = 1;
 		
-		var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "XENOGRAFT";
 	}
 	

@@ -36,7 +36,7 @@ if(answer != "no" && answer != ""){
 		
 		
 		instance_destroy();
-		instance_create_depth(0, 0, -7999, objScreenClassChange);
+		instance_create_depth(0, 0, ww.Lscn, objScreenClassChange);
 		return;
 		
 		

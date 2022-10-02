@@ -4,13 +4,13 @@ if(spellInputCD > 0){ spellInputCD --; } else if(numberPressed() != noone){
 	var i = numberPressed() - 1;
 	
 	//if(unitSelected == -1 || unitSelected != i){
-		if(pc.party[i] != noone){ if(pc.party[i].hp > 0){
+		if(pc.party[i] != noone){ //if(pc.party[i].hp > 0){
 			unitSelected = i;
 			with(objScreenSpell){ instance_destroy(); }
-			var s = instance_create_depth(0, 0, -8999, objScreenSpell);
+			var s = instance_create_depth(0, 0, ww.Lscn, objScreenSpell);
 			s.index = i; 
 			s.explore = instance_number(objScreenCombat) == 0;
-		}}
+		}//}
 	//} else if(unitSelected == i){
 		//unitSelected = -1;
 		//with(objScreenSpell){ instance_destroy(); }
@@ -49,13 +49,13 @@ if(usingItem != "" && answer != ""){
 		if(answer == 1){ ty --; } if(answer == 2){ tx ++; } if(answer == 3){ ty ++; } if(answer == 4){ tx --; }
 		if(usingItem == "bomb"){
 			pc.bombs --; wallBreak(tx, ty);
-			instance_create_depth(tx*64, ty*64, -8999, effBoom);
+			instance_create_depth(tx*64, ty*64, ww.Leff, effBoom);
 			spellInputCD = 5;
 		}
 		if(usingItem == "dig"){
 			if(!pc.pickType = imgPick2 || irandom_range(0, 1) == 1){ pc.picks --; }
 			floorBreak(tx, ty);
-			instance_create_depth(tx*64, ty*64, -8999, effDig);
+			instance_create_depth(tx*64, ty*64, ww.Leff, effDig);
 			spellInputCD = 5;
 		}
 		if(usingItem == "boat"){
@@ -72,7 +72,7 @@ if(usingItem != "" && answer != ""){
 				if(party[i].hp > 0 || pc.medkitType == imgMedkit2){
 					party[i].hp = party[i].hpMax;
 					pc.medkits --;
-					for(var ii=0; ii<20; ii++){ instance_create_depth(xSpot*64+32, ySpot*64, -8999, effHeal); }
+					for(var ii=0; ii<20; ii++){ instance_create_depth(xSpot*64+32, ySpot*64, ww.Leff, effHeal); }
 				}
 			}}
 			spellInputCD = 5;
@@ -118,7 +118,7 @@ if(!justMoved && spellInputCD < 1){
 			for(var aa=pc.xSpot-1; aa<=pc.xSpot+1; aa++){ for(var bb=pc.ySpot-1; bb<=pc.ySpot+1; bb++){ 
 				if(!inBounds(aa, bb)){ continue; }
 				wallBreak(aa, bb);
-				instance_create_depth(aa*64, bb*64, -8999, effBoom);
+				instance_create_depth(aa*64, bb*64, ww.Leff, effBoom);
 				if(ww.mmap[pc.zSpot][aa, bb] != noone && ww.mmap[pc.zSpot][aa, bb].object_index == objMobGoon){
 					instance_destroy(ww.mmap[pc.zSpot][aa, bb]);
 					ww.mmap[pc.zSpot][aa, bb] = noone;
@@ -141,7 +141,7 @@ if(!justMoved && spellInputCD < 1){
 		createMenu("Inflate RAFT in which direction?", "dir", "wide", "dir", [""], [""], [""]);
 	}
 	else if(letterPressed() == "I"){
-		instance_create_depth(0, 0, -8998, objScreenInventory);
+		instance_create_depth(0, 0, ww.Lscn, objScreenInventory);
 	}
 }
 

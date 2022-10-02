@@ -16,7 +16,8 @@ function mobSpawnForCombat(){
 	var typ = ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].sprite_index;
 	var spec = noone;
 	
-	if(typ == imgGoonWater){ mobList = [objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater]; }
+	if(typ == imgGoonWater){ mobList = [objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater]; big = 0; spec = noone; }
+	if(typ == imgGoonSwarm){ mobList = [objCombatMobGoonBug, objCombatMobGoonBug, objCombatMobGoonBug, objCombatMobGoonBug]; big = 0; spec = noone; }
 	if(typ == imgGoon2){ big += irandom_range(1, 6); }
 	if(typ == imgBoss01){ spec = objCombatMobBoss1; big = 0; number = 14; mobList = [getCommonMob(), getCommonMob(), getCommonMob(), getCommonMob()]; }
 	
@@ -30,7 +31,7 @@ function mobSpawnForCombat(){
 		if(i == 0 && spec != noone){ m = spec; a = 64 * 3; b = room_height / 2; }
 		else if(big > 0){ big --; m = objCombatMobGoon2; }
 		else if(irandom_range(0, 2) == 0){ m = mobList[irandom_range(1, maxKinds)]; }
-		instance_create_depth(a, b, -8000, m);
+		instance_create_depth(a, b, ww.Lcmb, m);
 		
 	}
 

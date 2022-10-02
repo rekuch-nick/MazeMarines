@@ -38,7 +38,7 @@ if(answer != ""){
 			//pc.inventory[pc.inventoryCursor] = oldE;
 			//equipping = false;
 			instance_destroy();
-			instance_create_depth(0, 0, -8998, objScreenInventory);
+			instance_create_depth(0, 0, ww.Lscn, objScreenInventory);
 			return;
 		} else if(o.canWear){
 			equipping = playerItemIndex(o.nam);
@@ -84,7 +84,7 @@ if(answer != ""){
 			
 		} else {
 			instance_destroy();
-			instance_create_depth(0, 0, -8998, objScreenInventory);
+			instance_create_depth(0, 0, ww.Lscn, objScreenInventory);
 		}
 		
 		

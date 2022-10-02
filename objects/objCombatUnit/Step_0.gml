@@ -21,7 +21,7 @@ if(firstFrame || moved){
 	firstFrame = false;
 } /// end of firstframe
 
-depth = -8000 - y;
+depth = ww.Lcmb - y;
 
 
 
@@ -105,7 +105,7 @@ if(shotCD < 1){
 		var st = shotType;
 		
 		if(vex > 0 && irandom_range(0, 1) == 1){ 
-			var s = instance_create_depth(x+32, y+32, -8990, objEffect);
+			var s = instance_create_depth(x+32, y+32, ww.Leff, objEffect);
 			s.text = "?";
 			vex --; st = noone; 
 		}
@@ -131,7 +131,7 @@ if(shotCD < 1){
 					effLineOf(effLaz, 20, x, y+32, target.x+32, target.y+32); 
 				}
 			
-				var s = instance_create_depth(x+32, y+32, -8990, st);
+				var s = instance_create_depth(x+32, y+32, ww.Leff, st);
 				s.aly = aly;
 				s.tx = aa;
 				s.ty = bb;

@@ -6,6 +6,15 @@ seed = 1;
 frameCD = 0;
 
 
+ww.Lmnu = -5990; // layer menu
+ww.Lscn = -5000; // layer screens
+ww.Leff = -4000; // layer effects
+ww.Lcmb  = -3000; // layer combat units
+ww.Lcsn = -2999; // layer combat screen
+ww.Lmmb = -1000; // layer map units
+depth = -100;
+
+
 classSprites[0] = imgMarine;
 classSprites[1] = imgApprentice;
 classSprites[2] = imgMechanic;
@@ -32,7 +41,7 @@ classSprites[19] = imgAscendant;
 
 
 
-bag = instance_create_depth(1098, 740, -7500, objWidgetBag);
+bag = instance_create_depth(1098, 740, ww.Lscn, objWidgetBag);
 
 
 //create blank world
@@ -46,4 +55,4 @@ for(var z=0; z<21; z++){
 	}}
 }
 
-instance_create_depth(0, 0, -8000, objScreenTitle);
+instance_create_depth(0, 0, ww.Lmnu+1, objScreenTitle);

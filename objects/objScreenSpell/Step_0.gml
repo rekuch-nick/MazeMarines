@@ -2,6 +2,7 @@ if(instance_number(objMenu)){ return; }
 if(firstFrame){
 	firstFrame = false;
 	
+	
 	var len = array_length(pc.party[index].spells);
 	for(var i=0; i<len; i++){
 		var s = getSpell(pc.party[index].spells[i]);
@@ -31,7 +32,7 @@ if(firstFrame){
 	} else {
 		if(instance_number(objScreenCombat) < 1 && template != noone){
 			pc.unitSelected = -1;
-			createMenu("Checking Status", "", "small", "", ["Okay"], ["no"], [0]);
+			createMenu("Checking Status", "stat", "small", "", ["Okay"], ["no"], [0]);
 		} else {
 			instance_destroy(); return;
 		}

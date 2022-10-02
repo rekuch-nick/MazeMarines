@@ -6,7 +6,7 @@ function effLineOf(eff, disBetween, ix, iy, tx, ty){
 	var ys = sin(angle) * disBetween;
 			
 	while(aa > tx){
-		instance_create_depth(aa, bb, -8900, eff);
+		instance_create_depth(aa, bb, ww.Leff, eff);
 		aa += xs; bb += ys;
 	}
 

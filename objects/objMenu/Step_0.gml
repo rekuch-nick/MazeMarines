@@ -25,6 +25,8 @@ if(firstFrame){
 	if(optionsType == "spell"){
 		for(var i=0; i<array_length(optionsAction); i++){
 			canDo[i] = pc.party[pc.unitSelected].mp >= cost[i];
+			if(pc.party[pc.unitSelected].mute > 0){ canDo[i] = false; }
+			if(pc.party[pc.unitSelected].hp < 1){ canDo[i] = false; }
 		}
 		if(pc.party[pc.unitSelected].mute > 0){ canDo[i] = false; }
 	}
@@ -36,6 +38,27 @@ if(firstFrame){
 
 if(optionsType == "bag"){ 
 	asker.o = pc.inventory[optionsAction[cursor]]; 
+}
+
+//change chars with numbers
+if(optionsType == "spell" || optionsType == "stat"){
+	if(numberPressed() != noone){
+		var n = numberPressed() - 1;
+		var ss = instance_find(objScreenSpell, 0);
+		if(ss != noone){
+			
+			
+			var s = instance_create_depth(0, 0, ww.Lscn, objScreenSpell);
+			s.index = n; 
+			s.explore = instance_number(objScreenCombat) == 0;
+			pc.unitSelected = n;
+			
+			instance_destroy(); 
+			instance_destroy(ss); 
+			return;
+		}
+		
+	}
 }
 
 if(letterPressed() != noone && hotkeyType == "spell"){

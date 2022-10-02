@@ -34,14 +34,14 @@ if(other.aly != aly && (other.aly != 0 || aly == -1)){
 	if(other.aly == 1 && !multiTarget && pc.party[other.playerIndex].item != noone && pc.party[other.playerIndex].item.wearEffect == "Minor Deflection"){
 		var r = irandom_range(0, 99);
 		if(r < 10){
-			instance_create_depth(x, y, depth, effPinkShotBlocked);
+			instance_create_depth(x, y, ww.Leff, effPinkShotBlocked);
 			instance_destroy();
 			return;
 		}
 	}
 	
 	if(aoe > 0){
-		var s = instance_create_depth(x, y, depth, effBoomCircle);
+		var s = instance_create_depth(x, y, ww.Leff, effBoomCircle);
 		s.image_xscale = aoe / sprite_width;
 		s.image_yscale = aoe / sprite_height;
 		
@@ -71,7 +71,7 @@ if(other.aly != aly && (other.aly != 0 || aly == -1)){
 		aimType = "random";
 		var t = characterAim();
 		if(t != noone){
-			var s = instance_create_depth(x, y, depth, object_index);
+			var s = instance_create_depth(x, y, ww.Leff, object_index);
 			s.chain = chain - 1;
 			s.onlyFor = t;
 			s.aly = aly;

@@ -106,7 +106,7 @@ if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv6){
 }
 
 if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv7){
-	msg = "Bring me proof of your valor, and I will can teleport you deep into the dungeon below.\n\n";
+	msg = "Once you become powerful enough, I can teleport you deep into the dungeon below.\n\n";
 	msg += "Of course, I can't help you come back up, but that isn't going to stop someone like you, is it?\n\n";
 	
 	msg = stringInsertBreaks(msg, 45);

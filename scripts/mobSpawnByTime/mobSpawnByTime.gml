@@ -21,7 +21,7 @@ function mobSpawnByTime(){
 				var f = ww.fmap[z][a, b];
 				if(f != imgStairDown && f != imgStairUp && f != imgStairDownLocked && f != imgFloorSwitchUp && f != imgFloorSafe && f != imgFloorGate01 && f != imgFloorGate02){
 					if(f != imgFloorWater){
-						ww.mmap[z][a, b] = instance_create_depth(a * 64, b * 64, -5000, t);
+						ww.mmap[z][a, b] = instance_create_depth(a * 64, b * 64, ww.Lmmb, t);
 						ww.mmap[z][a, b].xSpot = a;
 						ww.mmap[z][a, b].ySpot = b;
 						ww.mmap[z][a, b].zSpot = z;

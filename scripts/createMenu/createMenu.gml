@@ -4,7 +4,7 @@ function createMenu(promptText, oType, positionNote, oHotkey, oText, oAction, oP
 	var yy = 32;
 	
 	
-	var menu = instance_create_depth(xx, yy, -8999, objMenu);
+	var menu = instance_create_depth(xx, yy, ww.Lmnu, objMenu);
 	menu.promptText = promptText;
 	menu.asker = id;
 	menu.optionsType = oType;

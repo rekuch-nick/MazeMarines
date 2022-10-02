@@ -117,11 +117,11 @@ function xpCheck(){
 				if(pc.party[i] != noone){ if(pc.party[i].hp > 0){
 					var co = ww.screenCombat.pcc[i];
 					if(co != noone){
-						var s = instance_create_depth(co.x + 32, co.y, -8900, objEffect); s.text = "Level Up!";
+						var s = instance_create_depth(co.x + 32, co.y, ww.Leff, objEffect); s.text = "Level Up!";
 					}
 				}}
 			} else {
-				var s = instance_create_depth(pc.x + 32, pc.y, -8900, objEffect); s.text = "Level Up!";
+				var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect); s.text = "Level Up!";
 			}
 
 		}

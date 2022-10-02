@@ -26,7 +26,7 @@ for(var a=0; a<17; a++){ for(var b=0; b<13; b++){
 	var dis = abs(a - pc.xSpot) + abs(b - pc.ySpot);
 	if(ww.gmap[z][a, b] == noone && dis > 1 ){
 		if(irandom_range(0, 19) == 1){
-			instance_create_depth(a*64, b*64, -6000, objGasDark);
+			instance_create_depth(a*64, b*64, ww.depth-1, objGasDark);
 		}
 	}
 }}

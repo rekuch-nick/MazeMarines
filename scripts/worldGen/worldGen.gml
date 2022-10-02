@@ -116,6 +116,8 @@ function worldGen(){
 			//if(z == 8){ worldGenPatchGas(z, objGasPoison, 10); }
 			if(z == 8){ worldGenReplaceFloor(z, imgFloor01, imgFloorSwitchTrapHiddenUp, 20); }
 			
+			if(z == 11){ worldGenReplaceFloor(z, imgFloor01, imgFloorGrass, 50); }
+			
 			
 			worldGenReplaceBlock(z, imgBlock01, imgBlockHiddenChest, (z%2)+1 );
 			worldGenReplaceBlock(z, imgBlock01, imgBlockIron, -36 + z*6);

@@ -83,7 +83,7 @@ if(image_alpha < 1){ image_alpha += .05; }
 if(image_alpha >= 1 && !started){
 	//spawn player party
 	for(var i=0; i<7; i++){ if(pc.party[i] != noone){
-		var o = instance_create_depth(14*64, (2+(i*2))*64, -8000, objCombatUnit);
+		var o = instance_create_depth(14*64, (2+(i*2))*64, ww.Lcmb, objCombatUnit);
 		o.sprite_index = pc.party[i].img;
 		o.hp = pc.party[i].hp;
 		o.hpMax = pc.party[i].hpMax;

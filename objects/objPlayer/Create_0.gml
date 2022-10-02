@@ -1,4 +1,5 @@
 image_xscale = 4; image_yscale = 4;
+depth = ww.depth-1;
 debug = false;
 advancedClasses = false;
 answer = "";

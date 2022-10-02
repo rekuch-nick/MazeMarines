@@ -64,6 +64,14 @@ function playerStep(xMove, yMove){
 	
 	
 	if(xOld != xSpot || yOld != ySpot){
+		
+		
+		if(ww.fmap[pc.zSpot][xOld, yOld] == imgFloorGrass){
+			if(ww.mmap[pc.zSpot][xOld, yOld] == noone && irandom_range(0, 1) == 1){
+				ww.mmap[pc.zSpot][xOld, yOld] = instance_create_depth(xOld * 64, yOld * 64, ww.Lmmb, objMobGoonSwarm);
+			}
+		}
+		
 		timePasses(1);
 		
 	} else {
