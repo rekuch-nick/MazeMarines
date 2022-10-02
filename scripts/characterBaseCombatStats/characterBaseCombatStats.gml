@@ -36,7 +36,7 @@ function characterBaseCombatStats(c, l){
 		o.shotPowerMax = 14 + l;
 		o.limitGainMin = 5;
 		o.limitGainMax = 25;
-		o.limit = "Craft a bomb and harrow";
+		o.limit = "Craft Tools";
 		o.magicPower = .4;
 	}
 	if(c == 3){ // medic
@@ -64,7 +64,7 @@ function characterBaseCombatStats(c, l){
 	if(c == 5){ // scribe
 		o.shotPowerMin = 5 + l;
 		o.shotPowerMax = 14 + l;
-		o.limit = "Regain 4 MP";
+		o.limit = "Regain 8 MP";
 		o.magicPower = 1;
 	}
 	
@@ -106,7 +106,7 @@ function characterBaseCombatStats(c, l){
 		
 		o.shotPowerMin = 15 + l;
 		o.shotPowerMax = 15 + l;
-		o.shotCDMax = 20;
+		o.shotCDMax = 30;
 		o.shotType = objLazShot;
 		
 		o.magicPower = .4;
@@ -126,7 +126,6 @@ function characterBaseCombatStats(c, l){
 		o.shotPowerMax = 11 + l;
 		o.shotCluster = 4; o.shotClusterMax = 4;
 		
-		
 		o.magicPower = 1.2;
 	}
 	if(c == 12){ // Bard
@@ -137,16 +136,19 @@ function characterBaseCombatStats(c, l){
 		o.magicPower = 1.2;
 	}
 	if(c == 13){ // Gish
-		o.shotPowerMin = 20 + l;
-		o.shotPowerMax = 25 + l;
-		o.shotCDMax = 30;
+		o.shotCluster = 2; o.shotClusterMax = 2;
+		o.shotPowerMin = 6 + l;
+		o.shotPowerMax = 16 + l;
+		o.shotCDMax = 40;
 		o.magicPower = 1;
 	}
 	if(c == 14){ // Sprayer
 		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
+		o.shotPowerMax = 11 + l;
+		o.shotCluster = 4; o.shotClusterMax = 4;
+		o.shotCDMax = 90;
+		o.shotType = objFireSpray;
+		//if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
 		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
 		o.magicPower = .4;
 	}

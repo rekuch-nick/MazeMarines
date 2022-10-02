@@ -43,37 +43,40 @@ if(combatCD > 0){ combatCD --; }
 
 
 if(usingItem != "" && answer != ""){
-	var tx = xSpot; var ty = ySpot;
-	if(answer == 1){ ty --; } if(answer == 2){ tx ++; } if(answer == 3){ ty ++; } if(answer == 4){ tx --; }
-	if(usingItem == "bomb"){
-		pc.bombs --; wallBreak(tx, ty);
-		instance_create_depth(tx*64, ty*64, -8999, effBoom);
-		spellInputCD = 5;
-	}
-	if(usingItem == "dig"){
-		if(pc.pickType = imgPick2 && irandom_range(0, 1) == 1){ pc.picks --; }
-		floorBreak(tx, ty);
-		instance_create_depth(tx*64, ty*64, -8999, effDig);
-		spellInputCD = 5;
-	}
-	if(usingItem == "boat"){
-		if(inBounds(tx, ty) && ww.fmap[zSpot][tx, ty] == imgFloorWater){
-			pc.boats --;
-			var t = pc.boatType == imgBoat2 ? imgFloorWaterBoat2 : imgFloorWaterBoat;
-			ww.fmap[zSpot][tx, ty] = t;
+	if(answer == 1 || answer == 2 || answer == 3 || answer == 4){
+	
+		var tx = xSpot; var ty = ySpot;
+		if(answer == 1){ ty --; } if(answer == 2){ tx ++; } if(answer == 3){ ty ++; } if(answer == 4){ tx --; }
+		if(usingItem == "bomb"){
+			pc.bombs --; wallBreak(tx, ty);
+			instance_create_depth(tx*64, ty*64, -8999, effBoom);
+			spellInputCD = 5;
 		}
-		spellInputCD = 5;
-	}
-	if(usingItem == "medkit"){
-		var i = answer;
-		if(party[i] != noone){ if(party[i].hp < party[i].hpMax){
-			if(party[i].hp > 0 || pc.medkitType == imgMedkit2){
-				party[i].hp = party[i].hpMax;
-				pc.medkits --;
-				for(var ii=0; ii<20; ii++){ instance_create_depth(xSpot*64+32, ySpot*64, -8999, effHeal); }
+		if(usingItem == "dig"){
+			if(!pc.pickType = imgPick2 || irandom_range(0, 1) == 1){ pc.picks --; }
+			floorBreak(tx, ty);
+			instance_create_depth(tx*64, ty*64, -8999, effDig);
+			spellInputCD = 5;
+		}
+		if(usingItem == "boat"){
+			if(inBounds(tx, ty) && ww.fmap[zSpot][tx, ty] == imgFloorWater){
+				pc.boats --;
+				var t = pc.boatType == imgBoat2 ? imgFloorWaterBoat2 : imgFloorWaterBoat;
+				ww.fmap[zSpot][tx, ty] = t;
 			}
-		}}
-		spellInputCD = 5;
+			spellInputCD = 5;
+		}
+		if(usingItem == "medkit"){
+			var i = answer;
+			if(party[i] != noone){ if(party[i].hp < party[i].hpMax){
+				if(party[i].hp > 0 || pc.medkitType == imgMedkit2){
+					party[i].hp = party[i].hpMax;
+					pc.medkits --;
+					for(var ii=0; ii<20; ii++){ instance_create_depth(xSpot*64+32, ySpot*64, -8999, effHeal); }
+				}
+			}}
+			spellInputCD = 5;
+		}
 	}
 	answer = "";
 	usingItem = "";
@@ -171,14 +174,12 @@ if(debug){
 	if(keyboard_check_pressed(vk_pageup)){ playerMoveFloor(-1); }
 	
 	if(keyboard_check_pressed(vk_home)){ 
-		//pc.party[0].xp += xpMax(pc.party[0].xpLevel[pc.party[0].class]);
 		var n = xpMax(pc.party[0].xpLevel[pc.party[0].class]);
 		xpToGain += n*5; 
 	}
 	
 	if(keyboard_check_pressed(vk_insert)){ 
-		//createMenu("This is an example menu", "", "", "", ["1", "2", "3", "4", "5"], ["1", "2", "3", "4", "5"] );
 		if(pc.coins >= 10000){ pc.coins = 0; } else { pc.coins = 10000; }
-		//pc.boatType = imgBoat;
+		picks = 10; bombs = 10; medkits = 10; boats = 10;
 	}
 }

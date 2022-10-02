@@ -1,8 +1,8 @@
 function mobSpawnForCombat(){
 	var z = pc.zSpot;
 	
-	var number = irandom_range(1, 8);
-	for(var i=0; i<z/2; i++){ number += irandom_range(0, 2); }
+	var number = irandom_range(1, 8 + floor(z / 2));
+	//for(var i=0; i<z/2; i++){ number += irandom_range(0, 2); }
 	var big = 0;
 	if(z > 5 && irandom_range(1, 6) == 1){ big++; }
 	
@@ -17,7 +17,7 @@ function mobSpawnForCombat(){
 	var spec = noone;
 	
 	if(typ == imgGoonWater){ mobList = [objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater]; }
-	if(typ == imgGoon2){ spec = objCombatMobGoon2; big = irandom_range(0, ceil(z / 4)); }
+	if(typ == imgGoon2){ big += irandom_range(1, 6); }
 	if(typ == imgBoss01){ spec = objCombatMobBoss1; big = 0; number = 14; mobList = [getCommonMob(), getCommonMob(), getCommonMob(), getCommonMob()]; }
 	
 	

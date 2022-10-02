@@ -19,3 +19,11 @@ aoe = 0;
 aoeEff = effBoomCircle;
 onlyFor = noone;
 xSpeedup = false;
+
+isFire = false;
+isIce = false;
+
+multiTarget = false;
+alreadyHit = ds_list_create();
+
+chain = 0;

@@ -27,5 +27,6 @@ if(sprite_index == imgShotSong){ //&& irandom_range(1, 10) == 1){
 
 
 if(x > (room_width - (5 * 64)) || x < 0 || y < 0 || y > room_width){
+	ds_list_destroy(alreadyHit);
 	instance_destroy();
 }

@@ -42,6 +42,17 @@ function getSpell(n){
 		desc: "Caster shoots rapidly",
 	}; }
 	
+	if(n == "Bolts+"){ return {
+		nam: n,
+		cost: 4,
+		wait: 0,
+		explore: false,
+		target: "",
+		canCast: true,
+		hotKey: "B",
+		desc: "Caster shoots rapidly",
+	}; }
+	
 	if(n == "Bind Wounds"){ return {
 		nam: n,
 		cost: 1,
@@ -86,6 +97,17 @@ function getSpell(n){
 		desc: "Magic eye looks around",
 	}; }
 	
+	if(n == "Flame Ward"){ return {
+		nam: n,
+		cost: 12,
+		wait: 0,
+		explore: true,
+		target: "",
+		canCast: true,
+		hotKey: "F",
+		desc: "Reduce FIRE dmg taken",
+	}; }
+	
 	if(n == "Frost"){ return {
 		nam: n,
 		cost: 8,
@@ -95,6 +117,27 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "F",
 		desc: "AoE Cold Attack",
+	}; }
+	if(n == "Frost+"){ return {
+		nam: n,
+		cost: 8,
+		wait: 30,
+		explore: false,
+		target: "",
+		canCast: true,
+		hotKey: "F",
+		desc: "AoE Cold Attack",
+	}; }
+	
+	if(n == "Gravity"){ return {
+		nam: n,
+		cost: 5,
+		wait: 0,
+		explore: false,
+		target: "",
+		canCast: true,
+		hotKey: "G",
+		desc: "Push foes together",
 	}; }
 	
 	if(n == "Ice Lance"){ return {
@@ -151,6 +194,16 @@ function getSpell(n){
 		hotKey: "P",
 		desc: "Remove one normal wall",
 	}; }
+	if(n == "Polymorph"){ return {
+		nam: n,
+		cost: 12,
+		wait: 10,
+		explore: false,
+		target: "",
+		canCast: true,
+		hotKey: "P",
+		desc: "Turn foes into Sheep",
+	}; }
 	
 	if(n == "Repel"){ return {
 		nam: n,
@@ -174,6 +227,17 @@ function getSpell(n){
 		desc: "Caster protects party's HP",
 	}; }
 	
+	if(n == "Tornado"){ return {
+		nam: n,
+		cost: 4,
+		wait: 0,
+		explore: true,
+		target: "direction",
+		canCast: true,
+		hotKey: "T",
+		desc: "Dissipates gas and flame",
+	}; }
+	
 	if(n == "Vex"){ return {
 		nam: n,
 		cost: 3,
@@ -183,6 +247,17 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "V",
 		desc: "Foes will missfire",
+	}; }
+	
+	if(n == "Warp"){ return {
+		nam: n,
+		cost: 5,
+		wait: 0,
+		explore: true,
+		target: "direction",
+		canCast: true,
+		hotKey: "W",
+		desc: "Teleport in a direction",
 	}; }
 	
 	if(n == "Wall of Fire"){ return {

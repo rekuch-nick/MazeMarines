@@ -3,21 +3,21 @@ B   bolt (self rapid attack)        bind wounds (cure bleed)
 C                                   cure
 D   
 E                                   eye 
-F  frost (aoe, auto kills small)      
-G
-H  ice lance
-I
+F  frost (aoe, auto kills small)    flame ward 
+G  gravity* (clump monsters)
+H  
+I  ice lance
 J  
 K	
 L  leach (attack highest hp)        light (remove dark gas)
 M
 N
 O                                   open 
-P                                   phase door (remove wall)
+P  polymorph                        phase door (remove wall)
 Q
 R                                   repel
 S  shield
-T
+T                                   tornado (remove gas)
 U
 V  vex 
 W  wall of fire                     warp*
@@ -32,31 +32,43 @@ neophyte
 1 bolts, bind wounds
 3 wall of fire
 5 cure
+10 bind+
 
 
 scribe
 1 aim
 3 light
 5 shield
+10 polymorph
 
 gasdoc
-1 anti-venom
+1 antiVenom
 3 lance
 5 vex
+10 anitiV+
 
 iceman
 1 frost
+5 flame ward
+5 ice lance
+10 frost+
 
 bard
 1 phasedoor
 3 repel
+5 warp
+10 tornado
 
 gish
 1 open
 3 xenograft
+10 bolts+
 
 mage
 1 xerox
+5 gravity
+10 eye
+
 
 ascendant
 1 eye
@@ -76,12 +88,12 @@ ascendant
  8 cyborg T
 
 25dps/5 
- 9 laserTech  T (20, target lowest)
+ 9 laserTech  T (20, target lowest) 
 10 MGunner  P (30, basline, misses a lot, weak to armor)
 11 Iceman  M   (25 slow af)  ss frost
 12 Bard  M      (12.5, also sux) ss phase door
 13 Gish  M       (25) ss open
-14 Sprayer  P
+14 Sprayer  P (25)
 
 25dps/5+
 15 Sniper  P
@@ -102,5 +114,14 @@ gml_Script_xpCheck (line 98)
 gml_Script_xpGain (line 16) - 	xpCheck();
 gml_Object_objPlayer_Step_0 (line 33) - 	xpGain(n);
 
+
+
+
+text tips needed:
+-limit breaks
+-class stats gain, magic pow %
+-xp per floor rules
+-upgraded tools
+-facetank some traps / dig up switches
 
 

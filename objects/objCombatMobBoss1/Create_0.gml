@@ -13,6 +13,7 @@ bleedChance = 25;
 
 hp = 3000;
 
+canPoly = false;
 
 xp = 2360;
 gold = 15;

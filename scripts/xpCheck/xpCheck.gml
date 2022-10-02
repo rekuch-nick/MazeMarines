@@ -29,6 +29,7 @@ function xpCheck(){
 				pc.party[i].mpMax += 1;
 				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Light"); }
 				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Shield"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Polymorph"); }
 				
 			} else if(pc.party[i].class == 6){ // gasdoc
 				pc.party[i].hpGained += 2;
@@ -53,16 +54,20 @@ function xpCheck(){
 				pc.party[i].mpMax += 1;
 				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Leach"); }
 				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Ice Lance"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Flame Ward"); }
 			
 			} else if(pc.party[i].class == 12){ // bard
 				pc.party[i].hpGained += 1;
 				pc.party[i].mpMax += 1;
 				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Repel"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Warp"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Tornado"); }
 				
 			} else if(pc.party[i].class == 13){ // gish
 				pc.party[i].hpGained += 3;
 				pc.party[i].mpMax += 1;
 				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Xenograft"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Bolts"); }
 				
 			} else if(pc.party[i].class == 14){ // Sprayer
 				pc.party[i].hpGained += 3;
@@ -76,7 +81,10 @@ function xpCheck(){
 			} else if(pc.party[i].class == 17){ // Mage
 				pc.party[i].hpGained += 1;
 				pc.party[i].mpMax += 1;
-				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Leach"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Gravity"); }
+				if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Eye"); }
+				
+				
 				
 			} else if(pc.party[i].class == 18){ // Demo
 				pc.party[i].hpGained += 1;

@@ -5,6 +5,7 @@ function playerMoveFloor(d){
 		pc.party[i].aim = 0; //clamp(pc.party[i].aim - 1, 0, pc.party[i].aim);
 		pc.party[i].xenograft = 0; //clamp(pc.party[i].xenograft - 1, 0, pc.party[i].xenograft);
 		pc.party[i].shield = 0;
+		pc.party[i].flameward = 0;
 	}}
 	
 	var z = pc.zSpot;	

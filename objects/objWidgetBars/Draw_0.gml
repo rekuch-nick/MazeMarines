@@ -60,3 +60,4 @@ if(char.stun > 0){ draw_text_color(xx, yy, "S", c_yellow, c_yellow, c_yellow, c_
 if(char.aim > 0){ draw_text_color(xx, yy, "A", c_orange, c_orange, c_yellow, c_yellow, 1); xx += 18; }
 if(char.shield > 0){ draw_text_color(xx, yy, "S", c_white, c_white, c_aqua, c_aqua, 1); xx += 18; }
 if(char.xenograft > 0){ draw_text_color(xx, yy, "X", c_lime, c_fuchsia, c_lime, c_fuchsia, 1); xx += 18; }
+if(char.flameward > 0){ draw_text_color(xx, yy, "F", c_red, c_aqua, c_red, c_aqua, 1); xx += 18; }

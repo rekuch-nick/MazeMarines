@@ -24,15 +24,20 @@ if(firstFrame){
 depth = -8000 - y;
 
 
-if(regen > 1200 && hp < hpMax){ hp +=.5; regen --; }
-if(regen > 600 && hp < hpMax){ hp +=.5; regen --; }
-if(regen > 300 && hp < hpMax){ hp +=.5; regen --; }
-if(regen > 150 && hp < hpMax){ hp +=.5; regen --; }
-if(regen > 0 && hp < hpMax){ hp +=.5; regen --; }
+
+if(regen > 0 && hp < hpMax){
+	var hMod = 300; // 30 - 120
+	if(regen > 100){ hMod = 250; }
+	if(regen > 200){ hMod = 200; }
+	if(regen > 300){ hMod = 150; }
+	var n = (hpMax / hMod)
+	hp += n; 
+	regen -= n; 
+}
+	
 
 if(aly == 1){
 	pc.party[playerIndex].hp = hp;
-	show_debug_message(hp)
 	if(bleed > 0){ pc.party[playerIndex].bleed += bleed; bleed = 0; }
 	if(stun > 0){ pc.party[playerIndex].stun += stun; stun = 0; }
 	if(poison > 0){ pc.party[playerIndex].poison += poison; poison = 0; }
@@ -41,7 +46,10 @@ if(aly == 1){
 }
 
 
-
+if(sprite_index == imgPolySheep){
+	x = clamp(x + irandom_range(-1, 1), 32, 64*10);
+	y = clamp(y + irandom_range(-1, 1), 32, 64*11);
+}
 
 
 

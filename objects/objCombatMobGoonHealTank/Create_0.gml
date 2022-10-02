@@ -8,8 +8,8 @@ shotCDMax = 90;
 
 shotPowerMin = 2 + z;
 
-hp = 400 + z*10;
-regen = 60 * z;
+hp = 300 + z*10;
+regen = 300 + (z*10);
 
 
 
@@ -22,4 +22,3 @@ shotPowerMax = shotPowerMin;
 shotCD = irandom_range(30, shotCDMax);
 
 
-event_inherited();

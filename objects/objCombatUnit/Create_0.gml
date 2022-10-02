@@ -36,6 +36,8 @@ mute = 0;
 stun = 0;
 vex = 0;
 
+canPoly = true;
+
 bleedShots = false;
 poisonShots = false;
 poisonChance = 0;

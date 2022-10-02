@@ -15,7 +15,7 @@ function createParty(namArr, classArr){
 			limitMax: 1000,
 			spells: [],
 			bleed: 0, poison: 0, mute: 0, stun: 0, xenograft: 0,
-			aim: 0, shield: 0,
+			aim: 0, shield: 0, flameward: 0,
 			item: noone,
 		};
 		pc.party[i].xpLevel[classArr[i]] = 1;

@@ -10,6 +10,16 @@ function upgradeSpell(s, c){
 		s.target = "";
 	}
 	
+	if(s.nam == "Bolts" && c.xpLevel[13] >= 10){
+		s.nam = "Bolts+";
+		s.target = "";
+	}
+	
+	if(s.nam == "Frost" && c.xpLevel[12] >= 10){
+		s.nam = "Frost+";
+		s.target = "";
+	}
+	
 	
 	
 	

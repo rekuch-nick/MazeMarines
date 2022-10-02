@@ -14,7 +14,7 @@ function getClassDesc(n){
 	if(n == 11){ return "Magic User with great AoE damage"; }
 	if(n == 12){ return "Magic user with strong explore spells"; }
 	if(n == 13){ return "Hybrid Warrior / Magic User"; }
-	if(n == 14){ return "Warrior with fast AoE attacks"; }
+	if(n == 14){ return "Warrior with FIRE AoE attacks"; }
 	if(n == 15){ return "Warrior who attacks low HP foes"; }
 	if(n == 16){ return "Expert Warrior"; }
 	if(n == 17){ return "Elite Magic User with MP regen"; }
