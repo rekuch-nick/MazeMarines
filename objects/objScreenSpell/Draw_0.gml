@@ -4,11 +4,33 @@ if(firstFrame){ return; }
 
 
 
-if(instance_number(objScreenCombat) < 1 && template != noone){
-	draw_rectangle_color(320, 550, 1064, 815, c_black, c_black, c_black, c_black, false);
+if(instance_number(objScreenCombat) < 1 && template != noone && spl == noone){
+	draw_rectangle_color(550, 32, 1064, 815, c_navy, c_black, c_black, c_black, false);
 	var char = pc.party[index];
 	
-	draw_text(350, 555, getCharacterName(index) + " the " + getClassName(char.class) + " L" + string(char.xpLevel[char.class]));
+	//draw_text(350, 555, getCharacterName(index) + " the " + getClassName(char.class) + " L" + string(char.xpLevel[char.class]));
+	draw_text(560, 64, getCharacterName(index) + " the " + getClassName(char.class) + " L" + string(char.xpLevel[char.class]));
+	
+	draw_text(560, 96, "MHP: " + string(char.hpGained) + " + " + string(char.hpBase));
+	draw_text(560, 128, "MMP: " + string(char.mpMax));
+	
+	
+	draw_text(560, 160, "Shots/Turn: " + string(template.shotCluster + 1));
+	draw_text(560, 192, "Wait Time: " + string( floor(template.shotCDMax / 3) / 10  ) );
+	draw_text(560, 224, "Dmg: " + string(template.shotPowerMin) + "-" + string(template.shotPowerMax));
+	draw_text(560, 256, string(template.shotNote));
+	
+	draw_text(560, 288, "LP: " + string(1000 - char.limitMax));
+	draw_text(560, 320, "Limt Break: " + template.limit);
+	var n = ceil( pc.party[index].limitMax / (template.limitGainMin + template.limitGainMax / 2) );
+	draw_text(560, 352, "Limit Wait: " + string(n));
+	
+	n = string( template.magicPower * 100 ) + "%";
+	draw_text(560, 384, "Spell Power: " + string(n));
+	
+	if(template.passive != ""){ draw_text(560, 416, "Passive: " + string(template.passive)); }
+	
+	/*
 	draw_text(350, 580, "MHP: " + string(char.hpGained) + " + " + string(char.hpBase));
 	draw_text(600, 580, "   MMP: " + string(char.mpMax));
 	draw_text(850, 580, "   LP: " + string(1000 - char.limitMax));
@@ -27,19 +49,25 @@ if(instance_number(objScreenCombat) < 1 && template != noone){
 	draw_text(720, 655, "Spell Power: " + string(n));
 	
 	if(template.passive != ""){ draw_text(350, 705, "Passive: " + string(template.passive)); }
+	*/
 	
-	
-	var ii = 19;
+	var ii = 19; 
 	for(var i=0; i<ii; i++){
+		var aa = i; var bb = 0;
+		while(aa > 9){ aa -= 10; bb += 1; }
+		
 		var c = c_grey; var a = 1;
 		var l = pc.party[index].xpLevel[i];
-		if(characterCanChangeInto(index)[19]){ ii = 20; }
+		if(characterCanChangeInto(index)[19] || pc.party[index].class == 19 ){ ii = 20; }
 		
 		if(l == 0){ c = c_blue; }
-		draw_sprite_ext(ww.classSprites[i], 0, 305 + (i*40), 770, 3, 3, 0, c, a);
-		//TODO: deal with 2 digit level numbers!
-		//draw_text(335 + (i*40), 790, l);
-		draw_text_transformed(320 + (i*40), 800, l, .7, .7, 0);
+		draw_sprite_ext(ww.classSprites[i], 0, 555 + (aa*50), 700 + (bb*50), 3, 3, 0, c, a);
+		
+		var lt = l < 10 ? "0" + string(l) : l;
+		draw_text(565 + (aa*50), 730 + (bb*50), lt);
+		
+		
+		
 		
 	}
 	

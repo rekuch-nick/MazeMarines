@@ -8,7 +8,7 @@ function xpCheck(){
 			
 			if(pc.party[i].class == 0){ // rookie
 				pc.party[i].hpGained += 3;
-				pc.party[i].limitMax -= 10;
+				pc.party[i].limitMax -= 6;
 			} else if(pc.party[i].class == 1){ // apprentice
 				pc.party[i].hpGained += 2;
 				pc.party[i].mpMax += 1;
@@ -17,12 +17,15 @@ function xpCheck(){
 				
 			} else if(pc.party[i].class == 2){ // mechanic
 				pc.party[i].hpGained += 3;
+				pc.party[i].limitMax -= 1;
 			
 			} else if(pc.party[i].class == 3){ // medic
 				pc.party[i].hpGained += 3;
+				pc.party[i].limitMax -= 1;
 				
 			} else if(pc.party[i].class == 4){ // heavy
 				pc.party[i].hpGained += 4;
+				pc.party[i].limitMax -= 1;
 				
 			} else if(pc.party[i].class == 5){ // scribe
 				pc.party[i].hpGained += 2;
@@ -39,15 +42,19 @@ function xpCheck(){
 				
 			} else if(pc.party[i].class == 7){ // knight
 				pc.party[i].hpGained += 5;
+				pc.party[i].limitMax -= 1;
 			
 			} else if(pc.party[i].class == 8){ // cyborg
 				pc.party[i].hpGained += 5;
+				pc.party[i].limitMax -= 3;
 			
 			} else if(pc.party[i].class == 9){ // LaserTech
 				pc.party[i].hpGained += 3;
+				pc.party[i].limitMax -= 2;
 			
 			} else if(pc.party[i].class == 10){ // MGunner
 				pc.party[i].hpGained += 4;
+				pc.party[i].limitMax -= 1;
 				
 			} else if(pc.party[i].class == 11){ // iceman
 				pc.party[i].hpGained += 1;
@@ -66,17 +73,21 @@ function xpCheck(){
 			} else if(pc.party[i].class == 13){ // gish
 				pc.party[i].hpGained += 3;
 				pc.party[i].mpMax += 1;
+				pc.party[i].limitMax -= 1;
 				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Xenograft"); }
 				if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Bolts"); }
 				
 			} else if(pc.party[i].class == 14){ // Sprayer
 				pc.party[i].hpGained += 3;
+				pc.party[i].limitMax -= 1;
 				
 			} else if(pc.party[i].class == 15){ // Sniper
 				pc.party[i].hpGained += 3;
+				pc.party[i].limitMax -= 1;
 				
 			} else if(pc.party[i].class == 16){ // Commando
 				pc.party[i].hpGained += 5;
+				pc.party[i].limitMax -= 1;
 				
 			} else if(pc.party[i].class == 17){ // Mage
 				pc.party[i].hpGained += 1;
@@ -88,6 +99,7 @@ function xpCheck(){
 				
 			} else if(pc.party[i].class == 18){ // Demo
 				pc.party[i].hpGained += 1;
+				pc.party[i].limitMax -= 2;
 				
 			} else if(pc.party[i].class == 19){ // Ascendant
 				pc.party[i].hpGained += 1;

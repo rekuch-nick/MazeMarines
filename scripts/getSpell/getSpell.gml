@@ -227,6 +227,17 @@ function getSpell(n){
 		desc: "Caster protects party's HP",
 	}; }
 	
+	if(n == "Wall Ring"){ return {
+		nam: n,
+		cost: 0,
+		wait: 0,
+		explore: false,
+		target: "",
+		canCast: true,
+		hotKey: "S",
+		desc: "Caster protects party's HP",
+	}; }
+	
 	if(n == "Tornado"){ return {
 		nam: n,
 		cost: 4,

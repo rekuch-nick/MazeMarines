@@ -39,12 +39,12 @@ for(var i=0; i<30; i++){ inventory[i] = noone; }
 inventory[0] = getItem("Mission Briefing");
 inventory[1] = getItem("Instructions");
 //inventory[2] = getItem("Healing Potion");
-//inventory[2] = getItem("Portable Hole");
-//inventory[3] = getItem("Lucky Coin");
+//inventory[2] = getItem("Troll Brace");
+//inventory[3] = getItem("Wall Ring");
 //inventory[2] = getItem("Mage Staff");
 //inventory[3] = getItem("Titan Glove");
-//inventory[4] = getItem("Titan Belt");
-//inventory[4] = getItem("Lucky Coin");
+//inventory[4] = getItem("Flash Powder");
+//inventory[5] = getItem("Fan");
 
 
 //inventory[3] = getItem("Silver Triangle");

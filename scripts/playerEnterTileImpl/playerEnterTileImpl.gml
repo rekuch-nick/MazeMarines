@@ -25,10 +25,15 @@ function playerEnterTileImpl(z, a, b){
 	}
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorMPTrap){
+		var mpTaken = 0;
 		for(var i=0; i<12; i++){ instance_create_depth(x+32, y+32, -8998, effDrain); }
 		for(var i=0; i<7; i++){ if(pc.party[i] != noone){ if(pc.party[i].hp > 0){
+				if(party[i].mp > 0){ mpTaken ++; }
 				party[i].mp = clamp(party[i].mp - 1, 0, party[i].mp);
 		}}}
+		if(mpTaken > 0 && irandom_range(1, 4) == 1){
+			ww.fmap[zSpot][xSpot, ySpot] = imgFloor01;
+		}
 	}
 	
 	
@@ -102,6 +107,11 @@ function playerEnterTileImpl(z, a, b){
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv3){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv4){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv5){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv6){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv7){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv8){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv9){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorAdv10){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorRid){ instance_create_depth(0, 0, -7999, objScreenAdvicePage); }
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorShop){ instance_create_depth(0, 0, -7999, objScreenShop); }
 	

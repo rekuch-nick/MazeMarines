@@ -84,6 +84,11 @@ if(aly == 1){
 				spellCast(getSpell("Itm Fire"), playerIndex, ""); 
 				procCD = 300;
 			}
+			
+			if(itm.wearEffect == "Wall Ring" && irandom_range(1, 30 * 15) == 1){ 
+				spellCast(getSpell("Wall Ring"), playerIndex, ""); 
+				procCD = 300;
+			}
 		
 		}
 	}

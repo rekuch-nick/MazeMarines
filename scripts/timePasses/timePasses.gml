@@ -16,9 +16,14 @@ function timePasses(n){
 				var regenFor = 1;
 				if(pc.party[i].class == 8 || pc.party[i].xpLevel[8] >= 20){ regenFor = 4; }
 				c.hp = clamp(c.hp + regenFor, 0, c.hpMax);
-				
-				
 			}
+			
+			if(c.hp > 0 && pc.party[i].item != noone){ if(pc.party[i].item.wearEffect == "Troll Healing"){
+				c.hp = clamp(c.hp + 2, 0, c.hpMax);
+				show_debug_message(123)
+			}}
+			
+			
 			
 			if(c.hp > 0 && pc.party[i].item != noone){ if(pc.party[i].item.wearEffect == "MP Charge"){
 				pc.party[i].mp = clamp(party[i].mp + 1, 0, party[i].mpMax);

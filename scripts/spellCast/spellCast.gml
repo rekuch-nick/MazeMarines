@@ -224,7 +224,7 @@ function spellCast(spell, casterIndex, tar){
 		s.text = "REPEL";
 	}
 	
-	if(spell.nam == "Shield"){
+	if(spell.nam == "Shield" || spell.nam == "Wall Ring"){
 		for(var i=0; i<5; i++){ if(pc.party[i] != noone && pc.party[i].hp > 0){
 			pc.party[i].shield += mag * 40;
 		}}

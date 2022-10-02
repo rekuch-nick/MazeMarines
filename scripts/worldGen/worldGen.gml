@@ -59,7 +59,7 @@ function worldGen(){
 			ww.fmap[z][7, 6] = imgFloorGate02;
 			ww.fmap[z][9, 6] = imgFloorGate02;
 			
-			worldGenPatchGas(z, objGasPoison, 15);
+			worldGenPatchGas(z, objGasPoison, 3);
 		
 		} else if(z >= 1){
 			normMaze = true;
@@ -68,6 +68,8 @@ function worldGen(){
 			if(z == 2){ ww.signText[z] = stringInsertBreaks("Most monsters are so mindless they will target your party members randomly. The ones with chain-guns are even so dumb they always fire at the guy with the most HP.\n\nWatch out for the one that looks either like its melting or maybe wearing a dress. Somehow it knows who has the least HP and always shoots at them.", 0); }
 			if(z == 3){ ww.signText[z] = stringInsertBreaks("Don't worry about the pink monsters, it's the red ones that... well anyways, after you beat one for the  first time, look around to see if anything has changed.", 0); }
 			if(z == 4){ ww.signText[z] = stringInsertBreaks("Watch out for blocks with a blue crystal in them, they prevent some spells from being cast. Exploration spells like WARP and PHASE DOOR are the most often warded against, but it could be anything. You'll know a spell is blocked if it Fizzles when it shouldn't.", 0); }
+			
+			if(z == 7){ ww.signText[z] = stringInsertBreaks("Have you noticed anything about the Gravedigger's prices? He charges a percentage of your coins!\n\nSometimes you can spend a bunch right before hiring him and reduce what you pay.\n\nI mean ideally you won't need his services in the first place, but you know...", 0); }
 			
 			
 			worldGenMaze(z);

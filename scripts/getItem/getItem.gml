@@ -98,6 +98,26 @@ function getItem(i){
 		breakChance: 33,
 		breakMessage: "runs out",
 	}; }
+	if(i == "Flash Powder"){ return {
+		nam: i,
+		canWear: false,
+		wearEffect: "",
+		desc: "Sprinkel to teleport.",
+		spell: "Warp",
+		worth: 61,
+		breakChance: 100,
+		breakMessage: "is used up",
+	}; }
+	if(i == "Fan"){ return {
+		nam: i,
+		canWear: false,
+		wearEffect: "",
+		desc: "Wave to disperse gas.",
+		spell: "Tornado",
+		worth: 61,
+		breakChance: 50,
+		breakMessage: "breaks",
+	}; }
 	
 	
 	
@@ -129,6 +149,16 @@ function getItem(i){
 		breakMessage: "has broken",
 	}; }
 	
+	if(i == "Troll Brace"){ return {
+		nam: i,
+		canWear: true,
+		wearEffect: "Troll Healing",
+		desc: "E: Regain more HP over time",
+		spell: "",
+		worth: 265,
+		breakChance: 0,
+		breakMessage: "has broken",
+	}; }
 	
 	if(i == "Mirror Charm"){ return {
 		nam: i,
@@ -179,6 +209,17 @@ function getItem(i){
 		canWear: true,
 		wearEffect: "Wall of Fire",
 		desc: "E: Cast fire spells in combat",
+		spell: "",
+		worth: 465,
+		breakChance: 0,
+		breakMessage: "has broken",
+	}; }
+	
+	if(i == "Wall Ring"){ return {
+		nam: i,
+		canWear: true,
+		wearEffect: "Wall Ring",
+		desc: "E: Defend the team in battle",
 		spell: "",
 		worth: 465,
 		breakChance: 0,

@@ -4,7 +4,7 @@ C                                   cure
 D   
 E                                   eye 
 F  frost (aoe, auto kills small)    flame ward 
-G  gravity* (clump monsters)
+G  gravity (clump monsters)
 H  
 I  ice lance
 J  
@@ -118,11 +118,10 @@ gml_Object_objPlayer_Step_0 (line 33) - 	xpGain(n);
 
 
 text tips needed:
--limit breaks
 -class stats gain, magic pow %
 -xp per floor rules
--upgraded tools
--facetank some traps / dig up switches
 
+-facetank some traps / dig up switches
+-spell descriptions
 
 
