@@ -1,6 +1,7 @@
 image_xscale = 4; image_yscale = 4;
 
 firstFrame = true;
+moved = false;
 
 hp = 100;
 hpMax = 100;

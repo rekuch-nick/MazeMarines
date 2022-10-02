@@ -1,4 +1,4 @@
-image_xscale = 4;
-image_yscale = 4;
+image_xscale = 6;
+image_yscale = 6;
 
-timeCD = 450;
+timeCD = 300;

@@ -1,10 +1,11 @@
 event_inherited();
 var z = pc.zSpot;
-shotType = objPinkBladeShot;
+shotType = objGreenShot;
 
 
 ySpread = 70;
 shotCDMax = 90;
+poisonChance = 15;
 
 shotPowerMin = 2 + z*2;
 hp = 80 + z;

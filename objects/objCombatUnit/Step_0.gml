@@ -1,6 +1,6 @@
 if(instance_number(objMenu) > 0){ return; }
 
-if(firstFrame){
+if(firstFrame || moved){
 	var shiftAway = true;
 	if(object_index == objCombatClone){ shiftAway = false; }
 	
@@ -17,7 +17,7 @@ if(firstFrame){
 		}
 	}
 	
-	
+	moved = false;
 	firstFrame = false;
 } /// end of firstframe
 

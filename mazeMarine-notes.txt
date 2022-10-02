@@ -20,7 +20,7 @@ S  shield
 T                                   tornado (remove gas)
 U
 V  vex 
-W  wall of fire                     warp*
+W  wall of fire                     warp
 X  xerox                            xenograft
 Y
 Z
@@ -123,5 +123,6 @@ text tips needed:
 -xp per floor rules
 -upgraded tools
 -facetank some traps / dig up switches
+
 
 

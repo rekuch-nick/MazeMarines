@@ -174,8 +174,13 @@ if(debug){
 	if(keyboard_check_pressed(vk_pageup)){ playerMoveFloor(-1); }
 	
 	if(keyboard_check_pressed(vk_home)){ 
-		var n = xpMax(pc.party[0].xpLevel[pc.party[0].class]);
-		xpToGain += n*5; 
+		if(keyboard_check(vk_shift)){
+			party[0].xp = xpMax(pc.party[0].xpLevel[pc.party[0].class]);
+			xpCheck();
+		} else {
+			var n = xpMax(pc.party[0].xpLevel[pc.party[0].class]);
+			xpToGain += n*5; 
+		}
 	}
 	
 	if(keyboard_check_pressed(vk_insert)){ 
