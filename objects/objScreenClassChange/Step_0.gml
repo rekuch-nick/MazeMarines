@@ -1,16 +1,23 @@
-if(instance_number(objMenu)){ return; }
+if(instance_number(objMenu) > 0){ return; }
 
 
 if(answer != "no" && answer != ""){
+	if(answer == "1"){ answer = 0; }
+	if(answer == "2"){ answer = 1; }
+	if(answer == "3"){ answer = 2; }
+	if(answer == "4"){ answer = 3; }
+	if(answer == "5"){ answer = 4; }
 	
 	if(who != noone){
-		
+	
 		var n = answer;
+		
 		
 		if(pc.party[who].xpLevel[n] == 0){ pc.party[who].xpLevel[n] = 1; }
 		pc.party[who].class = n
 		pc.party[who].xp = 0;
 		pc.party[who].limit = 0;
+		
 		if(n == 0){ pc.party[who].img = imgMarine; pc.party[who].hpBase = 100; }
 		if(n == 1){ pc.party[who].img = imgApprentice; pc.party[who].hpBase = 50; characterLearnSpell(who, "Bolts"); characterLearnSpell(n, "Bind Wounds"); }
 		if(n == 2){ pc.party[who].img = imgMechanic; pc.party[who].hpBase = 80;}
@@ -32,20 +39,26 @@ if(answer != "no" && answer != ""){
 		if(n == 18){ pc.party[who].img = imgDemo; pc.party[who].hpBase = 20; }
 		if(n == 19){ pc.party[who].img = imgAscendant; pc.party[who].hpBase = 10; characterLearnSpell(who, "Eye"); }
 		
+		
 		pc.party[who].hpMax = pc.party[who].hpBase + pc.party[who].hpGained;
 		
 		
 		instance_destroy();
-		instance_create_depth(0, 0, ww.Lscn, objScreenClassChange);
+		//instance_create_depth(0, 0, ww.Lscn, objScreenClassChange);
 		return;
 		
 		
 		
 		
 	} else {
-		var n = pc.party[answer].nickname;
 		who = answer;
-		cc = characterCanChangeInto(answer);
+		// answer is player char index here
+		
+		var n = pc.party[who].nickname;
+		cc = characterCanChangeInto(who);
+		oC = noone; oA = noone; oP = noone;
+		
+		answer = "";
 		var j = 0;
 		for(var i=0; i<array_length(cc); i++){
 			if(cc[i]){
@@ -60,7 +73,11 @@ if(answer != "no" && answer != ""){
 				j ++;
 			}
 		}
+		
 		createMenu("What will " + n + " become?", "", "down1", "", oC, oA, oP);
+		return;
+		
+		
 	}
 	
 }

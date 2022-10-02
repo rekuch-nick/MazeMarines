@@ -23,5 +23,5 @@ if(cursor >= 0 && cursor <= 4){
 	
 }
 
-//var s = "Dev Note: "
-//draw_text_transformed(600, 650, stringInsertBreaks(s), .8, .8, 0);
+var s = "V 0.0.3";
+draw_text_transformed(1150, 750, s, .8, .8, 0);

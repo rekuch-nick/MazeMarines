@@ -1,4 +1,5 @@
 if(firstFrame){
+	
 	x = xp;
 	y = yp;
 	
@@ -53,8 +54,8 @@ if(optionsType == "spell" || optionsType == "stat"){
 			s.explore = instance_number(objScreenCombat) == 0;
 			pc.unitSelected = n;
 			
-			instance_destroy(); 
 			instance_destroy(ss); 
+			instance_destroy(); 
 			return;
 		}
 		
@@ -125,7 +126,11 @@ if(no){
 }
 
 if(ok){
-	asker.answer = optionsAction[cursor];
+	if(asker != noone && asker != undefined){
+		
+		asker.answer = optionsAction[cursor]; //type exception here in html only
+											// deleyed destrouction of CC screen to avoid
+	}
 	instance_destroy();
 	return;
 }

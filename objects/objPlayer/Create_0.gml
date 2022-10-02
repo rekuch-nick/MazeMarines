@@ -19,6 +19,7 @@ inBoat = noone;
 xpToGain = 0;
 
 spellInputCD = 0;
+whoIsCCing = -1;
 /*
 hp = 200;
 hpMax = 200;

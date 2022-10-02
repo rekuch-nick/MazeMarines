@@ -4,7 +4,7 @@ function getItem(i){
 		nam: i,
 		canWear: false,
 		wearEffect: "",
-		desc: "Lists the game controls.\n\n\nArrows to walk around\nI to open and close inventory\nArrows to navigate Inventory\nEnter to use item\nEnter to use stairs\nSpace to wait a turn\nNumber key to select unit\nFirst letter of spell to cast\n(In combat or while exploring)\nM to use a Medkit\nB to use a Bomb\nH to dig with a harrow\nR to use a Raft\nWalk into lock to use Key\nEnter in combat to speed it up",
+		desc: "Lists the game controls.\n\n\nArrows to walk around\nI to open inventory\nEnter to use selected item\nEnter to use stairs\nSpace to wait a turn\nNumber key to select unit\nFirst letter of spell to cast\n(In combat or while exploring)\nM to use a Medkit\nB to use a Bomb\nH to dig with a harrow\nR to use a Raft\nWalk into lock to use Key\nEnter in combat to speed it up",
 		spell: "",
 		worth: 20,
 		breakChance: 0,

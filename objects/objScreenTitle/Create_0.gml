@@ -1,10 +1,10 @@
 image_xscale = 4; image_yscale = 4;
 
-nam[0] = "Alvin"
-nam[1] = "Omar"
-nam[2] = "Paul"
-nam[3] = "Leroy"
-nam[4] = "Theo"
+nam[0] = "Dave"
+nam[1] = "Dave"
+nam[2] = "Dave"
+nam[3] = "Dave"
+nam[4] = "Dave"
 
 class[0] = 1;
 class[1] = 0;

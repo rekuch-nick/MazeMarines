@@ -133,3 +133,10 @@ ww.Leff = -4000; // layer effects
 ww.Lcmb  = -3000; // layer combat units
 ww.Lcsn = -2999; // layer combat screen
 ww.Lmmb = -1000; // layer map units
+
+
+<div> Arrows / WASD to move </div>
+<div> I to open Inventory </div>
+<div> Enter to speed up combat, go down stairs, accept menu option </div>
+<div> Escape to reject menu option </div>
+<div> # to select part member </div>
