@@ -109,7 +109,11 @@ if(!justMoved && spellInputCD < 1){
 	else if(keyboard_check(vk_right) || keyboard_check(ord("D"))){ playerStep(1, 0); }
 	else if(keyboard_check(vk_space) && waitCD < 1){ timePasses(-1); waitCD = 10; }
 	else if(keyboard_check_pressed(vk_enter)){
-		if(ww.fmap[zSpot][xSpot, ySpot] == imgStairDown){ playerMoveFloor(1); return; }
+		if(ww.fmap[zSpot][xSpot, ySpot] == imgStairDown){ 
+			playerMoveFloor(1); 
+			with(effStairIndicator){ instance_destroy(); }
+			return; 
+		}
 		if(ww.fmap[zSpot][xSpot, ySpot] == imgStairUp){ playerMoveFloor(-1); return; }
 	}
 	else if(bombs > 0 && letterPressed() == "B"){
@@ -170,7 +174,10 @@ if(keyboard_check_pressed(vk_backspace)){
 
 
 if(debug){
-	if(keyboard_check_pressed(vk_pagedown)){ playerMoveFloor(1); }
+	if(keyboard_check_pressed(vk_pagedown)){ 
+		with(effStairIndicator){ instance_destroy(); }
+		playerMoveFloor(1); 
+	}
 	if(keyboard_check_pressed(vk_pageup)){ playerMoveFloor(-1); }
 	
 	if(keyboard_check_pressed(vk_home)){ 

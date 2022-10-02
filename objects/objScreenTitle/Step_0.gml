@@ -10,6 +10,7 @@ if(keyboard_check_pressed(vk_enter)){
 	createParty(nam, class);
 	
 	ww.rollWorld = true;
+	instance_create_depth(14 * 64, 10 * 64, ww.Leff, effStairIndicator);
 	instance_destroy();
 }
 

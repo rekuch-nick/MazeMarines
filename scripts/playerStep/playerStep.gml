@@ -10,8 +10,28 @@ function playerStep(xMove, yMove){
 	
 	
 	if(ww.bmap[z][a, b] != noone){ 
+		//var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
+		//s.text = "ANTIVENOM";
 		
+		var t = ww.bmap[z][a, b];
+		if(t == imgBlockChest || t == imgBlockChest2 || t == imgSpecChest){
+			if(xMove > 0){ pc.x += 32; }
+			if(xMove < 0){ pc.x -= 32; }
+			if(yMove > 0){ pc.y += 32; }
+			if(yMove < 0){ pc.y -= 32; }
+			
+			if(pc.keys < 1){
+				var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
+				s.text = "Need A Key";
+			} else {
+				pc.keys --;
+				if(t == imgBlockChest){ openChest(z, a, b); }
+				if(t == imgBlockChest2){ openChest2(z, a, b); }
+				if(t == imgSpecChest){ openSpecChest(z, a, b); }
+			}
+		}
 		
+		/*
 		if(ww.bmap[z][a, b] == imgBlockChest && pc.keys > 0){ 
 			pc.keys --;
 			openChest(z, a, b);
@@ -38,7 +58,7 @@ function playerStep(xMove, yMove){
 			if(yMove > 0){ pc.y += 32; }
 			if(yMove < 0){ pc.y -= 32; }
 		}
-		
+		*/
 		return; 
 	}
 	
