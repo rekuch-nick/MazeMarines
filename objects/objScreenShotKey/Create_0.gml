@@ -1,7 +1,13 @@
 image_xscale = 4; image_yscale = 4;
 
+
+msg = "Welcome to Locksmith!"
 keyPrice = 70;
 hasBought = false;
+
+if(pc.coins < keyPrice){
+	msg = "Welcome to Locksmith!\n\nCome back once you have "+string(keyPrice)+" coins and I can help you\nout.";
+}
 
 answer = "";
 

@@ -53,6 +53,22 @@ function playerEnterTileImpl(z, a, b){
 		var s = instance_create_depth(64*17, pc.y, ww.Leff, effBladeWheel);
 	}
 	
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorRockTrap ){
+		ww.fmap[zSpot][xSpot, ySpot] = imgFloor01;
+		var s = instance_create_depth(pc.x+32, 0, ww.Leff, effRockFall);
+	}
+	
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorGasTrap ){
+		ww.fmap[zSpot][xSpot, ySpot] = imgFloor01;
+		var s = instance_create_depth(pc.x+32, pc.y+32, ww.Leff, effGasTrap);
+		for(var aa=pc.xSpot-1; aa<=pc.xSpot+1; aa++){ for(var bb=pc.ySpot-1; bb<=pc.ySpot+1; bb++){
+			if(inBounds(aa, bb) ){
+				if(pc.xSpot == aa && pc.ySpot == bb){ continue; }
+				instance_create_depth(aa*64, bb*64, ww.depth-1, objGasPoison);
+			}
+		}}
+	}
+	
 	
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorChurch){
@@ -163,6 +179,17 @@ function playerEnterTileImpl(z, a, b){
 			}}
 		}
 	}
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorLava){
+		if(pc.inBoat == noone){
+			instance_create_depth(pc.x, pc.y, ww.Leff, effFire);
+			for(var i=0; i<5; i++){ if(pc.party[i].hp > 0){
+				var d = 20;
+				if(pc.party[i].flameward > 0){ d = 4; }
+				pc.party[i].hp -= d;
+			}}
+			
+		}
+	}
 	
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorWaterBoat){
@@ -171,6 +198,12 @@ function playerEnterTileImpl(z, a, b){
 	}
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorWaterBoat2){
 		ww.fmap[zSpot][xSpot, ySpot] = imgFloorWater;
+		pc.inBoat = imgBoat2InWater;
+	}
+	
+	
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorLavaBoat){
+		ww.fmap[zSpot][xSpot, ySpot] = imgFloorLava;
 		pc.inBoat = imgBoat2InWater;
 	}
 	

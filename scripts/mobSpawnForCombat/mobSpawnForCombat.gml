@@ -19,6 +19,7 @@ function mobSpawnForCombat(){
 	if(typ == imgGoonWater){ mobList = [objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater]; big = 0; spec = noone; }
 	if(typ == imgGoonSwarm){ mobList = [objCombatMobGoonBug, objCombatMobGoonBug, objCombatMobGoonBug, objCombatMobGoonBug]; big = 0; spec = noone; }
 	if(typ == imgGoon2){ big += irandom_range(1, 6); }
+	if(typ == imgGoonTreasureGoblin){ number += 4; spec = objCombatMobTreasureGoblin; big += 2; }
 	if(typ == imgBoss01){ spec = objCombatMobBoss1; big = 0; number = 14; mobList = [getCommonMob(), getCommonMob(), getCommonMob(), getCommonMob()]; }
 	
 	

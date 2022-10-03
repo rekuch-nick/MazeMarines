@@ -70,6 +70,7 @@ function worldGen(){
 			if(z == 4){ ww.signText[z] = stringInsertBreaks("Watch out for blocks with a blue crystal in them, they prevent some spells from being cast. Exploration spells like WARP and PHASE DOOR are the most often warded against, but it could be anything. You'll know a spell is blocked if it Fizzles when it shouldn't.", 0); }
 			
 			if(z == 7){ ww.signText[z] = stringInsertBreaks("Have you noticed anything about the Gravedigger's prices? He charges a percentage of your coins!\n\nSometimes you can spend a bunch right before hiring him and reduce what you pay.\n\nI mean ideally you won't need his services in the first place, but you know...", 0); }
+			if(z == 8){ ww.signText[z] = stringInsertBreaks("If you beat a lot of monsters on the same floor without leaving, there's a chace a rare treasure laden monster will show up.", 0); }
 			
 			
 			worldGenMaze(z);
@@ -105,8 +106,6 @@ function worldGen(){
 			//if(z == 4){ worldGenReplaceFloor(z, imgFloor01, imgFloorSpike01, 10); }
 			//if(z == 5){ worldGenPatchGas(z, objGasDark, 2); }
 			if(z == 6){ worldGenReplaceFloor(z, imgFloor01, imgFloorMPTrap, 50); }
-			
-			
 			//if(z == 2){ worldGenTreasureRoom(z, imgCoin10); }
 			if(z == 7){ 
 				worldGenFloorH(imgFloorWater, true, irandom_range(4, 7), 2, z); 
@@ -115,8 +114,10 @@ function worldGen(){
 			}
 			//if(z == 8){ worldGenPatchGas(z, objGasPoison, 10); }
 			if(z == 8){ worldGenReplaceFloor(z, imgFloor01, imgFloorSwitchTrapHiddenUp, 20); }
-			
-			if(z == 11){ worldGenReplaceFloor(z, imgFloor01, imgFloorGrass, 50); }
+			if(z == 11){ worldGenReplaceFloor(z, imgFloor01, imgFloorGrass, 70); }
+			if(z == 12){ worldGenReplaceFloor(z, imgFloor01, imgFloorRockTrap, 50); }
+			if(z == 13){ worldGenReplaceFloor(z, imgFloor01, imgFloorGasTrap, 40); }
+			if(z == 14){ worldGenFloorH(imgFloorLava, true, irandom_range(4, 7), 2, z); }
 			
 			
 			worldGenReplaceBlock(z, imgBlock01, imgBlockHiddenChest, (z%2)+1 );

@@ -24,3 +24,4 @@ if(text != ""){
 yMatchPC = false;
 isBlade = false;
 hasHit = false;
+isRockTrap = false;

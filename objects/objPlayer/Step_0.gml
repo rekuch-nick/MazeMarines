@@ -64,6 +64,11 @@ if(usingItem != "" && answer != ""){
 				var t = pc.boatType == imgBoat2 ? imgFloorWaterBoat2 : imgFloorWaterBoat;
 				ww.fmap[zSpot][tx, ty] = t;
 			}
+			if(inBounds(tx, ty) && ww.fmap[zSpot][tx, ty] == imgFloorLava && pc.boatType == imgBoat2){
+				pc.boats --;
+				var t = imgFloorLavaBoat;
+				ww.fmap[zSpot][tx, ty] = t;
+			}
 			spellInputCD = 5;
 		}
 		if(usingItem == "medkit"){
@@ -193,5 +198,14 @@ if(debug){
 	if(keyboard_check_pressed(vk_insert)){ 
 		if(pc.coins >= 10000){ pc.coins = 0; } else { pc.coins = 10000; }
 		picks = 10; bombs = 10; medkits = 10; boats = 10;
+	}
+	
+	if(keyboard_check_pressed(vk_delete)){ 
+		for(var i=0; i<5; i++){
+			pc.party[i].hp = pc.party[i].hpMax;
+			pc.party[i].mp = pc.party[i].mpMax;
+			pc.party[i].poison = 0;
+			pc.party[i].bleed = 0;
+		}
 	}
 }

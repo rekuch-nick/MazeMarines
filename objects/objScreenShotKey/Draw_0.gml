@@ -1,6 +1,6 @@
 draw_sprite_ext(sprite_index, image_index, x, y, 4, 4, 0, c_white, .7);
 
-draw_text(40, 40, "Welcome to Locksmith!");
+draw_text(40, 40, msg);
 
 
 

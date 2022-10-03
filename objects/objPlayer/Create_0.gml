@@ -20,6 +20,10 @@ xpToGain = 0;
 
 spellInputCD = 0;
 whoIsCCing = -1;
+
+killsThisFloor = 0;
+treasureGoblinSpawned = 0;
+
 /*
 hp = 200;
 hpMax = 200;

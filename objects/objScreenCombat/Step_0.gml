@@ -9,6 +9,7 @@ if(over){ if(overCD > 0){ overCD --; return; } else {
 	pc.xpToGain += xp;
 	if(xpGainedTotal == -1){ 
 		//can put one time end of combat events here, but this whole thing should really be refactored
+		pc.killsThisFloor ++;
 		xpGainedTotal = xp; 
 		
 		var n = 0;
@@ -50,6 +51,10 @@ if(over && overCD < 1 && (keyboard_check_pressed(vk_enter)
 		}
 		ww.bossOneDown = true;
 	}
+	
+	if(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].object_index == objMobTreasureGoblin){ spawnGoblinTreasure(); }
+	
+	
 	instance_destroy(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot]);
 	ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot] = noone;
 	

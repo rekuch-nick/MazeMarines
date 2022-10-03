@@ -14,7 +14,7 @@ M
 N
 O                                   open 
 P  polymorph                        phase door (remove wall)
-Q
+Q  quickfix*(small combat heal)
 R                                   repel
 S  shield
 T                                   tornado (remove gas)
@@ -135,8 +135,10 @@ ww.Lcsn = -2999; // layer combat screen
 ww.Lmmb = -1000; // layer map units
 
 
-<div> Arrows / WASD to move </div>
-<div> I to open Inventory </div>
-<div> Enter to speed up combat, go down stairs, accept menu option </div>
-<div> Escape to reject menu option </div>
-<div> # to select part member </div>
+ted: true, message: "Uncaught TypeError: Cannot set properties of undefined (setting '_Cj')", filename: 'https://rekuch-nick.github.io/html5game/wtc.js?ZWIZB=1376806035', lineno: 739, colno: 264, …}
+__9
+: 
+"Unhandled Exception - Uncaught TypeError: Cannot set properties of undefined (setting '_Cj') in file https://rekuch-nick.github.io/html5game/wtc.js?ZWIZB=1376806035 at line 739"
+_ft
+: 
+undefined

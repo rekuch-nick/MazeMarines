@@ -106,8 +106,8 @@ if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv6){
 }
 
 if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv7){
-	msg = "Once you become powerful enough, I can teleport you deep into the dungeon below.\n\n";
-	msg += "Of course, I can't help you come back up, but that isn't going to stop someone like you, is it?\n\n";
+	msg = "Getting sick of long walks through the mazes? Once you become powerful enough, you can find items to teleport you deep into the dungeon below.\n\n";
+	msg += "Of course, they won't help you come back up, but that isn't going to stop someone like you, is it?\n\n";
 	
 	msg = stringInsertBreaks(msg, 45);
 }

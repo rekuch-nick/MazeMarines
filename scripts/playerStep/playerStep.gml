@@ -68,14 +68,20 @@ function playerStep(xMove, yMove){
 	//ww.mmap[pc.zSpot][a, b] = temp;
 	
 	if(inBoat != noone){
-		if(ww.fmap[z][a, b] != imgFloorWater){
+		if(ww.fmap[z][a, b] != imgFloorWater && ww.fmap[z][a, b] != imgFloorLava){
 			if(ww.fmap[z][xSpot, ySpot] == imgFloorWater){ 
 				var t = inBoat == imgBoatInWater ? imgFloorWaterBoat : imgFloorWaterBoat2;
+				ww.fmap[z][xSpot, ySpot] = t;
+			}
+			if(ww.fmap[z][xSpot, ySpot] == imgFloorLava){ 
+				var t = imgFloorLavaBoat;
 				ww.fmap[z][xSpot, ySpot] = t;
 			}
 			
 			inBoat = noone;
 		}
+		
+		
 	}
 	
 	

@@ -1,6 +1,9 @@
 function playerMoveFloor(d){
 	with(objGasDark){ instance_destroy(); }
 	
+	pc.killsThisFloor = 0;
+	pc.treasureGoblinSpawned = 0;
+	
 	for(var i=0; i<5; i++){ if(pc.party[i] != noone){
 		pc.party[i].aim = 0; //clamp(pc.party[i].aim - 1, 0, pc.party[i].aim);
 		pc.party[i].xenograft = 0; //clamp(pc.party[i].xenograft - 1, 0, pc.party[i].xenograft);

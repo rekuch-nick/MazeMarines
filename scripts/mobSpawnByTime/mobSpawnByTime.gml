@@ -6,6 +6,11 @@ function mobSpawnByTime(){
 	var t = objMobGoon;
 	if(pc.zSpot > 1 && irandom_range(1, 8) == 1){ t = objMobGoon2; }
 	
+	if(pc.killsThisFloor >= 10 && pc.treasureGoblinSpawned == 0 && irandom_range(1, 10) == 1){
+		pc.treasureGoblinSpawned ++;
+		t = objMobTreasureGoblin;
+	}
+	
 	
 	var tries = 0;
 	while(tries < 100){
@@ -20,7 +25,7 @@ function mobSpawnByTime(){
 			if(ww.mmap[z][a, b] == noone){ if(a != pc.xSpot || b != pc.ySpot){
 				var f = ww.fmap[z][a, b];
 				if(f != imgStairDown && f != imgStairUp && f != imgStairDownLocked && f != imgFloorSwitchUp && f != imgFloorSafe && f != imgFloorGate01 && f != imgFloorGate02){
-					if(f != imgFloorWater){
+					if(f != imgFloorWater && f != imgFloorLava){
 						ww.mmap[z][a, b] = instance_create_depth(a * 64, b * 64, ww.Lmmb, t);
 						ww.mmap[z][a, b].xSpot = a;
 						ww.mmap[z][a, b].ySpot = b;

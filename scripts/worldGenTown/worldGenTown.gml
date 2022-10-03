@@ -7,7 +7,7 @@ function worldGenTown(z){
 	 tm[4] = "111111111..111111";
 	 tm[5] = "11111.11......111";
 	 tm[6] = "111.......1.....1";
-	 tm[7] = "11........1.....1";
+	 tm[7] = "1.........1.....1";
 	 tm[8] = "111111.....111111";
 	 tm[9] = "1.1.1..1...11...1";
 	tm[10] = "1.....11........1";
@@ -20,7 +20,7 @@ function worldGenTown(z){
 	bmap[z][10, 8] = imgHousesChurch; fmap[z][10, 9] = imgFloorChurch;
 	
 
-	bmap[z][3, 6] = imgHousesTower; fmap[z][3, 7] = imgFloorTower;
+	bmap[z][3, 5] = imgHousesTower; fmap[z][3, 6] = imgFloorTower;
 			
 	
 	for(var a=0; a<9; a++){ fmap[z][a, 3] = imgRoadH; }
@@ -53,6 +53,8 @@ function worldGenTown(z){
 	bmap[z][3, 9] = imgHousesAdvice; fmap[z][3, 10] = imgFloorAdv8; //
 	bmap[z][7, 10] = imgHousesAdvice3; fmap[z][7, 11] = imgFloorAdv9; //
 	bmap[z][15, 5] = imgHousesAdvice2; fmap[z][15, 6] = imgFloorAdv10; //
+	
+	//bmap[z][1, 7] = imgHousesWell; fmap[z][2, 7] = imgFloorAdv7; //
 			
 	worldGenReplaceBlock(z, imgBlock01, imgHouses04, 4);
 	worldGenReplaceBlock(z, imgBlock01, imgHouses03, 10);

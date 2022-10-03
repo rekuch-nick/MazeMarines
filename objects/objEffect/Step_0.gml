@@ -23,7 +23,16 @@ if(isBlade && !hasHit && x < pc.x){
 	hasHit = true
 }
 
-
+if(isRockTrap){
+	if(pc.spellInputCD < 4){ pc.spellInputCD = 4; }
+	if(y > pc.y + 32){
+		timeCD = -1;
+		instance_create_depth(x, y, depth, effRockAfter);
+		for(var i=0; i<5; i++){ if(pc.party[i].hp > 0){
+			pc.party[i].hp -= irandom_range(1, 6) + irandom_range(1, 6);
+		}}
+	}
+}
 
 
 image_alpha -= fade;
