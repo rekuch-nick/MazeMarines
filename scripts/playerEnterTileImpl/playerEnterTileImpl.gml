@@ -64,7 +64,7 @@ function playerEnterTileImpl(z, a, b){
 		for(var aa=pc.xSpot-1; aa<=pc.xSpot+1; aa++){ for(var bb=pc.ySpot-1; bb<=pc.ySpot+1; bb++){
 			if(inBounds(aa, bb) ){
 				if(pc.xSpot == aa && pc.ySpot == bb){ continue; }
-				instance_create_depth(aa*64, bb*64, ww.depth-1, objGasPoison);
+				instance_create_depth(aa*64, bb*64, ww.Lmmb-1, objGasPoison);
 			}
 		}}
 	}
@@ -110,9 +110,8 @@ function playerEnterTileImpl(z, a, b){
 		ww.screenCombat = instance_create_depth(0, 0, ww.Lcsn, objScreenCombat);
 	}
 	
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorTower){
-		instance_create_depth(0, 0, ww.Lscn, objScreenClassChange);
-	}
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorTower){ instance_create_depth(0, 0, ww.Lscn, objScreenClassChange); }
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSpellOffice){ instance_create_depth(0, 0, ww.Lscn, objScreenSpellOffice); }
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorKey){
 		instance_create_depth(0, 0, ww.Lscn, objScreenShotKey);

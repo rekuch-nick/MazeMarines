@@ -23,6 +23,13 @@ if(firstFrame){
 		}
 	}
 	
+	if(optionsType == "learnSpell"){
+		for(var i=0; i<array_length(optionsAction); i++){
+			canDo[i] = pc.coins >= cost[i];
+		}
+		
+	}
+	
 	if(optionsType == "spell"){
 		for(var i=0; i<array_length(optionsAction); i++){
 			canDo[i] = pc.party[pc.unitSelected].mp >= cost[i];

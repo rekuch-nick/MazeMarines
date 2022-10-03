@@ -8,6 +8,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "A",
 		desc: "Team's shots do more damage",
+		learnCost: 5,
 	}; }
 	
 	if(n == "AntiVenom"){ return {
@@ -19,6 +20,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "A",
 		desc: "Remove Poison from one unit",
+		learnCost: 1,
 	}; }
 	if(n == "AntiVenom+"){ return {
 		nam: n,
@@ -29,6 +31,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "A",
 		desc: "Remove Poison from one unit",
+		learnCost: 1,
 	}; }
 	
 	if(n == "Bolts"){ return {
@@ -40,6 +43,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "B",
 		desc: "Caster shoots rapidly",
+		learnCost: 1,
 	}; }
 	
 	if(n == "Bolts+"){ return {
@@ -51,6 +55,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "B",
 		desc: "Caster shoots rapidly",
+		learnCost: 1,
 	}; }
 	
 	if(n == "Bind Wounds"){ return {
@@ -62,6 +67,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "B",
 		desc: "Remove Bleed from one unit",
+		learnCost: 1,
 	}; }
 	if(n == "Bind Wounds+"){ return {
 		nam: n,
@@ -72,6 +78,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "B",
 		desc: "Remove Bleed from all units",
+		learnCost: 1,
 	}; }
 	
 	if(n == "Cure"){ return {
@@ -83,6 +90,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "C",
 		desc: "Restore HP to one unit",
+		learnCost: 5,
 	}; }
 	
 	
@@ -95,6 +103,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "E",
 		desc: "Magic eye looks around",
+		learnCost: 23,
 	}; }
 	
 	if(n == "Flame Ward"){ return {
@@ -106,6 +115,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "F",
 		desc: "Reduce FIRE dmg taken",
+		learnCost: 13,
 	}; }
 	
 	if(n == "Frost"){ return {
@@ -117,6 +127,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "F",
 		desc: "AoE Cold Attack",
+		learnCost: 9,
 	}; }
 	if(n == "Frost+"){ return {
 		nam: n,
@@ -127,6 +138,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "F",
 		desc: "AoE Cold Attack",
+		learnCost: 9,
 	}; }
 	
 	if(n == "Gravity"){ return {
@@ -138,6 +150,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "G",
 		desc: "Push foes together",
+		learnCost: 18,
 	}; }
 	
 	if(n == "Ice Lance"){ return {
@@ -149,6 +162,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "I",
 		desc: "Caster attacks rapdily with ice",
+		learnCost: 13,
 	}; }
 	
 	if(n == "Leach"){ return {
@@ -160,6 +174,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "L",
 		desc: "Caster steals HP from foe with most",
+		learnCost: 7,
 	}; }
 	
 	if(n == "Light"){ return {
@@ -171,6 +186,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "L",
 		desc: "Remove dark gas",
+		learnCost: 7,
 	}; }
 	
 	if(n == "Open"){ return {
@@ -182,6 +198,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "O",
 		desc: "Break locks",
+		learnCost: 9,
 	}; }
 	
 	if(n == "Phase Door"){ return {
@@ -193,6 +210,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "P",
 		desc: "Remove one normal wall",
+		learnCost: 9,
 	}; }
 	if(n == "Polymorph"){ return {
 		nam: n,
@@ -203,6 +221,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "P",
 		desc: "Turn foes into Sheep",
+		learnCost: 14,
 	}; }
 	
 	if(n == "Repel"){ return {
@@ -214,6 +233,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "R",
 		desc: "Minor monsters may flee",
+		learnCost: 11,
 	}; }
 	
 	if(n == "Shield"){ return {
@@ -225,6 +245,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "S",
 		desc: "Caster protects party's HP",
+		learnCost: 9,
 	}; }
 	
 	if(n == "Wall Ring"){ return {
@@ -236,6 +257,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "S",
 		desc: "Caster protects party's HP",
+		learnCost: 9,
 	}; }
 	
 	if(n == "Tornado"){ return {
@@ -247,6 +269,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "T",
 		desc: "Dissipates gas and flame",
+		learnCost: 18,
 	}; }
 	
 	if(n == "Vex"){ return {
@@ -258,6 +281,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "V",
 		desc: "Foes will missfire",
+		learnCost: 9,
 	}; }
 	
 	if(n == "Warp"){ return {
@@ -269,6 +293,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "W",
 		desc: "Teleport in a direction",
+		learnCost: 13,
 	}; }
 	
 	if(n == "Wall of Fire"){ return {
@@ -280,6 +305,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "W",
 		desc: "AoE Fire Attack",
+		learnCost: 3,
 	}; }
 	
 	if(n == "Itm Fire"){ return {
@@ -291,6 +317,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "W",
 		desc: "AoE Fire Attack",
+		learnCost: 9,
 	}; }
 	
 	if(n == "Xenograft"){ return {
@@ -302,6 +329,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "X",
 		desc: "improve with donor tissue",
+		learnCost: 11,
 	}; }
 	
 	if(n == "Xerox"){ return {
@@ -313,6 +341,7 @@ function getSpell(n){
 		canCast: true,
 		hotKey: "X",
 		desc: "Make copies",
+		learnCost: 13,
 	}; }
 	
 }

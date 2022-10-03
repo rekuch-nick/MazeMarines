@@ -12,8 +12,8 @@ function xpCheck(){
 			} else if(pc.party[i].class == 1){ // apprentice
 				pc.party[i].hpGained += 2;
 				pc.party[i].mpMax += 1;
-				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Wall of Fire"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Cure"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Wall of Fire"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Cure"); }
 				
 			} else if(pc.party[i].class == 2){ // mechanic
 				pc.party[i].hpGained += 3;
@@ -30,15 +30,15 @@ function xpCheck(){
 			} else if(pc.party[i].class == 5){ // scribe
 				pc.party[i].hpGained += 2;
 				pc.party[i].mpMax += 1;
-				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Light"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Shield"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Polymorph"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Light"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Shield"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Polymorph"); }
 				
 			} else if(pc.party[i].class == 6){ // gasdoc
 				pc.party[i].hpGained += 2;
 				pc.party[i].mpMax += 1;
-				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Leach"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Vex"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Leach"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Vex"); }
 				
 			} else if(pc.party[i].class == 7){ // knight
 				pc.party[i].hpGained += 5;
@@ -59,23 +59,22 @@ function xpCheck(){
 			} else if(pc.party[i].class == 11){ // iceman
 				pc.party[i].hpGained += 1;
 				pc.party[i].mpMax += 1;
-				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Leach"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Ice Lance"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Flame Ward"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Ice Lance"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Flame Ward"); }
 			
 			} else if(pc.party[i].class == 12){ // bard
 				pc.party[i].hpGained += 1;
 				pc.party[i].mpMax += 1;
-				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Repel"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Warp"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Tornado"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Repel"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Warp"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Tornado"); }
 				
 			} else if(pc.party[i].class == 13){ // gish
 				pc.party[i].hpGained += 3;
 				pc.party[i].mpMax += 1;
 				pc.party[i].limitMax -= 1;
-				if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Xenograft"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Bolts"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Xenograft"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Bolts"); }
 				
 			} else if(pc.party[i].class == 14){ // Sprayer
 				pc.party[i].hpGained += 3;
@@ -92,8 +91,8 @@ function xpCheck(){
 			} else if(pc.party[i].class == 17){ // Mage
 				pc.party[i].hpGained += 1;
 				pc.party[i].mpMax += 1;
-				if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Gravity"); }
-				if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Eye"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 5){ characterLearnSpell(i, "Gravity"); }
+				//if(pc.party[i].xpLevel[pc.party[i].class] == 10){ characterLearnSpell(i, "Eye"); }
 				
 				
 				
@@ -104,11 +103,13 @@ function xpCheck(){
 			} else if(pc.party[i].class == 19){ // Ascendant
 				pc.party[i].hpGained += 1;
 				pc.party[i].mpMax += 1;
-				//if(pc.party[i].xpLevel[pc.party[i].class] == 3){ characterLearnSpell(i, "Leach"); }
+				
 			
 			} else { pc.party[i].hpGained += 3; }
 			
 			pc.party[i].hpMax = pc.party[i].hpBase + pc.party[i].hpGained;
+			
+			pc.party[i].readyToLearn = characterReadyToLearnSpells(i);
 			
 			xpM = xpMax(pc.party[i].xpLevel[pc.party[i].class]);
 			

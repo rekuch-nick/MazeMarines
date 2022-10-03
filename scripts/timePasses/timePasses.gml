@@ -10,6 +10,9 @@ function timePasses(n){
 		//bleed: 0, poison: 0, mute: 0, stun: 0,
 		//pc.hp = clamp(pc.hp + pc.hpRegen, 0, pc.hpMax);
 		for(var i=0; i<7; i++){ if(pc.party[i] != noone){
+			pc.party[i].readyToLearn = characterReadyToLearnSpells(i);
+			
+			
 			var c = pc.party[i];
 			
 			if(c.hp > 0 && (c.bleed < 1 && c.poison < 1) ){

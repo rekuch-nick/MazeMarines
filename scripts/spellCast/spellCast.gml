@@ -3,7 +3,10 @@ function spellCast(spell, casterIndex, tar){
 	if(tar == 1){ ty --; } if(tar == 2){ tx ++; } if(tar == 3){ ty ++; } if(tar == 4){ tx --; }
 	var casterLevel = casterIndex == -1 ? 0 : pc.party[casterIndex].xpLevel[pc.party[casterIndex].class];
 	var mag = .5;
-	if(instance_number(objScreenCombat) > 0){ mag = ww.screenCombat.pcc[casterIndex].magicPower; }
+	if(instance_number(objScreenCombat) > 0){ 
+		if(ww.screenCombat.pcc[casterIndex] == noone){ return; }
+		mag = ww.screenCombat.pcc[casterIndex].magicPower; 
+	}
 	
 	
 	for(var i=0; i<array_length(ww.antiMagic[pc.zSpot]); i++){

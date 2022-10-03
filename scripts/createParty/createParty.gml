@@ -17,6 +17,7 @@ function createParty(namArr, classArr){
 			bleed: 0, poison: 0, mute: 0, stun: 0, xenograft: 0,
 			aim: 0, shield: 0, flameward: 0,
 			item: noone,
+			readyToLearn: false,
 		};
 		pc.party[i].xpLevel[classArr[i]] = 1;
 		//pc.party[i].xpLevel[classArr[i]] = 5; /////////
@@ -110,13 +111,13 @@ function createParty(namArr, classArr){
 
 	ww.namePlate[0] = instance_create_depth(1098, 10, ww.Lscn, objWidgetBars);
 	ww.namePlate[0].index = 0;
-	ww.namePlate[1] = instance_create_depth(1098, 140, ww.Lscn, objWidgetBars);
+	ww.namePlate[1] = instance_create_depth(1098, 140-8, ww.Lscn, objWidgetBars);
 	ww.namePlate[1].index = 1;
-	ww.namePlate[2] = instance_create_depth(1098, 270, ww.Lscn, objWidgetBars);
+	ww.namePlate[2] = instance_create_depth(1098, 270-16, ww.Lscn, objWidgetBars);
 	ww.namePlate[2].index = 2;
-	ww.namePlate[3] = instance_create_depth(1098, 400, ww.Lscn, objWidgetBars);
+	ww.namePlate[3] = instance_create_depth(1098, 400-24, ww.Lscn, objWidgetBars);
 	ww.namePlate[3].index = 3;
-	ww.namePlate[4] = instance_create_depth(1098, 530, ww.Lscn, objWidgetBars);
+	ww.namePlate[4] = instance_create_depth(1098, 530-32, ww.Lscn, objWidgetBars);
 	ww.namePlate[4].index = 4;
 
 }

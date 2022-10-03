@@ -17,6 +17,12 @@ for(var i=0; i<=cursorMax; i++){
 	if(c == c_white){ if(hotkeyType == "y/n" || hotkeyType == "spell" || hotkeyType == "number" || hotkeyType == "num"){
 		draw_text_color(x + 72, y + 64 + i*22 + promptLines*22, string_char_at(s, 0), c_yellow, c_yellow, c_yellow, c_yellow, 1);
 	}}
+	
+	if(optionsType == "learnSpell"){
+		var desc = getSpell(optionsAction[i]).desc;
+		draw_text_color(9 * 64 + 32, y + 64 + i*22 + promptLines*22, desc, c_grey, c_grey, c_grey, c_grey, 1);
+	}
+	
 }
 
 //draw_sprite_stretched(imgCursor, 0, x+16, y+ 64 + cursor*22 + 1, 30, 20);

@@ -1,4 +1,4 @@
-draw_rectangle_color(x, y, x+300, y+120, c_navy, c_black, c_black, c_navy, false);
+draw_rectangle_color(x, y, x+300, y+120-8, c_navy, c_black, c_black, c_navy, false);
 var char = pc.party[index];
 
 var c = c_white;
@@ -34,7 +34,7 @@ if(char.mpMax > 0){
 
 var lim = pc.party[index].limit;
 var lM = pc.party[index].limitMax;
-yo1 = y+60; yo2 = yo1 + 16;
+yo1 = y+60; yo2 = yo1 + 8;
 draw_rectangle_color(x, yo1, x + 300, yo2, c_dkgray, c_dkgray, c_dkgray, c_dkgray, false);
 var xm = 300 * (lim / lM);
 //draw_rectangle_color(x, yo1, x + xm, yo2, c_orange, c_purple, c_fuchsia, c_silver, false);
@@ -42,7 +42,7 @@ draw_rectangle_color(x, yo1, x + xm, yo2, c_purple, c_purple, c_purple, c_purple
 //draw_text(x+8, yo1, "Limit Break");
 
 var xpM = xpMax(pc.party[index].xpLevel[pc.party[index].class]);
-yo1 = y+80; yo2 = yo1 + 16;
+yo1 = y+72; yo2 = yo1 + 16;
 draw_rectangle_color(x, yo1, x + 300, yo2, c_dkgray, c_dkgray, c_dkgray, c_dkgray, false);
 var xm = 300 * (char.xp / xpM);
 //draw_rectangle_color(x, yo1, x + xm, yo2, c_lime, c_green, c_lime, c_green, false);
@@ -51,7 +51,9 @@ draw_text(x+8, yo1, "XP:" + string(char.xp));
 
 
 
-var xx = x+2; var yy = y + 100;
+var xx = x+2; var yy = y + 100 - 8;
+if(pc.party[index].readyToLearn){ draw_text_color(xx, yy, "*", c_white, c_white, c_white, c_white, 1); xx += 18; }
+
 if(char.bleed > 0){ draw_text_color(xx, yy, "B", c_maroon, c_maroon, c_maroon, c_maroon, 1); xx += 18; }
 if(char.poison > 0){ draw_text_color(xx, yy, "P", c_green, c_green, c_green, c_green, 1); xx += 18; }
 if(char.mute > 0){ draw_text_color(xx, yy, "M", c_fuchsia, c_fuchsia, c_fuchsia, c_fuchsia, 1); xx += 18; }

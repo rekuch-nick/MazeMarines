@@ -69,6 +69,7 @@ if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv1){
 	msg += "P : Unit is Poisoned, will lose 5% hp instead of healing every few steps. Lasts until cured.\n\n";
 	msg += "M : Unit is Muted, cannot cast any spells. Lasts for a while then goes away.\n\n";
 	msg += "S : Unit is Stunned, cannot attack. Lasts for a while then goes away.\n\n";
+	msg += "Also keep an eye out for a * in that same area, it means you're qualified to learn a new spell. Head to the spell tower anytime you see it!\n\n";
 	
 	msg = stringInsertBreaks(msg, 45);
 }

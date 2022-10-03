@@ -21,6 +21,7 @@ function worldGenTown(z){
 	
 
 	bmap[z][3, 5] = imgHousesTower; fmap[z][3, 6] = imgFloorTower;
+	bmap[z][1, 6] = imgHousesSpell; fmap[z][1, 7] = imgFloorSpellOffice;
 			
 	
 	for(var a=0; a<9; a++){ fmap[z][a, 3] = imgRoadH; }

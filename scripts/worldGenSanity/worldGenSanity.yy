@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "characterAimAtMostHP",
+  "name": "worldGenSanity",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

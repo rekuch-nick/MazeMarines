@@ -53,7 +53,9 @@ if(usingItem != "" && answer != ""){
 			spellInputCD = 5;
 		}
 		if(usingItem == "dig"){
-			if(!pc.pickType = imgPick2 || irandom_range(0, 1) == 1){ pc.picks --; }
+			//if(!pc.pickType = imgPick2 || irandom_range(0, 1) == 1){ pc.picks --; }
+			pc.picks --;
+			if(pc.pickType == imgPick2 && irandom_range(0, 1) == 1){ pc.picks ++; }
 			floorBreak(tx, ty);
 			instance_create_depth(tx*64, ty*64, ww.Leff, effDig);
 			spellInputCD = 5;
@@ -198,6 +200,15 @@ if(debug){
 	if(keyboard_check_pressed(vk_insert)){ 
 		if(pc.coins >= 10000){ pc.coins = 0; } else { pc.coins = 10000; }
 		picks = 10; bombs = 10; medkits = 10; boats = 10;
+		
+		if(keyboard_check(vk_shift)){
+			for(var i=0; i<5; i++){
+				var arr = characterGetLearnableSpells(i);
+				for(var j=0; j<array_length(arr); j++){
+					characterLearnSpell(i, arr[j]);
+				}
+			}
+		}
 	}
 	
 	if(keyboard_check_pressed(vk_delete)){ 

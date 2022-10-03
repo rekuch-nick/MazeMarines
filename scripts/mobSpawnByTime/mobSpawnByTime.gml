@@ -6,7 +6,7 @@ function mobSpawnByTime(){
 	var t = objMobGoon;
 	if(pc.zSpot > 1 && irandom_range(1, 8) == 1){ t = objMobGoon2; }
 	
-	if(pc.killsThisFloor >= 10 && pc.treasureGoblinSpawned == 0 && irandom_range(1, 10) == 1){
+	if(pc.killsThisFloor >= 10 && pc.treasureGoblinSpawned == 0 && irandom_range(1, 100) + clamp(pc.killsThisFloor-10, 0, 25) >= 96){
 		pc.treasureGoblinSpawned ++;
 		t = objMobTreasureGoblin;
 	}

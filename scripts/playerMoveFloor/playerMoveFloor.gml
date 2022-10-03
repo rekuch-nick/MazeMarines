@@ -33,14 +33,14 @@ function playerMoveFloor(d){
 		var m = ww.mmap[z][a, b];
 		if(m != noone && m != pc){
 			ww.mmap[z][a, b] = instance_create_depth(a*64, b*64, ww.Lmmb, m);
-		} else if (ww.fmap[z][a, b] == imgFloorSpike01) { ww.mmap[z][a, b] = instance_create_depth(a*64, b*64, ww.Lcmb, objMobGoon2);
-		} else if (ww.fmap[z][a, b] == imgFloorSpikeBoss01) { ww.mmap[z][a, b] = instance_create_depth(a*64, b*64, ww.Lcmb, objMobBoss1); }
+		} else if (ww.fmap[z][a, b] == imgFloorSpike01) { ww.mmap[z][a, b] = instance_create_depth(a*64, b*64, ww.Lmmb, objMobGoon2);
+		} else if (ww.fmap[z][a, b] == imgFloorSpikeBoss01) { ww.mmap[z][a, b] = instance_create_depth(a*64, b*64, ww.Lmmb, objMobBoss1); }
 	}}
 	
 	for(var a=0; a<17; a++){ for (var b=0; b<13; b++){
 		var m = ww.gmap[z][a, b];
 		if(m != noone){
-			instance_create_depth(a*64, b*64, ww.depth-1, m);
+			instance_create_depth(a*64, b*64, ww.Lmmb-1, m);
 		}
 	}}
 	

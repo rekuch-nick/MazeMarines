@@ -120,6 +120,10 @@ function worldGen(){
 			if(z == 14){ worldGenFloorH(imgFloorLava, true, irandom_range(4, 7), 2, z); }
 			
 			
+			
+			if(z == 4){ bmap[z][4, 5] = imgBlockIron; bmap[z][6, 5] = imgBlockIron; bmap[z][5, 4] = imgBlockIron; bmap[z][5, 6] = imgBlockIron; bmap[z][5, 5] = noone; fmap[z][5, 5] = imgFloorSwitchUp; }
+			
+			
 			worldGenReplaceBlock(z, imgBlock01, imgBlockHiddenChest, (z%2)+1 );
 			worldGenReplaceBlock(z, imgBlock01, imgBlockIron, -36 + z*6);
 			
@@ -167,6 +171,10 @@ function worldGen(){
 		
 			if(z > 0){
 				worldGenFloorTreasure(z, irandom_range(1, 4));
+			}
+			
+			while(!worldGenSanity(z)){
+				worldGenReplaceBlock(z, imgBlockIron, imgBlock01, 2);
 			}
 		}
 		

@@ -1,7 +1,7 @@
 function spawnGoblinTreasure(){
 	var aa = pc.xSpot; var bb = pc.ySpot; var z = pc.zSpot;
 	
-	var tries = 0;
+	var tries = clamp(z, 20, 50);
 	var n = 2;
 	while(tries < 50 && n > 0){
 		tries ++;

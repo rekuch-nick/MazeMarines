@@ -23,6 +23,7 @@ whoIsCCing = -1;
 
 killsThisFloor = 0;
 treasureGoblinSpawned = 0;
+spellLearnPriceMod = 150;
 
 /*
 hp = 200;

@@ -43,4 +43,6 @@ function characterLearnSpell(charIndex, s){
 		pc.party[charIndex].spells[i] = arr[i];
 	}
 	
+	
+	for(var i=0; i<5; i++){ if(pc.party[i] != noone){ pc.party[i].readyToLearn = characterReadyToLearnSpells(i); }}
 }

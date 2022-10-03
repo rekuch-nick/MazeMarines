@@ -6,10 +6,10 @@ function characterAimAtLeastHP(ialy){
 	var tarList;
 	var index = 0;
 	with(objCombatUnit){
-		if(aly != ialy){ 
+		if(aly != ialy){ if(aly != 0 || ialy == -1){
 			tarList[index] = id;
 			index ++;
-		}
+		}}
 	}
 	if(index == 0){ return noone; }
 	

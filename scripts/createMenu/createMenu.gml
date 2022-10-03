@@ -21,5 +21,6 @@ function createMenu(promptText, oType, positionNote, oHotkey, oText, oAction, oP
 	if(positionNote == "small"){ menu.xp2 = 64*6 + 32; menu.yp2 = 64*2 + 32; }
 	if(positionNote == "wide"){ menu.yp2 = 64*2 + 32; }
 	if(positionNote == "wide+"){ menu.yp2 = 64*2 + 32; menu.yp2 = 64*3 + 32; }
+	if(positionNote == "big"){ menu.xp2 = 64*21 + 32; }
 	
 }
