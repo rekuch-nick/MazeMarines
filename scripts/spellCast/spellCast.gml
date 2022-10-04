@@ -239,9 +239,9 @@ function spellCast(spell, casterIndex, tar){
 	
 	if(spell.nam == "Slab1" || spell.nam == "Slab2" || spell.nam == "Slab3"){
 		var n = 1;
-		if(spell.nam == "Slab1"){ n = 11; }
-		if(spell.nam == "Slab2"){ n = 18; }
-		if(spell.nam == "Slab3"){ n = 19; }
+		if(spell.nam == "Slab1"){ n = ww.slab1Floor; }
+		if(spell.nam == "Slab2"){ n = ww.slab2Floor; }
+		if(spell.nam == "Slab3"){ n = ww.slab3Floor; }
 		
 		
 		if(pc.zSpot < n){
