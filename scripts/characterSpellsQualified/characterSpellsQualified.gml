@@ -15,8 +15,8 @@ function characterSpellsQualified(index){
 	if(pc.party[index].xpLevel[5] >= 10){ spls[i] = "Polymorph"; i++; }
 	
 	if(pc.party[index].xpLevel[6] >= 1){ spls[i] = "AntiVenom"; i++; }
-	if(pc.party[index].xpLevel[6] >= 1){ spls[i] = "Leach"; i++; }
-	if(pc.party[index].xpLevel[6] >= 3){ spls[i] = "Vex"; i++; }
+	if(pc.party[index].xpLevel[6] >= 3){ spls[i] = "Leach"; i++; }
+	if(pc.party[index].xpLevel[6] >= 5){ spls[i] = "Vex"; i++; }
 	
 	if(pc.party[index].xpLevel[11] >= 1){ spls[i] = "Frost"; i++; }
 	if(pc.party[index].xpLevel[11] >= 3){ spls[i] = "Flame Ward"; i++; }
