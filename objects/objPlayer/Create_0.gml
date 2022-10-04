@@ -23,7 +23,7 @@ whoIsCCing = -1;
 
 killsThisFloor = 0;
 treasureGoblinSpawned = 0;
-spellLearnPriceMod = 150;
+spellLearnPriceMod = 40;
 
 /*
 hp = 200;
@@ -57,9 +57,9 @@ inventory[1] = getItem("Instructions");
 //inventory[3] = getItem("Silver Triangle");
 //inventory[3] = getItem("Silver Circle");
 
-inventory[3] = getItem("Granite Slab");
-inventory[4] = getItem("Jade Slab");
-inventory[5] = getItem("Onyx Slab");
+//inventory[3] = getItem("Granite Slab");
+//inventory[4] = getItem("Jade Slab");
+//inventory[5] = getItem("Onyx Slab");
 
 //inventory[3] = getItem("Mirror Charm");
 //inventory[3] = getItem("Rod of Fireballs");

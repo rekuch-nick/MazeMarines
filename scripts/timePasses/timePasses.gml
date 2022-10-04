@@ -23,7 +23,6 @@ function timePasses(n){
 			
 			if(c.hp > 0 && pc.party[i].item != noone){ if(pc.party[i].item.wearEffect == "Troll Healing"){
 				c.hp = clamp(c.hp + 2, 0, c.hpMax);
-				show_debug_message(123)
 			}}
 			
 			

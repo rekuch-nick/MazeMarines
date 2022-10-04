@@ -8,14 +8,14 @@ function worldGen(){
 	clueFloor = 9;
 	circleFloor = 10;
 	
-	slab1Floor = 11;
-	slab2Floor = 17;
-	slab3Floor = 19;
+	slab1Floor = 6;
+	slab2Floor = 11;
+	slab3Floor = 15;
 	
-	boatFloor = 64;
-	medkitFloor = 53;
+	boatFloor = 19;
+	medkitFloor = 12;
 	bombFloor = 13;
-	pickFloor = 78;
+	pickFloor = 17;
 	
 	
 	var stairQuad = choose(4, 1, 3, 2);
@@ -182,7 +182,6 @@ function worldGen(){
 			
 			if(z > 1 && z % 3 == 0){
 				worldGenReplaceFloor(z, imgFloor01, imgFloorLPLab, 1);
-				show_debug_message(z)
 			}
 			
 			while(!worldGenSanity(z)){

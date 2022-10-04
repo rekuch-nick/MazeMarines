@@ -2,7 +2,7 @@ image_xscale = 4; image_yscale = 4;
 
 
 msg = "Welcome to Locksmith!"
-keyPrice = 70;
+keyPrice = 50;
 hasBought = false;
 
 if(pc.coins < keyPrice){

@@ -243,7 +243,6 @@ function spellCast(spell, casterIndex, tar){
 		if(spell.nam == "Slab2"){ n = 18; }
 		if(spell.nam == "Slab3"){ n = 19; }
 		
-		show_debug_message(n)
 		
 		if(pc.zSpot < n){
 			var dis = n - pc.zSpot;

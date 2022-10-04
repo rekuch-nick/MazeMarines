@@ -19,12 +19,17 @@ function combatTreasure(plus){
 		if(r == 4){ t = getItem("Bezoar"); }
 		if(r == 5){ t = getItem("Deflection Ring"); } 
 		if(r == 6){ t = getItem("Mirror Charm"); } ////from start
-		if(r == 7){ t = getItem("Wall Ring"); } 
+		if(r == 7){ t = getItem("Troll Brace"); } 
 		if(r == 8){ t = getItem("Titan Glove"); } 
-		if(r == 9){ t = getItem("Troll Brace"); } 
+		if(r == 9){ t = getItem("Wall Ring"); } 
 		if(r == 10){ t = getItem("Rod of Fireballs"); } 
 		if(r == 11){ t = getItem("Titan Belt"); } 
 		if(r == 12){ t = getItem("Mage Staff"); } 
+		if(r == 13){ t = getItem("Wall Ring"); } 
+		if(r == 14){ t = getItem("Rod of Fireballs"); } 
+		if(r == 15){ t = getItem("Titan Belt"); } 
+		if(r == 16){ t = getItem("Mage Staff"); } 
+		
 		
 		return t;
 	}

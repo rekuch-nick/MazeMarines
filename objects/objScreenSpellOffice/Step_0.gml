@@ -8,9 +8,9 @@ if(answer != "" && answer != "no"){
 	
 	if(who != noone){
 		
-		pc.coins -= getSpell(answer).learnCost;
+		pc.coins -= getSpell(answer).learnCost * pc.spellLearnPriceMod;
 		characterLearnSpell(who, answer);
-		
+		answer = ""; who = noone;
 		
 		
 	} else {
@@ -31,15 +31,16 @@ if(answer != "" && answer != "no"){
 			var o = getSpell(sA[i]);
 			nams[i] = o.nam;
 			for(j=0; j<(19 - string_length(o.nam)); j++){ nams[i] += "."; }
-			nams[i] += string(o.cost * pc.spellLearnPriceMod) + "g";
+			nams[i] += string(o.learnCost * pc.spellLearnPriceMod) + "g";
 		
 		
 			ids[i] = o.nam;
 			cost[i] = o.learnCost * pc.spellLearnPriceMod;
 		}
 	
-	
+		answer = "";
 		createMenu("Which spell to learn?", "learnSpell", "big", "",nams, ids, cost);
+		return;
 	}
 	
 	
