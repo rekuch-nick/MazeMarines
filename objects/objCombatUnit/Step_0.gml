@@ -43,6 +43,13 @@ if(aly == 1){
 	if(poison > 0){ pc.party[playerIndex].poison += poison; poison = 0; }
 	if(mute > 0){ pc.party[playerIndex].mute += mute; mute = 0; }
 	
+	if(hp < 1){
+		with(objScreenSpell){
+			if(index == playerIndex){
+				instance_destroy();	
+			}
+		}
+	}
 }
 
 

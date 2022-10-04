@@ -73,6 +73,12 @@ if(lose && overCD < 1 && keyboard_check_pressed(vk_enter)){
 	with(objCombatUnit){ instance_destroy(); }
 	pc.coins = 0;
 	room_speed = 30;
+	
+	var ft = ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot];
+	if(pc.inBoat != noone){
+		//code here if we don't want the boat lost...
+	}
+	
 	pc.xSpot = 10; pc.x = 10*64;
 	pc.ySpot = 10; pc.y = 10*64;
 	playerMoveFloor(-pc.zSpot);

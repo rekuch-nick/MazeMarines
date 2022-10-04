@@ -28,7 +28,7 @@ if(char.mpMax > 0){
 	draw_rectangle_color(x, yo1, x + 300, yo2, c_dkgray, c_dkgray, c_dkgray, c_dkgray, false);
 	var xm = 300 * (char.mp / char.mpMax);
 	//draw_rectangle_color(x, yo1, x + xm, yo2, c_aqua, c_blue, c_aqua, c_blue, false);
-	draw_rectangle_color(x, yo1, x + xm, yo2, c_navy, c_navy, c_navy, c_navy, false);
+	draw_rectangle_color(x, yo1, x + xm, yo2, c_blue, c_blue, c_blue, c_blue, false);
 	draw_text(x+8, yo1, "MP:" + string(char.mp));
 }
 
