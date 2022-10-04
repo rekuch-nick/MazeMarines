@@ -91,6 +91,12 @@ function playerEnterTileImpl(z, a, b){
 			}}
 		}
 		
+		for(var zz=0; zz<ww.LAST; zz ++){ for(var aa=0; aa<17; aa++){ for (var bb=0; bb<13; bb++){
+			if(ww.fmap[zz][aa, bb] == imgFloorLPLab && ww.pmap[zz][aa, bb] == noone){
+				ww.pmap[zz][aa, bb] = imgStimpack;
+			}
+		}}}
+		
 		ww.pmap[ww.clueFloor][5, 4] = imgrBed;
 		ww.pmap[ww.clueFloor][8, 4] = imgrCandle;
 		ww.pmap[ww.clueFloor][11, 4] = imgrDeck;
@@ -266,6 +272,10 @@ function playerEnterTileImpl(z, a, b){
 		if(pup == imgrPiano){ if(playerGainItem("Piano")){ rem = true; txt = "Chose the Piano"; removeClueItems(); } }
 		if(pup == imgrSoap){ if(playerGainItem("Bar of Soap")){ rem = true; txt = "Chose the Bar of Soap"; removeClueItems(); } }
 		if(pup == imgrSponge){ if(playerGainItem("Sponge")){ rem = true; txt = "Chose the Sponge"; removeClueItems(); } }
+		
+		if(pup == imgSlab1){ if(playerGainItem("Granite Slab")){ rem = true; txt = "The SLAB humms with power"; } }
+		if(pup == imgSlab2){ if(playerGainItem("Jade Slab")){ rem = true; txt = "The SLAB humms with power"; } }
+		if(pup == imgSlab3){ if(playerGainItem("Onyx Slab")){ rem = true; txt = "The SLAB humms with power"; } }
 	}
 		
 	

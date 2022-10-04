@@ -38,6 +38,7 @@ function playerMoveFloor(d){
 	}}
 	
 	for(var a=0; a<17; a++){ for (var b=0; b<13; b++){
+		
 		var m = ww.gmap[z][a, b];
 		if(m != noone){
 			instance_create_depth(a*64, b*64, ww.Lmmb-1, m);

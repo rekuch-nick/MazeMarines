@@ -16,8 +16,7 @@ function worldGenFloorTreasure(z, n){
 					if(r2 >= 90){ t = imgCoin4; }
 					if(r2 >= 120){ t = imgCoin5; }
 				
-					if(r >= 81){ t = imgStimpack; }
-					if(r >= 91){ t = imgBook; }
+					if(r >= 86){ t = imgBook; }
 				
 				
 					ww.pmap[z][a, b] = t;

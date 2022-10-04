@@ -236,6 +236,36 @@ function spellCast(spell, casterIndex, tar){
 		s.text = "SHIELD";
 	}
 	
+	
+	if(spell.nam == "Slab1" || spell.nam == "Slab2" || spell.nam == "Slab3"){
+		var n = 1;
+		if(spell.nam == "Slab1"){ n = 11; }
+		if(spell.nam == "Slab2"){ n = 18; }
+		if(spell.nam == "Slab3"){ n = 19; }
+		
+		show_debug_message(n)
+		
+		if(pc.zSpot < n){
+			var dis = n - pc.zSpot;
+			tx = pc.xSpot; ty = pc.ySpot;
+			for(var a=0; a<17; a++){ for(var b=0; b<13; b++){
+				if(ww.fmap[pc.zSpot+dis][a, b] == imgStairUp){ tx = a; ty = b; }
+			}}
+			pc.xSpot = tx; pc.x = tx * 64;
+			pc.ySpot = ty; pc.y = ty * 64;
+			playerMoveFloor(dis);
+			
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
+			s.text = "Used SLAB";
+		} else {
+			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
+			s.text = "Need to be higher up to use the SLAB";
+		}
+		
+	}
+	
+	
+	
 	if(spell.nam == "Tornado"){
 		if(tar == 1){ tx = pc.xSpot-1; ty = pc.ySpot -3; }
 		if(tar == 2){ tx = pc.xSpot+1; ty = pc.ySpot -1; }

@@ -38,7 +38,7 @@ yo1 = y+60; yo2 = yo1 + 8;
 draw_rectangle_color(x, yo1, x + 300, yo2, c_dkgray, c_dkgray, c_dkgray, c_dkgray, false);
 var xm = 300 * (lim / lM);
 //draw_rectangle_color(x, yo1, x + xm, yo2, c_orange, c_purple, c_fuchsia, c_silver, false);
-draw_rectangle_color(x, yo1, x + xm, yo2, c_purple, c_purple, c_purple, c_purple, false);
+draw_rectangle_color(x, yo1, x + xm, yo2, c_orange, c_orange, c_orange, c_orange, false);
 //draw_text(x+8, yo1, "Limit Break");
 
 var xpM = xpMax(pc.party[index].xpLevel[pc.party[index].class]);

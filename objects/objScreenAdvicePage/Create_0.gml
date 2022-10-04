@@ -102,7 +102,7 @@ if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv9){
 
 if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv6){
 	msg = "Hidden in normal looking red treasure chests, there are a few very special items. If you find a red BOMB, orange RAFT, blue MEDKIT, or golden HARROW, every one of those items you use from then on will be upgraded.\n\n";
-	msg += "\n\n";
+	msg += "Rare stone slabs grant you the ability to teleport from a higher floor down into the floor they were found on.\n\n";
 	msg = stringInsertBreaks(msg, 45);
 }
 
@@ -117,7 +117,7 @@ if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv8){
 	msg = "Harrow kits are digging equipment with shovels, picks, etc. They are incredibly useful!\n\n";
 	msg += "Don't be afraid to try them out anywhere. Not only will they destroy dangerous traps, but they won't ever destroy important tiles like door switches or stairs.\n\n";
 	msg += "Apparently there's even a few treasures you can only find by digging in exactly the right spot... but I wouldn't know anything about where they are.\n\n";
-	msg += "Harrowing isn't your only option for traps though. Some of them will only trigger a limited number of times. You could always just step on a few then run back up to town to heal. It's slow, but works."
+	msg += "Harrowing isn't your only option for traps though. Most of them besides spikes will only trigger a limited number of times. You could always just step on a few then run back up to town to heal. It's slow and painful, but works."
 	
 	msg = stringInsertBreaks(msg, 45);
 }

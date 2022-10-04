@@ -248,6 +248,40 @@ function getSpell(n){
 		learnCost: 9,
 	}; }
 	
+	if(n == "Slab1"){ return {
+		nam: n,
+		cost: 0,
+		wait: 0,
+		explore: true,
+		target: "",
+		canCast: true,
+		hotKey: "S",
+		desc: "Return to the Deeps",
+		learnCost: 1,
+	}; }
+	if(n == "Slab2"){ return {
+		nam: n,
+		cost: 0,
+		wait: 0,
+		explore: true,
+		target: "",
+		canCast: true,
+		hotKey: "S",
+		desc: "Return to the Deep",
+		learnCost: 1,
+	}; }
+	if(n == "Slab3"){ return {
+		nam: n,
+		cost: 0,
+		wait: 0,
+		explore: true,
+		target: "",
+		canCast: true,
+		hotKey: "S",
+		desc: "Return to the Deep",
+		learnCost: 1,
+	}; }
+	
 	if(n == "Wall Ring"){ return {
 		nam: n,
 		cost: 0,

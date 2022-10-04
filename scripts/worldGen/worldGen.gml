@@ -8,6 +8,10 @@ function worldGen(){
 	clueFloor = 9;
 	circleFloor = 10;
 	
+	slab1Floor = 11;
+	slab2Floor = 17;
+	slab3Floor = 19;
+	
 	boatFloor = 64;
 	medkitFloor = 53;
 	bombFloor = 13;
@@ -73,10 +77,13 @@ function worldGen(){
 			if(z == 8){ ww.signText[z] = stringInsertBreaks("If you beat a lot of monsters on the same floor without leaving, there's a chace a rare treasure laden monster will show up.", 0); }
 			
 			
+			if(z == 12){ ww.signText[z] = stringInsertBreaks("The Stone Slabs are amazing tools, but the final treasure won't appear while you hold one- they're worth quite a few coins, so be sure to sell them before you attempt a final run.", 0); }
+			
+			
 			worldGenMaze(z);
 			worldGenReplaceBlock(z, imgBlock01, noone, 40 - z*2);
 			
-			if(z == bombFloor || z == medkitFloor || z == boatFloor || z == pickFloor){
+			if(z == bombFloor || z == medkitFloor || z == boatFloor || z == pickFloor || z == slab1Floor || z == slab2Floor || z == slab3Floor){
 				worldGenReplaceBlock(z, imgBlock01, imgBlockChest2, 1);
 			}
 			worldGenReplaceBlock(z, imgBlock01, imgBlockChest, 2);
@@ -171,6 +178,11 @@ function worldGen(){
 		
 			if(z > 0){
 				worldGenFloorTreasure(z, irandom_range(1, 4));
+			}
+			
+			if(z > 1 && z % 3 == 0){
+				worldGenReplaceFloor(z, imgFloor01, imgFloorLPLab, 1);
+				show_debug_message(z)
 			}
 			
 			while(!worldGenSanity(z)){

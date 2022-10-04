@@ -43,7 +43,36 @@ function getItem(i){
 		breakMessage: "has broken",
 	}; }
 	
-	
+	if(i == "Granite Slab"){ return {
+		nam: i,
+		canWear: false,
+		wearEffect: "",
+		desc: "Use to return to the deep.",
+		spell: "Slab1",
+		worth: 1000,
+		breakChance: 0,
+		breakMessage: "has broken",
+	}; }
+	if(i == "Jade Slab"){ return {
+		nam: i,
+		canWear: false,
+		wearEffect: "",
+		desc: "Use to return to the deep.",
+		spell: "Slab2",
+		worth: 1000,
+		breakChance: 0,
+		breakMessage: "has broken",
+	}; }
+	if(i == "Onyx Slab"){ return {
+		nam: i,
+		canWear: false,
+		wearEffect: "",
+		desc: "Use to return to the deep.",
+		spell: "Slab3",
+		worth: 1000,
+		breakChance: 0,
+		breakMessage: "has broken",
+	}; }
 	
 	
 	if(i == "Lantern"){ return {
