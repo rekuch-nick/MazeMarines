@@ -158,7 +158,7 @@ function playerEnterTileImpl(z, a, b){
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorGate02){
 		if(playerHasItem("Silver Circle")){
 			worldGenReplaceBlockAll(pc.zSpot, imgBlockGate, noone);
-			worldGenReplaceFloorAll(pc.zSpot, imgFloorGate01, imgFloor01);
+			worldGenReplaceFloorAll(pc.zSpot, imgFloorGate02, imgFloor01);
 			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 			s.text = "Bearer of the Circle, you may pass";
 		} else {

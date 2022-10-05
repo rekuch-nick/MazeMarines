@@ -130,7 +130,7 @@ if(!justMoved && spellInputCD < 1){
 				if(!inBounds(aa, bb)){ continue; }
 				wallBreak(aa, bb);
 				instance_create_depth(aa*64, bb*64, ww.Leff, effBoom);
-				if(ww.mmap[pc.zSpot][aa, bb] != noone && ww.mmap[pc.zSpot][aa, bb].object_index == objMobGoon){
+				if(ww.mmap[pc.zSpot][aa, bb] != noone && (ww.mmap[pc.zSpot][aa, bb].object_index == objMobGoon || ww.mmap[pc.zSpot][aa, bb].object_index == objMobGoonSwarm )){
 					instance_destroy(ww.mmap[pc.zSpot][aa, bb]);
 					ww.mmap[pc.zSpot][aa, bb] = noone;
 				}

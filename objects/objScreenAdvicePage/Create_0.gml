@@ -49,7 +49,6 @@ if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv3){
 	msg = "You can select a team member by pressing number keys. Outside of combat, this will let you view stats and levels.\n\n";
 	msg += "If the character knows any spells, you'll be able to cast one by pressing the first letter of its name while the unit is selected.\n\n";
 	msg += "In-combat and out-of-combat spells lists are entirely different, and you'll only see one kind or the other depending on if you're in a fight.\n\n";
-	msg += "Sometimes you'll learn a new spell when leveling up, so be sure to check both lists often.";
 	
 	msg = stringInsertBreaks(msg, 45);
 }
@@ -103,12 +102,15 @@ if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv9){
 if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv6){
 	msg = "Hidden in normal looking red treasure chests, there are a few very special items. If you find a red BOMB, orange RAFT, blue MEDKIT, or golden HARROW, every one of those items you use from then on will be upgraded.\n\n";
 	msg += "Rare stone slabs grant you the ability to teleport from a higher floor down into the floor they were found on.\n\n";
+	msg += "Of course, they won't help you come back up, but that isn't going to stop someone like you, is it?\n\n";
 	msg = stringInsertBreaks(msg, 45);
 }
 
 if(ww.fmap[pc.zSpot][pc.xSpot, pc.ySpot] == imgFloorAdv7){
-	msg = "Getting sick of long walks through the mazes? Once you become powerful enough, you can find items to teleport you deep into the dungeon below.\n\n";
-	msg += "Of course, they won't help you come back up, but that isn't going to stop someone like you, is it?\n\n";
+	msg = "A few spells get better on their own once you reach a certian level in that spell's class. For example, you probably know the Neophyte spell Bind Wounds that removes the bleed debuff, right?\n\n";
+	msg += "Well if a Neophyte reached level 10, they'll cast Bind Wounds+ instead, which affects the whole party at once.\n\n";
+	msg += "You'll keep using the upgraded version, even after  you change to another class.\n\n";
+	msg += "Upgraded spells don't have to be bought either, you just get them as long as you know the base spell, so that's nice.\n\n";
 	
 	msg = stringInsertBreaks(msg, 45);
 }

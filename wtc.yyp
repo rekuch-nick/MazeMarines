@@ -309,6 +309,7 @@
     {"id":{"name":"imgFloorLavaBoat","path":"sprites/imgFloorLavaBoat/imgFloorLavaBoat.yy",},"order":73,},
     {"id":{"name":"castLimit","path":"scripts/castLimit/castLimit.yy",},"order":32,},
     {"id":{"name":"imgSlab3","path":"sprites/imgSlab3/imgSlab3.yy",},"order":32,},
+    {"id":{"name":"imgScreenSignSmaller","path":"sprites/imgScreenSignSmaller/imgScreenSignSmaller.yy",},"order":68,},
     {"id":{"name":"effProtect","path":"objects/effProtect/effProtect.yy",},"order":11,},
     {"id":{"name":"imgGish","path":"sprites/imgGish/imgGish.yy",},"order":13,},
     {"id":{"name":"imgFloorSpellOffice","path":"sprites/imgFloorSpellOffice/imgFloorSpellOffice.yy",},"order":74,},

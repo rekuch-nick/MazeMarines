@@ -128,7 +128,7 @@ function worldGen(){
 			
 			
 			
-			if(z == 4){ bmap[z][4, 5] = imgBlockIron; bmap[z][6, 5] = imgBlockIron; bmap[z][5, 4] = imgBlockIron; bmap[z][5, 6] = imgBlockIron; bmap[z][5, 5] = noone; fmap[z][5, 5] = imgFloorSwitchUp; }
+			//if(z == 4){ bmap[z][4, 5] = imgBlockIron; bmap[z][6, 5] = imgBlockIron; bmap[z][5, 4] = imgBlockIron; bmap[z][5, 6] = imgBlockIron; bmap[z][5, 5] = noone; fmap[z][5, 5] = imgFloorSwitchUp; }
 			
 			
 			worldGenReplaceBlock(z, imgBlock01, imgBlockHiddenChest, (z%2)+1 );

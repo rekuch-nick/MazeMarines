@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "objScreenSign",
   "spriteId": {
-    "name": "imgScreenSign",
-    "path": "sprites/imgScreenSign/imgScreenSign.yy",
+    "name": "imgScreenSignSmaller",
+    "path": "sprites/imgScreenSignSmaller/imgScreenSignSmaller.yy",
   },
   "solid": false,
   "visible": true,
