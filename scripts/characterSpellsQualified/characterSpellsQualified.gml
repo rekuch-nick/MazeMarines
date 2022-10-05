@@ -21,8 +21,10 @@ function characterSpellsQualified(index){
 	if(pc.party[index].xpLevel[11] >= 1){ spls[i] = "Frost"; i++; }
 	if(pc.party[index].xpLevel[11] >= 3){ spls[i] = "Flame Ward"; i++; }
 	if(pc.party[index].xpLevel[11] >= 5){ spls[i] = "Ice Lance"; i++; }
+	if(pc.party[index].xpLevel[11] >= 10){ spls[i] = "Undertow"; i++; }
 	
 	if(pc.party[index].xpLevel[12] >= 1){ spls[i] = "Phase Door"; i++; }
+	if(pc.party[index].xpLevel[12] >= 1){ spls[i] = "CombatCure"; i++; }
 	if(pc.party[index].xpLevel[12] >= 3){ spls[i] = "Repel"; i++; }
 	if(pc.party[index].xpLevel[12] >= 5){ spls[i] = "Warp"; i++; }
 	if(pc.party[index].xpLevel[12] >= 10){ spls[i] = "Tornado"; i++; }

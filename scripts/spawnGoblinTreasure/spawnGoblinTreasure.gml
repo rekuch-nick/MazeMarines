@@ -8,7 +8,7 @@ function spawnGoblinTreasure(){
 		var a = aa + irandom_range(-2, 2);
 		var b = bb + irandom_range(-2, 2);
 		
-		if(inBounds(a, b) && ww.bmap[z][a, b] == noone){
+		if(inBounds(a, b) && ww.bmap[z][a, b] == noone && (a!=pc.xSpot || b!=pc.ySpot) ){
 			
 			if(ww.pmap[z][a, b] == imgCoin3){
 				var t = choose(imgCoin3, imgCoin3, imgCoin3, imgKey, imgKeyTwo, imgCoin10);

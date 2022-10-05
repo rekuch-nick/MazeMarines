@@ -30,6 +30,7 @@ function characterBaseCombatStats(c, l){
 		o.shotPowerMax = 14 + l;
 		o.limit = "Regain 4 MP";
 		o.magicPower = 1;
+		o.shotType = objMagShot;
 	}
 	if(c == 2){ // mechanic
 		o.shotPowerMin = 5 + l;
@@ -66,6 +67,7 @@ function characterBaseCombatStats(c, l){
 		o.shotPowerMax = 14 + l;
 		o.limit = "Regain 8 MP";
 		o.magicPower = 1;
+		o.shotType = objMagShot;
 	}
 	
 	if(c == 6){ // gasdoc
@@ -76,6 +78,7 @@ function characterBaseCombatStats(c, l){
 		o.limitGainMax = 120;
 		o.limit = "AoE magic attack";
 		o.magicPower = 1;
+		o.shotType = objMagShot;
 	}
 	
 	if(c == 7){ // knight
@@ -175,6 +178,7 @@ function characterBaseCombatStats(c, l){
 		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
 		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
 		o.magicPower = 1.5;
+		o.shotType = objMagShot;
 	}
 	if(c == 18){ // Demo
 		o.shotPowerMin = 5 + l;
@@ -191,6 +195,7 @@ function characterBaseCombatStats(c, l){
 		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
 		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
 		o.magicPower = 1.5;
+		o.shotType = objMagShot;
 	}
 	
 	return o;

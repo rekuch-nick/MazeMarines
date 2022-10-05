@@ -82,6 +82,19 @@ function spellCast(spell, casterIndex, tar){
 		s.text = "CURE";
 	}
 	
+	if(spell.nam == "CombatCure"){
+		var d = ceil(20 * mag);
+		for(var i=0; i<5; i++){ if(pc.party[i] != noone && pc.party[i].hp > 0){
+			with(objCombatUnit){ if(aly == 1){
+				hp = clamp(hp + d, 0, hpMax);
+				for(var ii=0; ii<10; ii++){ instance_create_depth(x + 32, y, ww.Leff, effHeal); }
+			}}
+		}}
+		
+		var s = instance_create_depth(ww.screenCombat.pcc[casterIndex].x + 32, ww.screenCombat.pcc[casterIndex].y, ww.Leff, objEffect);
+		s.text = "CURE";
+	}
+	
 	if(spell.nam == "Eye"){
 		var n = 0;
 		for(var aa=0; aa<17; aa++){ for(var bb=0; bb<13; bb++){
@@ -284,6 +297,11 @@ function spellCast(spell, casterIndex, tar){
 		s.text = "TORNADO";
 	}
 	
+	if(spell.nam == "Undertow"){
+		spellCastUndertow(tar);
+		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
+		s.text = "UNDERTOW";
+	}
 	
 	if(spell.nam == "Vex"){
 		with(objCombatUnit){ if(aly == -1){

@@ -93,6 +93,18 @@ function getSpell(n){
 		learnCost: 5,
 	}; }
 	
+	if(n == "CombatCure"){ return {
+		nam: n,
+		cost: 3,
+		wait: 0,
+		explore: false,
+		target: "",
+		canCast: true,
+		hotKey: "C",
+		desc: "Restore HP to all units",
+		learnCost: 9,
+	}; }
+	
 	
 	if(n == "Eye"){ return {
 		nam: n,
@@ -304,6 +316,18 @@ function getSpell(n){
 		hotKey: "T",
 		desc: "Dissipates gas and flame",
 		learnCost: 18,
+	}; }
+	
+	if(n == "Undertow"){ return {
+		nam: n,
+		cost: 2,
+		wait: 0,
+		explore: true,
+		target: "direction",
+		canCast: true,
+		hotKey: "U",
+		desc: "Push anything floating in one direction",
+		learnCost: 5,
 	}; }
 	
 	if(n == "Vex"){ return {
