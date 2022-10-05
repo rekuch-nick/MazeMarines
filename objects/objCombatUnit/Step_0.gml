@@ -45,7 +45,7 @@ if(aly == 1){
 	
 	if(hp < 1){
 		with(objScreenSpell){
-			if(index == playerIndex){
+			if(index == other.playerIndex){
 				instance_destroy();	
 			}
 		}

@@ -40,6 +40,7 @@
     {"id":{"name":"imgGasDoc","path":"sprites/imgGasDoc/imgGasDoc.yy",},"order":8,},
     {"id":{"name":"objWidgetBag","path":"objects/objWidgetBag/objWidgetBag.yy",},"order":2,},
     {"id":{"name":"imgHouses","path":"sprites/imgHouses/imgHouses.yy",},"order":15,},
+    {"id":{"name":"imgFloorMerch","path":"sprites/imgFloorMerch/imgFloorMerch.yy",},"order":77,},
     {"id":{"name":"imgrDeck","path":"sprites/imgrDeck/imgrDeck.yy",},"order":18,},
     {"id":{"name":"imgFloorAdv8","path":"sprites/imgFloorAdv8/imgFloorAdv8.yy",},"order":62,},
     {"id":{"name":"objScreenInventory","path":"objects/objScreenInventory/objScreenInventory.yy",},"order":7,},

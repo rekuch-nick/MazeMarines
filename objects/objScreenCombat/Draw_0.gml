@@ -14,7 +14,11 @@ if(over && overCD < 1){
 	}
 	
 	if(itemFound != noone){
-		draw_text(96, 64*5, "Found a " + string(itemFound.nam) + ".");
+		if(itemFound == "Key"){
+			draw_text(96, 64*5, "Found a KEY.");
+		} else {
+			draw_text(96, 64*5, "Found a " + string(itemFound.nam) + ".");
+		}
 	}
 }
 

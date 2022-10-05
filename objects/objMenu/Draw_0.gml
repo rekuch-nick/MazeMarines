@@ -13,6 +13,10 @@ for(var i=0; i<=cursorMax; i++){
 	var s = optionsText[i];
 	var c = c_white;
 	if(!canDo[i]){ c = c_grey; }
+	
+	if(pc.menuNote == "Bind Wounds" && hotkeyType == "num" && pc.party[optionsAction[i]].bleed > 0){ c = c_red; }
+	if(pc.menuNote == "AntiVenom" && hotkeyType == "num" && pc.party[optionsAction[i]].poison > 0){ c = c_red; }
+	
 	draw_text_color(x + 72, y + 64 + i*22 + promptLines*22, s, c, c, c, c, 1);
 	if(c == c_white){ if(hotkeyType == "y/n" || hotkeyType == "spell" || hotkeyType == "number" || hotkeyType == "num"){
 		draw_text_color(x + 72, y + 64 + i*22 + promptLines*22, string_char_at(s, 0), c_yellow, c_yellow, c_yellow, c_yellow, 1);

@@ -16,7 +16,13 @@ if(over){ if(overCD > 0){ overCD --; return; } else {
 		if(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].sprite_index == imgGoonWater){ n = -1000; }
 		if(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].sprite_index == imgGoon2){ n = 10; }
 		itemFound = combatTreasure(n);
-		if(itemFound != noone){ playerGainItem(itemFound.nam); }
+		if(itemFound != noone){ 
+			if(itemFound == "Key"){
+				pc.keys ++;
+			} else {
+				playerGainItem(itemFound.nam); 
+			}
+		}
 		
 		for(var i=0; i<5; i++){ if(pc.party[i] != noone && pc.party[i].hp > 0){
 			if(pc.party[i].item != noone && pc.party[i].item.wearEffect == "Gold Find"){

@@ -25,6 +25,8 @@ killsThisFloor = 0;
 treasureGoblinSpawned = 0;
 spellLearnPriceMod = 40;
 
+menuNote = "";
+
 /*
 hp = 200;
 hpMax = 200;
@@ -77,6 +79,7 @@ unitSelected = -1;
 usingItem = "";
 answer = "";
 
+keysForSale = 10;
 
 coins = 0;
 bombs = 0;
