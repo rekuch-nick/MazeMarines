@@ -170,6 +170,7 @@
     {"id":{"name":"effDrain","path":"objects/effDrain/effDrain.yy",},"order":12,},
     {"id":{"name":"objCharacter","path":"objects/objCharacter/objCharacter.yy",},"order":3,},
     {"id":{"name":"imgStairDown","path":"sprites/imgStairDown/imgStairDown.yy",},"order":25,},
+    {"id":{"name":"characterHasPassive","path":"scripts/characterHasPassive/characterHasPassive.yy",},"order":88,},
     {"id":{"name":"imgBard","path":"sprites/imgBard/imgBard.yy",},"order":14,},
     {"id":{"name":"imgGoonChaingun","path":"sprites/imgGoonChaingun/imgGoonChaingun.yy",},"order":34,},
     {"id":{"name":"characterDrawSelf","path":"scripts/characterDrawSelf/characterDrawSelf.yy",},"order":8,},
