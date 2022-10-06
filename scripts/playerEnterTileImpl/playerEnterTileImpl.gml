@@ -1,5 +1,23 @@
 function playerEnterTileImpl(z, a, b){
 	
+	var noGas = false;
+	for(var i=0; i<5; i++){
+		if(pc.party[i].hp > 0){
+			if(pc.party[i].xpLevel[6] >= 20  || (pc.party[i].xpLevel[6] >= 15 && pc.party[i].class == 6) ){
+				var noGas = true; break;
+			}
+		}
+	}
+	if(noGas){ for(var aa=a-1; aa<=a+1; aa++){ for(var bb=b-1; bb<=b+1; bb++){ if(inBounds(aa, bb)){
+		with(objGasPoison){
+			xSpot = floor(x / 64);
+			ySpot = floor(y / 64);
+			var dis = abs(a-xSpot)+abs(b-ySpot);
+			if(dis < 2){ instance_destroy(); }
+		}
+	}}}}
+	
+	
 	var hit = false;
 	with(objGasPoison){
 		xSpot = floor(x / 64);

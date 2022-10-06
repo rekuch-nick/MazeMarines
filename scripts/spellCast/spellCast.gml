@@ -175,7 +175,9 @@ function spellCast(spell, casterIndex, tar){
 	}
 	
 	if(spell.nam == "Light"){
-		with(objGasDark){ instance_destroy(); }
+		with(objGasDark){ if(object_index == objGasDark){
+			instance_destroy(); 
+		}}
 		
 		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
 		s.text = "LIGHT";
@@ -286,11 +288,11 @@ function spellCast(spell, casterIndex, tar){
 		
 		for(var aa=tx; aa<=tx+2; aa++){ for(var bb=ty; bb<=ty+2; bb++){ if(inBounds(aa, bb)){
 			var s = instance_create_depth(aa*64, bb*64, ww.Leff, effTornado);
-			with(objGasDark){
+			with(objGasDark){ if(object_index != objGasQuestion){
 				if(x == aa*64 && y == bb * 64){
 					instance_destroy();
 				}
-			}
+			}}
 		}}}
 		
 		var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);

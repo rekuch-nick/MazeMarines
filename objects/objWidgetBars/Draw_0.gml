@@ -2,7 +2,7 @@ draw_rectangle_color(x, y, x+300, y+120-8, c_navy, c_black, c_black, c_navy, fal
 var char = pc.party[index];
 
 var c = c_white;
-if(pc.unitSelected == index){ c = c_yellow; }
+//if(pc.unitSelected == index){ c = c_yellow; }
 draw_text_color(x, y, getCharacterName(index), c, c, c, c, 1);
 draw_set_halign(fa_right);
 draw_text_color(x+305, y, " L" + string(char.xpLevel[char.class]), c, c, c, c, 1);

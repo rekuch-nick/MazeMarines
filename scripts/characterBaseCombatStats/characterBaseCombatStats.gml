@@ -60,6 +60,9 @@ function characterBaseCombatStats(c, l){
 		o.limitGainMax = 40;
 		o.magicPower = .4;
 		o.limit = "Berserk";
+		if(l >= 15){
+			o.passive = "Heals by killing";
+		}
 	}
 	
 	if(c == 5){ // scribe
@@ -79,6 +82,9 @@ function characterBaseCombatStats(c, l){
 		o.limit = "AoE magic attack";
 		o.magicPower = 1;
 		o.shotType = objMagShot;
+		if(l >= 15){
+			o.passive = "Ignore poison gas";
+		}
 	}
 	
 	if(c == 7){ // knight

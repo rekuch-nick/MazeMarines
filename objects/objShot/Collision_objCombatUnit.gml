@@ -47,14 +47,14 @@ if(other.aly != aly && (other.aly != 0 || aly == -1)){
 		
 		
 		
-		with(objCombatUnit){
+		with(objCombatUnit){ if(other.aly != aly && (other.aly != 0 || aly == -1)){
 			var dis = point_distance(x, y, other.x, other.y);
 			if(dis <= other.aoe){
 				
 				hp -= d;
 				
 			}
-		}
+		}}
 		
 	} else {
 	

@@ -64,7 +64,18 @@ if(hp < 1){
 	hp = 0;
 	
 	
-	if(aly == -1){ ww.screenCombat.xp += xp; ww.screenCombat.gp += gold; }
+	if(aly == -1){ 
+		ww.screenCombat.xp += xp; ww.screenCombat.gp += gold; 
+		
+		for(var i=0; i<5; i++){
+			if(pc.party[i].hp > 0){ if(pc.party[i].xpLevel[4] >= 20 || (pc.party[i].class == 4 &&  pc.party[i].xpLevel[4] >= 5) ){
+				with(objCombatUnit){ if(aly == 1 && playerIndex == i){
+					hp = clamp(hp + 1, 0, hpMax);
+				}}
+			}}
+		}
+		
+	}
 	if(aly == 1){ pc.party[playerIndex].hp = 0; }
 	
 	var iid = id;

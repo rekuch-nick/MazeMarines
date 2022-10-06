@@ -18,7 +18,7 @@ Q
 R                                   repel
 S  shield
 T                                   tornado (remove gas)
-U                                   undertow (move boats)
+U                                   undertow* (move boats)
 V  vex 
 W  wall of fire                     warp
 X  xerox                            xenograft
@@ -51,10 +51,10 @@ iceman
 1 frost
 5 flame ward
 5 ice lance
-10 frost+
+10 frost+, undertow
 
 bard
-1 phasedoor
+1 phasedoor, combatCure
 3 repel
 5 warp
 10 tornado
@@ -104,6 +104,31 @@ ascendant
 19 Ascendant  M ss eye
 
 
+
+
+
+
+passives
+ 0 rookie         
+ 1 neophyte
+ 2 mechanic
+ 3 medic
+ 4 heavy          L5 heals by killing
+ 5 scribe
+ 6 gasdoc         L15 poisonGasPurge
+ 7 knight         L5 status immune
+ 8 cyborg         L1 x4 regen
+ 9 laserTech      
+10 MGunner
+11 Iceman
+12 Bard
+13 Gish
+14 Sprayer
+15 Sniper
+16 Commando
+17 Mage
+18 Demo
+19 Ascendant
 
 
 
