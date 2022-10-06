@@ -60,7 +60,7 @@ function characterBaseCombatStats(c, l){
 		o.limitGainMax = 40;
 		o.magicPower = .4;
 		o.limit = "Berserk";
-		if(l >= 15){
+		if(l >= 5){
 			o.passive = "Heals by killing";
 		}
 	}

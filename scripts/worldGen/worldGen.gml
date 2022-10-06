@@ -69,7 +69,7 @@ function worldGen(){
 			normMaze = true;
 			
 			if(z == 1){ ww.signText[z] = stringInsertBreaks("Feeling good about my first mission! I'll leave another note on this floor on my way back out.", 0); }
-			if(z == 2){ ww.signText[z] = stringInsertBreaks("Most monsters are so mindless they will target your party members randomly. The ones with chain-guns are even so dumb they always fire at the guy with the most HP.\n\nWatch out for the one that looks either like its melting or maybe wearing a dress. Somehow it knows who has the least HP and always shoots at them.", 0); }
+			if(z == 2){ ww.signText[z] = stringInsertBreaks("Most monsters are so mindless they will target your party members randomly. The ones with chain-guns are even so dumb they always fire at the guy with the most HP.\n\n\nWatch out for the one that looks either like its melting or maybe wearing a dress. Somehow it knows who has the least HP and always shoots at them.", 0); }
 			if(z == 3){ ww.signText[z] = stringInsertBreaks("Don't worry about the pink monsters, it's the red ones that... well anyways, after you beat one for the  first time, look around to see if anything has changed.", 0); }
 			if(z == 4){ ww.signText[z] = stringInsertBreaks("Watch out for blocks with a blue crystal in them, they prevent some spells from being cast. Exploration spells like WARP and PHASE DOOR are the most often warded against, but it could be anything. You'll know a spell is blocked if it Fizzles when it shouldn't.", 0); }
 			
