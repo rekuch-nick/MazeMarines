@@ -41,7 +41,8 @@ function playerMoveFloor(d){
 		
 		var m = ww.gmap[z][a, b];
 		if(m != noone){
-			instance_create_depth(a*64, b*64, ww.Lmmb-1, m);
+			var g = instance_create_depth(a*64, b*64, ww.Lmmb-1, m);
+			g.xSpot = a; g.ySpot = b;
 		}
 	}}
 	

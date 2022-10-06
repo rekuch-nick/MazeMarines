@@ -36,6 +36,21 @@ function playerEnterTileImpl(z, a, b){
 		}
 	}
 	
+	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSpawnTrap){
+		for(var aa=pc.xSpot-2; aa<=pc.xSpot+2; aa++){ for(var bb=pc.ySpot-2; bb<=pc.ySpot+2; bb++){
+			if(aa == pc.xSpot-2 || aa == pc.xSpot+2 || bb == pc.ySpot-2 || bb == pc.ySpot+2){
+				if(inBounds(aa, bb)){ if(ww.mmap[pc.zSpot][aa, bb] == noone && tileCanHaveMob(ww.fmap[z][aa, bb])){
+					ww.mmap[z][aa, bb] = instance_create_depth(aa * 64, bb * 64, ww.Lmmb, objMobGoon);
+					ww.mmap[z][aa, bb].xSpot = aa;
+					ww.mmap[z][aa, bb].ySpot = bb;
+					ww.mmap[z][aa, bb].zSpot = z;
+				}}
+			}
+		}}
+		
+		ww.fmap[zSpot][xSpot, ySpot] = imgFloor01;
+	}
+	
 	
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSwitchUp){

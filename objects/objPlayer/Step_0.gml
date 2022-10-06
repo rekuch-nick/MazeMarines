@@ -165,7 +165,9 @@ if(callEnterTile){
 	
 }
 
-
+if(party[0].hp < 1 && party[1].hp < 1 && party[2].hp < 1 && party[3].hp < 1 && party[4].hp < 1){
+	ww.screenCombat = instance_create_depth(0, 0, ww.Lcsn, objScreenCombat);
+}
 
 if(answer != ""){
 	answer = "";

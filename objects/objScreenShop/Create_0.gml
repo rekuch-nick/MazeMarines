@@ -5,6 +5,15 @@ msg = "Welcome to the store.";
 inventory = ["Lantern", "Portable Hole", "Bug Spray", "Healing Potion"];
 priceMod = 5;
 
+
+if(ds_list_size(pc.keyItemsLost) > 0){
+	var itm = ds_list_find_value(pc.keyItemsLost, ds_list_size(pc.keyItemsLost)-1);
+	inventory[array_length(inventory)] = itm;
+}
+
+
+
+
 triedToBuyWhileFull = false;
 cannotAfford = false;
 justBought = false;

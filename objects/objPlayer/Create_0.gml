@@ -66,7 +66,7 @@ inventory[5] = getItem("Onyx Slab");
 //inventory[3] = getItem("Mirror Charm");
 //inventory[3] = getItem("Rod of Fireballs");
 
-
+keyItemsLost = ds_list_create();
 
 
 for(var i=0; i<10; i++){ party[i] = noone; }

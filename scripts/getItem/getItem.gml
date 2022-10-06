@@ -9,6 +9,7 @@ function getItem(i){
 		worth: 20,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	if(i == "Mission Briefing"){ return {
 		nam: i,
@@ -19,6 +20,7 @@ function getItem(i){
 		worth: 20,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Silver Triangle"){ return {
@@ -30,6 +32,7 @@ function getItem(i){
 		worth: 120,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: true,
 	}; }
 	
 	if(i == "Silver Circle"){ return {
@@ -41,6 +44,7 @@ function getItem(i){
 		worth: 120,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: true,
 	}; }
 	
 	if(i == "Granite Slab"){ return {
@@ -52,6 +56,7 @@ function getItem(i){
 		worth: 1000,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: true,
 	}; }
 	if(i == "Jade Slab"){ return {
 		nam: i,
@@ -62,6 +67,7 @@ function getItem(i){
 		worth: 1000,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: true,
 	}; }
 	if(i == "Onyx Slab"){ return {
 		nam: i,
@@ -72,6 +78,7 @@ function getItem(i){
 		worth: 1000,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: true,
 	}; }
 	
 	
@@ -84,6 +91,7 @@ function getItem(i){
 		worth: 20,
 		breakChance: 50,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Bezoar"){ return {
@@ -95,6 +103,7 @@ function getItem(i){
 		worth: 20,
 		breakChance: 50,
 		breakMessage: "is consumed",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Portable Hole"){ return {
@@ -106,6 +115,7 @@ function getItem(i){
 		worth: 20,
 		breakChance: 33,
 		breakMessage: "is consumed",
+		isKeyItem: false,
 	}; }
 	if(i == "Bug Spray"){ return {
 		nam: i,
@@ -116,6 +126,7 @@ function getItem(i){
 		worth: 24,
 		breakChance: 20,
 		breakMessage: "is empty",
+		isKeyItem: false,
 	}; }
 	if(i == "Healing Potion"){ return {
 		nam: i,
@@ -126,6 +137,7 @@ function getItem(i){
 		worth: 424,
 		breakChance: 33,
 		breakMessage: "runs out",
+		isKeyItem: false,
 	}; }
 	if(i == "Flash Powder"){ return {
 		nam: i,
@@ -136,6 +148,7 @@ function getItem(i){
 		worth: 61,
 		breakChance: 100,
 		breakMessage: "is used up",
+		isKeyItem: false,
 	}; }
 	if(i == "Fan"){ return {
 		nam: i,
@@ -146,6 +159,7 @@ function getItem(i){
 		worth: 61,
 		breakChance: 50,
 		breakMessage: "breaks",
+		isKeyItem: false,
 	}; }
 	
 	
@@ -165,6 +179,7 @@ function getItem(i){
 		worth: 255,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Titan Glove"){ return {
@@ -176,6 +191,7 @@ function getItem(i){
 		worth: 165,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Troll Brace"){ return {
@@ -187,6 +203,7 @@ function getItem(i){
 		worth: 265,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Mirror Charm"){ return {
@@ -198,6 +215,7 @@ function getItem(i){
 		worth: 65,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Deflection Ring"){ return {
@@ -209,6 +227,7 @@ function getItem(i){
 		worth: 65,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Lucky Coin"){ return {
@@ -220,6 +239,7 @@ function getItem(i){
 		worth: 125,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Mage Staff"){ return {
@@ -231,6 +251,7 @@ function getItem(i){
 		worth: 965,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Rod of Fireballs"){ return {
@@ -242,6 +263,7 @@ function getItem(i){
 		worth: 465,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	if(i == "Wall Ring"){ return {
@@ -253,6 +275,7 @@ function getItem(i){
 		worth: 465,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	}; }
 	
 	
@@ -270,5 +293,6 @@ function getItem(i){
 		worth: 1,
 		breakChance: 0,
 		breakMessage: "has broken",
+		isKeyItem: false,
 	};
 }

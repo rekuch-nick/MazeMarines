@@ -13,7 +13,18 @@ function mobSpawnForCombat(){
 	if(z > 10 && irandom_range(1, 4) == 1){ maxKinds=3; }
 	
 	
+	
+	if(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot] == noone){
+		ww.mmap[z][pc.xSpot, pc.ySpot] = instance_create_depth(pc.xSpot * 64, pc.ySpot * 64, ww.Lmmb, objMobGoon);
+		ww.mmap[z][pc.xSpot, pc.ySpot].xSpot = pc.xSpot;
+		ww.mmap[z][pc.xSpot, pc.ySpot].ySpot = pc.ySpot;
+		ww.mmap[z][pc.xSpot, pc.ySpot].zSpot = z;
+	}
 	var typ = ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].sprite_index;
+	
+	
+	
+	
 	var spec = noone;
 	
 	if(typ == imgGoonWater){ mobList = [objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater, objCombatMobGoonWater]; big = 0; spec = noone; }

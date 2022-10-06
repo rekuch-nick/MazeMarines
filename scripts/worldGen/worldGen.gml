@@ -125,8 +125,8 @@ function worldGen(){
 			if(z == 12){ worldGenReplaceFloor(z, imgFloor01, imgFloorRockTrap, 50); }
 			if(z == 13){ worldGenReplaceFloor(z, imgFloor01, imgFloorGasTrap, 40); }
 			if(z == 14){ worldGenFloorH(imgFloorLava, true, irandom_range(4, 7), 2, z); }
-			
-			
+			if(z == 15){ for(var a=0; a<17; a++){ for (b=0; b<13; b++){ gmap[z][a, b] = objGasQuestion; }}}
+			if(z == 16){ worldGenReplaceFloor(z, imgFloor01, imgFloorSpawnTrap, 20); }
 			
 			//if(z == 4){ bmap[z][4, 5] = imgBlockIron; bmap[z][6, 5] = imgBlockIron; bmap[z][5, 4] = imgBlockIron; bmap[z][5, 6] = imgBlockIron; bmap[z][5, 5] = noone; fmap[z][5, 5] = imgFloorSwitchUp; }
 			

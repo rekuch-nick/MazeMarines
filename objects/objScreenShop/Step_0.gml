@@ -21,6 +21,9 @@ if(answer == "sell"){
 	i = string_delete(i, 1, 1);
 	
 	pc.coins += pc.inventory[i].worth;
+	if(pc.inventory[i].isKeyItem){
+		ds_list_add(pc.keyItemsLost, pc.inventory[i].nam);
+	}
 	playerLoseItem(pc.inventory[i].nam);
 	
 	if(playerInventoryEmpty()){
@@ -47,6 +50,11 @@ if(answer == "sell"){
 	msg = "Enjoy your new " + string(inventory[answer].nam) + ".";
 	pc.coins -= inventory[answer].worth * priceMod;
 	playerGainItem(inventory[answer].nam);
+	if(getItem(inventory[answer].nam).isKeyItem){
+		ds_list_delete(pc.keyItemsLost, ds_list_find_index(pc.keyItemsLost, inventory[answer].nam));
+		//inventory[array_length(inventory)-1] = "Sock";
+		instance_destroy(); return; 
+	}
 	answer = "";
 	var full = !playerHasInventorySpace();
 	for(i=0; i<array_length(inventory); i++){ if(full){ priceArray[i] = pc.coins + 1; } }

@@ -24,7 +24,8 @@ function mobSpawnByTime(){
 		if(ww.bmap[z][a, b] == noone && dis >= 2){
 			if(ww.mmap[z][a, b] == noone){ if(a != pc.xSpot || b != pc.ySpot){
 				var f = ww.fmap[z][a, b];
-				if(f != imgStairDown && f != imgStairUp && f != imgStairDownLocked && f != imgFloorSwitchUp && f != imgFloorSafe && f != imgFloorGate01 && f != imgFloorGate02){
+				//if(f != imgStairDown && f != imgStairUp && f != imgStairDownLocked && f != imgFloorSwitchUp && f != imgFloorSafe && f != imgFloorGate01 && f != imgFloorGate02){
+				if(tileCanHaveMob(f)){
 					if(f != imgFloorWater && f != imgFloorLava){
 						ww.mmap[z][a, b] = instance_create_depth(a * 64, b * 64, ww.Lmmb, t);
 						ww.mmap[z][a, b].xSpot = a;
