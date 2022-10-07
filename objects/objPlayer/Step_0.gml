@@ -222,3 +222,13 @@ if(debug){
 		}
 	}
 }
+
+
+var numAlive = 0; for(var i=0; i<5; i++){
+	if(party[i].hp > 0){ numAlive ++; }
+}
+if(numAlive == 1){ sprite_index = imgPlayerSquad1; }
+if(numAlive == 2){ sprite_index = imgPlayerSquad2; }
+if(numAlive == 3){ sprite_index = imgPlayerSquad3; }
+if(numAlive == 4){ sprite_index = imgPlayerSquad4; }
+if(numAlive == 5){ sprite_index = imgPlayerSquad; }
