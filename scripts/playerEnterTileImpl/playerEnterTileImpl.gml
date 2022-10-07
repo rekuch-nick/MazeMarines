@@ -3,7 +3,8 @@ function playerEnterTileImpl(z, a, b){
 	var noGas = false;
 	for(var i=0; i<5; i++){
 		if(pc.party[i].hp > 0){
-			if(pc.party[i].xpLevel[6] >= 20  || (pc.party[i].xpLevel[6] >= 15 && pc.party[i].class == 6) ){
+			if(characterHasPassive(6, i)){
+			//if(pc.party[i].xpLevel[6] >= 20  || (pc.party[i].xpLevel[6] >= 15 && pc.party[i].class == 6) ){
 				var noGas = true; break;
 			}
 		}

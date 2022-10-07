@@ -7,7 +7,7 @@ function combatTreasure(plus){
 		pc.itemFindCD ++;
 		return noone;
 	} else {
-		if(irandom_range(0, 1) == 1){
+		if(irandom_range(0, 2) == 1){
 			pc.itemFindCD = floor(pc.itemFindCD / 2);
 			return "Key";
 		} else {

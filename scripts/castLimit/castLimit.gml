@@ -29,7 +29,7 @@ function castLimit(co, ind){
 		
 		with(objCombatUnit){ if(aly == 1){
 			if(hp < 1){ continue; }
-			var h = 40;
+			var h = 20;
 			hp = clamp(hp + h, hp, hpMax);
 			for(var ii=0; ii<20; ii++){
 				instance_create_depth(x + 32, y, ww.Leff, effHeal);

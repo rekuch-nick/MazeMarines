@@ -17,7 +17,8 @@ function timePasses(n){
 			
 			if(c.hp > 0 && (c.bleed < 1 && c.poison < 1) ){
 				var regenFor = 1;
-				if(pc.party[i].class == 8 || pc.party[i].xpLevel[8] >= 20){ regenFor = 4; }
+				//if(pc.party[i].class == 8 || pc.party[i].xpLevel[8] >= 20){ regenFor = 4; }
+				if(characterHasPassive(8, i)){ regenFor = 4; }
 				c.hp = clamp(c.hp + regenFor, 0, c.hpMax);
 			}
 			

@@ -1,6 +1,6 @@
 image_xscale = 4; image_yscale = 4;
 
-price = clamp(ceil(pc.coins / 5), 0, pc.coins);
+price = clamp(ceil(pc.coins / 10), 0, pc.coins);
 answer = "";
 
 phase = "no";

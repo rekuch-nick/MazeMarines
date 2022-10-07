@@ -46,7 +46,7 @@ function characterBaseCombatStats(c, l){
 		o.shotCluster = 1; o.shotClusterMax = 1; o.shotClusterCD = 10;
 		o.limitGainMin = 50;
 		o.limitGainMax = 150;
-		o.limit = "Heal party for 5%";
+		o.limit = "Heal party";
 		o.magicPower = .6;
 	}
 	

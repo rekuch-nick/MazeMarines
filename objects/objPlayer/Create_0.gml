@@ -23,7 +23,7 @@ whoIsCCing = -1;
 
 killsThisFloor = 0;
 treasureGoblinSpawned = 0;
-spellLearnPriceMod = 40;
+spellLearnPriceMod = 25;
 
 menuNote = "";
 

@@ -68,11 +68,12 @@ if(hp < 1){
 		ww.screenCombat.xp += xp; ww.screenCombat.gp += gold; 
 		
 		for(var i=0; i<5; i++){
-			if(pc.party[i].hp > 0){ if(pc.party[i].xpLevel[4] >= 20 || (pc.party[i].class == 4 &&  pc.party[i].xpLevel[4] >= 5) ){
+			if(characterHasPassive(4, i)){
+			//if(pc.party[i].hp > 0){ if(pc.party[i].xpLevel[4] >= 20 || (pc.party[i].class == 4 &&  pc.party[i].xpLevel[4] >= 5) ){
 				with(objCombatUnit){ if(aly == 1 && playerIndex == i){
 					hp = clamp(hp + 1, 0, hpMax);
 				}}
-			}}
+			}//}
 		}
 		
 	}
