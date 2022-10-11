@@ -121,7 +121,8 @@ if(shotCD < 1){
 		shotCD = shotCDMax;
 		pc.party[playerIndex].limit = 0;
 	} else {
-		var st = shotType;
+		var st = shotType; var crit = false;
+		if(irandom_range(0, 99) < bombChance){ crit = true; st = objTNTShot; }
 		
 		if(vex > 0 && irandom_range(0, 1) == 1){ 
 			var s = instance_create_depth(x+32, y+32, ww.Leff, objEffect);
@@ -133,7 +134,7 @@ if(shotCD < 1){
 		if(st != noone){
 			if(target == noone){
 				target = characterAim();
-				if(st == objLazShot){
+				if(st == objLazShot || (st == objLongShot && irandom_range(0, 1) == 1) ){
 					//target = characterAimAtMostHP(aly);
 					target = characterAimAtLeastHP(aly);
 				}
@@ -155,6 +156,7 @@ if(shotCD < 1){
 				s.tx = aa;
 				s.ty = bb;
 				s.shotPower = irandom_range(shotPowerMin, shotPowerMax);
+				if(crit){ s.shotPower *= 3; }
 				if(aly == 1 && pc.party[playerIndex].item != noone && pc.party[playerIndex].item.wearEffect == "+1"){ s.shotPower +=1; }
 				if(aly == 1 && pc.party[playerIndex].item != noone && pc.party[playerIndex].item.wearEffect == "+2"){ s.shotPower +=2; }
 				if(aly == 1 && pc.party[playerIndex].aim > 0){ s.shotPower = floor(s.shotPower * 1.2); }
@@ -174,6 +176,7 @@ if(shotCD < 1){
 				
 				if(s.aoe > 0){ s.aoe += aoePlus; }
 				if(st == objLazShot){ s.onlyFor = target; }
+				if(st == objTNTShot){ s.onlyFor = target; }
 			}
 		}
 	

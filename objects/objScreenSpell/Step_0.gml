@@ -14,9 +14,7 @@ if(firstFrame){
 			//if(pc.party[index].mp < s.cost){ s.canCast = false; }
 			//if(pc.party[index].mute > 0){ s.canCast = false; }
 			
-			pc.menuNote = "";
-			if(s.nam == "Bind Wounds"){ pc.menuNote = "Bind Wounds"; }
-			if(s.nam == "AntiVenom"){ pc.menuNote = "AntiVenom"; }
+			
 		}
 	}
 	
@@ -88,6 +86,11 @@ if(answer != ""){
 				return;
 				
 			} else if(s.target == "number"){
+				pc.menuNote = "";
+				if(s.nam == "Bind Wounds"){ pc.menuNote = "Bind Wounds"; }
+				if(s.nam == "AntiVenom"){ pc.menuNote = "AntiVenom"; }
+				
+				
 				createMenu("Cast " + s.nam + " on whom?", "num", "wide+", "num", ["1] "+pc.party[0].nickname,"2] "+pc.party[1].nickname,"3] "+pc.party[2].nickname,"4] "+pc.party[3].nickname,"5] "+pc.party[4].nickname], [0,1,2,3,4], [0,0,0,0,0]);
 				
 				

@@ -27,3 +27,5 @@ multiTarget = false;
 alreadyHit = ds_list_create();
 
 chain = 0;
+lob = false;
+lobDis = 0;

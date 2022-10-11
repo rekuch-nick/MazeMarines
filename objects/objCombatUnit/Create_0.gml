@@ -22,6 +22,8 @@ shotPowerMin = 6;
 shotPowerMax = 15;
 shotSpeed = 10;
 
+bombChance = 0;
+
 aimType = "random";
 shotType = objShot;
 target = noone;

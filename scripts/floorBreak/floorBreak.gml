@@ -10,6 +10,7 @@ function floorBreak(a, b){
 				|| t == imgFloorGrass
 				|| t == imgFloorRockTrap
 				|| t == imgFloorGasTrap
+				|| t == imgFloorSpawnTrap
 				){
 		ww.fmap[pc.zSpot][a, b] = imgFloorDug;
 	}

@@ -124,6 +124,7 @@ if(image_alpha >= 1 && !started){
 		o.limit = temp.limit;
 		o.shotType = temp.shotType;
 		o.magicPower = temp.magicPower;
+		o.bombChance = temp.bombChance;
 	
 	
 

@@ -15,6 +15,7 @@ function characterBaseCombatStats(c, l){
 		shotNote: "",
 		passive: "",
 		magicPower: 1,
+		bombChance: 0,
 	}
 	
 	if(c == 0){ // rookie
@@ -162,19 +163,22 @@ function characterBaseCombatStats(c, l){
 		o.magicPower = .4;
 	}
 	if(c == 15){ // Sniper
-		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
+		o.shotType = objLongShot;
+		o.shotPowerMin = 65 + l;
+		o.shotPowerMax = 85 + l;
+		//if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
+		//if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
 		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
 		o.magicPower = .4;
+		o.shotCDMax = 90;
 	}
 	if(c == 16){ // Commando
-		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
-		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
+		o.shotPowerMin = 30 + l;
+		o.shotPowerMax = 40 + l;
+		
+		o.shotCDMax = 40;
+		o.bombChance = 20;
+		
 		o.magicPower = .75;
 	}
 	if(c == 17){ // Mage
@@ -187,21 +191,21 @@ function characterBaseCombatStats(c, l){
 		o.shotType = objMagShot;
 	}
 	if(c == 18){ // Demo
-		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
+		o.shotCDMax = 120;
+		o.shotPowerMin = 85 + l;
+		o.shotPowerMax = 105 + l;
+		o.shotType = objTNTShot;
+		//if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
+		//if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
 		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
 		o.magicPower = .5;
 	}
 	if(c == 19){ // Ascendant
-		o.shotPowerMin = 5 + l;
-		o.shotPowerMax = 14 + l;
-		if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
-		if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
-		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
+		o.shotPowerMin = 15 + l;
+		o.shotPowerMax = 16 + l;
+		
 		o.magicPower = 1.5;
-		o.shotType = objMagShot;
+		o.shotType = objMagShot2;
 	}
 	
 	return o;

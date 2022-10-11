@@ -5,14 +5,33 @@ if(instance_number(objScreenCombat) != 1){
 }
 
 if(firstFrame){
+	
+	
 	var angle = arctan2(ty - y, tx - x);
 	xs = cos(angle) * moveSpeed;
 	ys = sin(angle) * moveSpeed;
 	
+	if(lob){
+		lobDis = abs(x - tx) / 2;
+	}
+	
+	
 	firstFrame = false;
 }
 
-
+if(lob){
+	image_angle += 2;
+	lobDis -= abs(xs);
+	if(lobDis > 0){
+		y -= 2; 
+		image_xscale += .08;
+		image_yscale += .08;
+	} else {
+		y += 2;
+		image_xscale -= .08;
+		image_yscale -= .08;
+	}
+}
 x += xs;
 y += ys;
 ys += grav;
