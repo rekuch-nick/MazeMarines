@@ -74,16 +74,14 @@ function playerEnterTileImpl(z, a, b){
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSwitchUp){
 		ww.fmap[zSpot][xSpot, ySpot] = imgFloorSwitchDown;
-		var s = instance_create_depth(pc.x+32, pc.y, ww.Leff, objEffect);
-		s.text = "click";
+		notifyMessage("click", 0);
 		roomCheckSwtches();
 	}
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSwitchTrapUp || ww.fmap[zSpot][xSpot, ySpot] == imgFloorSwitchTrapHiddenUp){
 		ww.fmap[zSpot][xSpot, ySpot] = imgFloorSwitchDown;
-		var s = instance_create_depth(pc.x+32, pc.y, ww.Leff, objEffect);
-		s.text = "click";
 		
+		notifyMessage("click", 0);
 		var s = instance_create_depth(64*17, pc.y, ww.Leff, effBladeWheel);
 	}
 	
@@ -181,11 +179,9 @@ function playerEnterTileImpl(z, a, b){
 		if(playerHasItem("Silver Triangle")){
 			worldGenReplaceBlockAll(pc.zSpot, imgBlockGate, noone);
 			worldGenReplaceFloorAll(pc.zSpot, imgFloorGate01, imgFloor01);
-			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
-			s.text = "Bearer of the Triangle, you may pass";
+			notifyMessage("Bearer of the Triangle, you may pass", 0);
 		} else {
-			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
-			s.text = "Only the Silver Triangle bearer may pass";
+			notifyMessage("Only the Silver Triangle bearer may pass", 0);
 		}
 	}
 	
@@ -193,11 +189,9 @@ function playerEnterTileImpl(z, a, b){
 		if(playerHasItem("Silver Circle")){
 			worldGenReplaceBlockAll(pc.zSpot, imgBlockGate, noone);
 			worldGenReplaceFloorAll(pc.zSpot, imgFloorGate02, imgFloor01);
-			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
-			s.text = "Bearer of the Circle, you may pass";
+			notifyMessage("Bearer of the Circle, you may pass", 0);
 		} else {
-			var s = instance_create_depth(pc.x + 32, pc.y, ww.Leff, objEffect);
-			s.text = "Only the Silver Circle bearer may pass";
+			notifyMessage("Only the Silver Circle bearer may pass", 0);
 		}
 	}
 	
@@ -315,8 +309,9 @@ function playerEnterTileImpl(z, a, b){
 	
 	if(rem){ ww.pmap[zSpot][xSpot, ySpot] = noone; }
 	if(txt != noone){
-		var s = instance_create_depth(pc.x+32, pc.y, ww.Leff, objEffect);
-		s.text = txt;
+		//var s = instance_create_depth(pc.x+32, pc.y, ww.Leff, objEffect);
+		//s.text = txt;
+		notifyMessage(txt, 0);
 	}
 	
 }

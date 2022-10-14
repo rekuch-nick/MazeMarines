@@ -30,6 +30,5 @@ characterDrawSelf();
 
 var f = ww.fmap[zSpot][xSpot, ySpot];
 if(f == imgStairDown || f == imgStairUp || f == imgFloorSign){
-	show_debug_message(123)
 	draw_text_color(x - 32, y + 64+4, "[ENTER]", choose(c_white), choose(c_white), choose(c_white), choose(c_white), .5);
 }
