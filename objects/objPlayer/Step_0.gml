@@ -121,6 +121,11 @@ if(!justMoved && spellInputCD < 1){
 			with(effStairIndicator){ instance_destroy(); }
 			return; 
 		}
+		
+		if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSign){ 
+			instance_create_depth(0, 0, ww.Lscn, objScreenSign); 
+		}
+		
 		if(ww.fmap[zSpot][xSpot, ySpot] == imgStairUp){ playerMoveFloor(-1); return; }
 	}
 	else if(bombs > 0 && letterPressed() == "B"){

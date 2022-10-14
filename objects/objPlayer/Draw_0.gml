@@ -10,7 +10,7 @@ if(debug){
 	draw_set_color(c_grey);
 	draw_text_transformed(1100, 620, "Arrows / WASD: move", .7, .7, 0);
 	draw_text_transformed(1100, 634, "I: open inventory", .7, .7, 0);
-	draw_text_transformed(1100, 648, "ENTER: OK, use stairs ", .7, .7, 0);
+	draw_text_transformed(1100, 648, "ENTER: OK, use floor ", .7, .7, 0);
 	draw_text_transformed(1100, 664, "ENTER: Speed up combat", .7, .7, 0);
 	draw_text_transformed(1100, 678, "ESC: Cancel", .7, .7, 0);
 	draw_text_transformed(1100, 692, "1/2/3/4/5: Select Character", .7, .7, 0);
@@ -26,3 +26,10 @@ if(inBoat != noone){
 }
 characterDrawSelf();
 
+
+
+var f = ww.fmap[zSpot][xSpot, ySpot];
+if(f == imgStairDown || f == imgStairUp || f == imgFloorSign){
+	show_debug_message(123)
+	draw_text_color(x - 32, y + 64+4, "[ENTER]", choose(c_white), choose(c_white), choose(c_white), choose(c_white), .5);
+}

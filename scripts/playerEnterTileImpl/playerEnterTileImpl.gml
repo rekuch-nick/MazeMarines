@@ -170,7 +170,7 @@ function playerEnterTileImpl(z, a, b){
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorRid){ instance_create_depth(0, 0, ww.Lscn, objScreenAdvicePage); }
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorShop){ instance_create_depth(0, 0, ww.Lscn, objScreenShop); }
 	
-	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSign){ instance_create_depth(0, 0, ww.Lscn, objScreenSign); }
+	//if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorSign){ instance_create_depth(0, 0, ww.Lscn, objScreenSign); }
 	
 	if(ww.fmap[zSpot][xSpot, ySpot] == imgFloorGrave){
 		instance_create_depth(0, 0, ww.Lscn, objScreenShopRez);
