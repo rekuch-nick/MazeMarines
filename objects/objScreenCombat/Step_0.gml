@@ -4,6 +4,11 @@ if(keyboard_check_pressed(vk_enter)){
 	
 }
 
+
+//instance_create_depth(17*32, room_height/2, ww.Lcsn-1, objStar);
+//instance_create_depth(17*64, irandom_range(0, room_height), ww.Lcsn-1, objStreak);
+
+
 if(over){ if(overCD > 0){ overCD --; return; } else {
 	with(objCombatUnit){ shotCD = 10; }
 	pc.xpToGain += xp;

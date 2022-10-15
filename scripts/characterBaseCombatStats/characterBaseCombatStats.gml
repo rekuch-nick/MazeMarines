@@ -195,7 +195,7 @@ function characterBaseCombatStats(c, l){
 		o.shotPowerMin = 85 + l;
 		o.shotPowerMax = 105 + l;
 		o.shotType = objTNTShot;
-		//if(l >= 2){ o.shotCluster = 1; o.shotClusterMax = 1; }
+		if(l >= 6){ o.shotCluster = 1; o.shotClusterMax = 1; }
 		//if(l >= 4){ o.shotCluster = 2; o.shotClusterMax = 2; }
 		//if(l >= 5){ o.shotCluster = 3; o.shotClusterMax = 3; }
 		o.magicPower = .5;

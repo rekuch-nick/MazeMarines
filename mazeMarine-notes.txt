@@ -155,7 +155,7 @@ text tips needed:
 ww.Lmnu = -5990; // layer menu
 ww.Lscn = -5000; // layer screens
 ww.Leff = -4000; // layer effects
-ww.Lcmb  = -3000; // layer combat units
+ww.Lcmb  = -3001; // layer combat units
 ww.Lcsn = -2999; // layer combat screen
 ww.Lmmb = -1000; // layer map units
 

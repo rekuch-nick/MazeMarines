@@ -3,8 +3,8 @@ if(other.aly != aly && (other.aly != 0 || aly == -1)){
 	if(onlyFor != noone && onlyFor != other.id){ return; }
 	
 	if(multiTarget){
-		if(ds_list_find_index(alreadyHit, id) == -1){
-			ds_list_add(alreadyHit, id);
+		if(ds_list_find_index(alreadyHit, other.id) == -1){
+			ds_list_add(alreadyHit, other.id);
 		} else {
 			return;
 		}
