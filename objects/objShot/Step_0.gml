@@ -36,6 +36,8 @@ x += xs;
 y += ys;
 ys += grav;
 if(xSpeedup){ xs *= 1.08; ys *= 1.08; }
+image_xscale += gro;
+image_yscale += gro;
 
 if(sprite_index == imgShotSong){ //&& irandom_range(1, 10) == 1){ 
 	//grav *= -1;

@@ -119,6 +119,10 @@ function characterBaseCombatStats(c, l){
 		o.shotCDMax = 30;
 		o.shotType = objLazShot;
 		
+		o.limitGainMin = 5;
+		o.limitGainMax = 20;
+		o.limit = "Craft Tools";
+		
 		o.magicPower = .4;
 	}
 	if(c == 10){ // MGunner

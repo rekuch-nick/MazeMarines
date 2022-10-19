@@ -56,14 +56,16 @@ if(over && overCD < 1 && (keyboard_check_pressed(vk_enter)
 	pc.coins += gpGain;
 	room_speed = 30;
 	
-	if(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].sprite_index == imgBoss01){
-		if(playerNeedsKeyItem("Silver Triangle")){ 
-			worldGenReplaceBlockAllAndClear(ww.triangleFloor, imgBlockFutureSpecChest, imgSpecChest);
+	if(!lose){
+		if(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].sprite_index == imgBoss01){
+			//if(playerNeedsKeyItem("Silver Triangle")){ 
+				worldGenReplaceBlockAllAndClear(ww.triangleFloor, imgBlockFutureSpecChest, imgSpecChest);
+			//}
+			ww.bossOneDown = true;
 		}
-		ww.bossOneDown = true;
-	}
 	
-	if(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].object_index == objMobTreasureGoblin){ spawnGoblinTreasure(); }
+		if(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot].object_index == objMobTreasureGoblin){ spawnGoblinTreasure(); }
+	}
 	
 	
 	instance_destroy(ww.mmap[pc.zSpot][pc.xSpot, pc.ySpot]);

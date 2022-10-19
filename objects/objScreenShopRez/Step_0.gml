@@ -8,6 +8,7 @@ if(answer == "y"){
 			pc.party[i].hp = 1;
 			pc.party[i].bleed = 0;
 			pc.party[i].poison = 0;
+			pc.party[i].limit = 0;
 		}
 	}
 	

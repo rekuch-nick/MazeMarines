@@ -6,6 +6,9 @@ function spellCast(spell, casterIndex, tar){
 	if(instance_number(objScreenCombat) > 0){ 
 		if(ww.screenCombat.pcc[casterIndex] == noone){ return; }
 		mag = ww.screenCombat.pcc[casterIndex].magicPower; 
+	} else {
+		var o = characterBaseCombatStats(pc.party[casterIndex].class, pc.party[casterIndex].xpLevel[pc.party[casterIndex].class]);
+		mag = o.magicPower;
 	}
 	
 	
@@ -70,20 +73,32 @@ function spellCast(spell, casterIndex, tar){
 	}
 	
 	if(spell.nam == "Cure"){
-		var n = floor(pc.party[tar].hpBase * 1);
-		pc.party[tar].hp = clamp(pc.party[tar].hp + n, 0, pc.party[tar].hpMax);
-		
-		notifyMessage("CURE", casterIndex);
+		if(pc.party[tar].hp < 1){
+			spellFizzle();
+		} else {
+			var n = ceil(100 * mag);//floor(pc.party[tar].hpBase * 1);
+			pc.party[tar].hp = clamp(pc.party[tar].hp + n, 0, pc.party[tar].hpMax);
+			
+			notifyMessage("CURE", casterIndex);
+		}
 	}
 	
 	if(spell.nam == "CombatCure"){
 		var d = ceil(20 * mag);
-		for(var i=0; i<5; i++){ if(pc.party[i] != noone && pc.party[i].hp > 0){
-			with(objCombatUnit){ if(aly == 1){
-				hp = clamp(hp + d, 0, hpMax);
-				for(var ii=0; ii<10; ii++){ instance_create_depth(x + 32, y, ww.Leff, effHeal); }
-			}}
+		
+		with(objCombatUnit){ if(aly == 1 && hp > 0){
+			hp = clamp(hp + d, 0, hpMax);
 		}}
+		
+		for(var i=0; i<5; i++){ if(pc.party[i] != noone && pc.party[i].hp > 0){
+			pc.party[i].hp = clamp(pc.party[i].hp + d, 0, pc.party[i].hpMax);
+		}}
+		
+		for(var ii=0; ii<200; ii++){
+			var a = irandom_range(64*13+32, 64*15);
+			var b = irandom_range(0, room_height);
+			instance_create_depth(a, b, ww.Leff, effHeal); 
+		}
 		
 		notifyMessage("CURE", casterIndex);
 	}

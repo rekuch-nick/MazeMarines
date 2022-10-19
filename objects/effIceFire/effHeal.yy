@@ -1,19 +1,15 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "objPinkShot",
   "spriteId": {
-    "name": "imgPinkShot",
-    "path": "sprites/imgPinkShot/imgPinkShot.yy",
+    "name": "imgEffHeal",
+    "path": "sprites/imgEffHeal/imgEffHeal.yy",
   },
   "solid": false,
   "visible": true,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "objShot",
-    "path": "objects/objShot/objShot.yy",
+    "name": "objEffect",
+    "path": "objects/objEffect/objEffect.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,12 +24,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "shots",
-    "path": "folders/Objects/shots.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "effHeal",
+  "tags": [],
+  "resourceType": "GMObject",
 }

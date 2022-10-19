@@ -17,7 +17,7 @@ function castLimit(co, ind){
 		s.text = "Limit MP Charge";
 		
 		
-	} else if (c == 2) { // Mechanic
+	} else if (c == 2 || c == 9) { // Mechanic, laser tech
 		pc.bombs ++; pc.picks += 2;
 		var s = instance_create_depth(co.x + 32, co.y, ww.Leff, objEffect); 
 		s.text = "Limit Craft Tools";
@@ -68,6 +68,15 @@ function castLimit(co, ind){
 		} }
 		var s = instance_create_depth(co.x + 32, co.y, ww.Leff, objEffect);
 		s.text = "Limit Protect";
+		
+		
+	//} else if(c == 10){ // MGunner
+		
+		
+		
+		
+		
+		
 		
 	} else { //Rookie, other
 		var h = ceil(char.hpMax / 5);

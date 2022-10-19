@@ -19,6 +19,8 @@ aoe = 0;
 aoeEff = effBoomCircle;
 onlyFor = noone;
 xSpeedup = false;
+gro = 0;
+
 
 isFire = false;
 isIce = false;

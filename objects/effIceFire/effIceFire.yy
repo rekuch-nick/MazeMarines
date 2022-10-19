@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objPinkShot",
+  "name": "effIceFire",
   "spriteId": {
-    "name": "imgPinkShot",
-    "path": "sprites/imgPinkShot/imgPinkShot.yy",
+    "name": "imgIceFire",
+    "path": "sprites/imgIceFire/imgIceFire.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "objShot",
-    "path": "objects/objShot/objShot.yy",
+    "name": "objEffect",
+    "path": "objects/objEffect/objEffect.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -33,7 +33,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "shots",
-    "path": "folders/Objects/shots.yy",
+    "name": "effects",
+    "path": "folders/Objects/effects.yy",
   },
 }

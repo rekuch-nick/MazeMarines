@@ -225,6 +225,7 @@ if(debug){
 			pc.party[i].poison = 0;
 			pc.party[i].bleed = 0;
 		}
+		pc.party[0].limit = pc.party[0].limitMax - 10;
 	}
 }
 

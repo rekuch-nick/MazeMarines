@@ -1,3 +1,3 @@
 event_inherited();
 
-gro = .02;
+moveSpeed = 10;

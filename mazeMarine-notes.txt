@@ -1,6 +1,6 @@
 A   aim (dmg buff)                  antivenom (cure poison)
 B   bolt (self rapid attack)        bind wounds (cure bleed)
-C     combat cure*                    cure
+C     combat cure                     cure
 D   
 E                                   eye 
 F  frost (aoe, auto kills small)    flame ward 
@@ -18,7 +18,7 @@ Q
 R                                   repel
 S  shield
 T                                   tornado (remove gas)
-U                                   undertow* (move boats)
+U                                   undertow (move boats)
 V  vex 
 W  wall of fire                     warp
 X  xerox                            xenograft
@@ -129,6 +129,38 @@ passives
 17 Mage
 18 Demo
 19 Ascendant
+
+
+
+
+
+
+limt
+ 0 rookie      self heal     
+ 1 neophyte    4 mp
+ 2 mechanic    craft tools
+ 3 medic       heal party
+ 4 heavy       berserk
+ 5 scribe      8 mp
+ 6 gasdoc      poison aoe
+ 7 knight      purge shots
+ 8 cyborg      breserk
+ 9 laserTech   craft tools
+10 MGunner     
+11 Iceman        
+12 Bard         
+13 Gish         
+14 Sprayer      
+15 Sniper       
+16 Commando       
+17 Mage         
+18 Demo         
+19 Ascendant      
+
+
+
+
+
 
 
 

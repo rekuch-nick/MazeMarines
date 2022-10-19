@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objPinkShot",
+  "name": "objIceFireShot",
   "spriteId": {
-    "name": "imgPinkShot",
-    "path": "sprites/imgPinkShot/imgPinkShot.yy",
+    "name": "imgIceFire",
+    "path": "sprites/imgIceFire/imgIceFire.yy",
   },
   "solid": false,
   "visible": true,
